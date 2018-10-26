@@ -13,6 +13,7 @@
 		4E9807DF1EBA19C5008415BD /* YouboraConfigViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9807DA1EBA19C5008415BD /* YouboraConfigViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9807E01EBA19C5008415BD /* YouboraConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9807DB1EBA19C5008415BD /* YouboraConfigViewController.m */; };
 		4E9807E11EBA19C5008415BD /* YouboraConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9807DC1EBA19C5008415BD /* YouboraConfigViewController.xib */; };
+		CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFE32B121836DB500491B84 /* YouboraLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4E9807DA1EBA19C5008415BD /* YouboraConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouboraConfigViewController.h; sourceTree = "<group>"; };
 		4E9807DB1EBA19C5008415BD /* YouboraConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouboraConfigViewController.m; sourceTree = "<group>"; };
 		4E9807DC1EBA19C5008415BD /* YouboraConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouboraConfigViewController.xib; sourceTree = "<group>"; };
+		CDFE32B121836DB500491B84 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 		4EFBCEDF1EBB6C9E009138D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDFE32B121836DB500491B84 /* YouboraLib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
