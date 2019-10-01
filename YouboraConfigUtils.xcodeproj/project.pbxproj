@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06927A862343ABA2005127FC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927A852343ABA2005127FC /* Test.swift */; };
 		4E41B5511EBA18B1003F8B80 /* YouboraConfigUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9807DD1EBA19C5008415BD /* YouboraConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9807D81EBA19C5008415BD /* YouboraConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9807DE1EBA19C5008415BD /* YouboraConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9807D91EBA19C5008415BD /* YouboraConfigManager.m */; };
 		4E9807DF1EBA19C5008415BD /* YouboraConfigViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9807DA1EBA19C5008415BD /* YouboraConfigViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9807E01EBA19C5008415BD /* YouboraConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9807DB1EBA19C5008415BD /* YouboraConfigViewController.m */; };
 		4E9807E11EBA19C5008415BD /* YouboraConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9807DC1EBA19C5008415BD /* YouboraConfigViewController.xib */; };
+		740DB4836F4C270DC1FC014D /* Pods_YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC16F8B80DDB52FA29A7EB0 /* Pods_YouboraConfigUtils.framework */; };
 		CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFE32B121836DB500491B84 /* YouboraLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06927A852343ABA2005127FC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		205CA5B7790EDFE736A3287D /* Pods-YouboraConfigUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils/Pods-YouboraConfigUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		4E41B54C1EBA18B1003F8B80 /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraConfigUtils.h; sourceTree = "<group>"; };
 		4E41B5501EBA18B1003F8B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -25,6 +29,8 @@
 		4E9807DA1EBA19C5008415BD /* YouboraConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouboraConfigViewController.h; sourceTree = "<group>"; };
 		4E9807DB1EBA19C5008415BD /* YouboraConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouboraConfigViewController.m; sourceTree = "<group>"; };
 		4E9807DC1EBA19C5008415BD /* YouboraConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YouboraConfigViewController.xib; sourceTree = "<group>"; };
+		7DC16F8B80DDB52FA29A7EB0 /* Pods_YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACFB1141F43BEA2F1285EC82 /* Pods-YouboraConfigUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils/Pods-YouboraConfigUtils.release.xcconfig"; sourceTree = "<group>"; };
 		CDFE32B121836DB500491B84 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,18 +40,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */,
+				740DB4836F4C270DC1FC014D /* Pods_YouboraConfigUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06927A5F2343A95C005127FC /* Example */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		2BD9E3FADA74AEBE6C318DDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				205CA5B7790EDFE736A3287D /* Pods-YouboraConfigUtils.debug.xcconfig */,
+				ACFB1141F43BEA2F1285EC82 /* Pods-YouboraConfigUtils.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E41B5421EBA18B1003F8B80 = {
 			isa = PBXGroup;
 			children = (
+				06927A5F2343A95C005127FC /* Example */,
 				4E41B54E1EBA18B1003F8B80 /* YouboraConfigUtils */,
 				4E41B54D1EBA18B1003F8B80 /* Products */,
 				4EFBCEDF1EBB6C9E009138D8 /* Frameworks */,
+				2BD9E3FADA74AEBE6C318DDF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +92,7 @@
 				4E9807DB1EBA19C5008415BD /* YouboraConfigViewController.m */,
 				4E9807DC1EBA19C5008415BD /* YouboraConfigViewController.xib */,
 				4E41B5501EBA18B1003F8B80 /* Info.plist */,
+				06927A852343ABA2005127FC /* Test.swift */,
 			);
 			path = YouboraConfigUtils;
 			sourceTree = "<group>";
@@ -75,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CDFE32B121836DB500491B84 /* YouboraLib.framework */,
+				7DC16F8B80DDB52FA29A7EB0 /* Pods_YouboraConfigUtils.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,6 +126,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E41B5541EBA18B1003F8B80 /* Build configuration list for PBXNativeTarget "YouboraConfigUtils" */;
 			buildPhases = (
+				080669823B069C8172EB704E /* [CP] Check Pods Manifest.lock */,
 				4E41B5471EBA18B1003F8B80 /* Sources */,
 				4E41B5481EBA18B1003F8B80 /* Frameworks */,
 				4E41B5491EBA18B1003F8B80 /* Headers */,
@@ -124,6 +152,7 @@
 				TargetAttributes = {
 					4E41B54B1EBA18B1003F8B80 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -157,6 +186,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		080669823B069C8172EB704E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouboraConfigUtils-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4E41B5471EBA18B1003F8B80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -164,6 +218,7 @@
 			files = (
 				4E9807E01EBA19C5008415BD /* YouboraConfigViewController.m in Sources */,
 				4E9807DE1EBA19C5008415BD /* YouboraConfigManager.m in Sources */,
+				06927A862343ABA2005127FC /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +325,9 @@
 		};
 		4E41B5551EBA18B1003F8B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 205CA5B7790EDFE736A3287D /* Pods-YouboraConfigUtils.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -287,12 +344,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraConfigUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		4E41B5561EBA18B1003F8B80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACFB1141F43BEA2F1285EC82 /* Pods-YouboraConfigUtils.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -309,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraConfigUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

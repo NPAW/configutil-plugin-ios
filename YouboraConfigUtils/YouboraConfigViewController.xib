@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -113,7 +113,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybs-72-Cee" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="syW-LK-3Rp"/>
@@ -148,7 +148,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70S-mF-DJ0" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="jt4-Hq-owX"/>
@@ -183,7 +183,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5z-V6-kbg" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="foz-RX-0Qc"/>
@@ -230,7 +230,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBb-OP-4n6" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="cve-EX-sMl"/>
@@ -243,7 +243,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzB-3l-cC5">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -277,7 +277,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBT-ik-yTK" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="3Tq-1j-brX"/>
@@ -290,7 +290,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgf-tI-ah1">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -324,14 +324,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0e-eZ-Lf4" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="9Lh-jw-bKP"/>
                                     </constraints>
                                 </view>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWY-KV-Ya9">
-                                    <rect key="frame" x="8" y="44.5" width="51" height="31"/>
+                                    <rect key="frame" x="8" y="45" width="51" height="31"/>
                                     <connections>
                                         <action selector="switchValueValueChanged:" destination="-1" eventType="valueChanged" id="qxa-tI-olr"/>
                                     </connections>
@@ -359,7 +359,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-8y-iU0" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="KPK-Tp-OS2"/>
@@ -406,7 +406,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6I-BD-nWV" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="RSV-PT-qDS"/>
@@ -441,7 +441,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzz-yh-POP" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="W2z-hI-1oq"/>
@@ -454,7 +454,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9S-Qx-O4T">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -488,7 +488,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHS-PA-VrA" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="7ap-og-Tri"/>
@@ -501,7 +501,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52z-zC-Han">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -535,7 +535,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJZ-tY-c4R" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="LDV-yx-9rO"/>
@@ -548,7 +548,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="co1-pP-TTv">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -582,7 +582,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc6-cO-0Ex" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Mjc-0y-NBu"/>
@@ -595,7 +595,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mpd-77-msr">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -629,7 +629,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th7-Eb-q9R" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="gmg-vG-UQ8"/>
@@ -642,7 +642,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-CO-1SL">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -676,14 +676,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-5c-GLu" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="PG1-OE-M9f"/>
                                     </constraints>
                                 </view>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ME0-bg-ZwX">
-                                    <rect key="frame" x="8" y="44.5" width="51" height="31"/>
+                                    <rect key="frame" x="8" y="45" width="51" height="31"/>
                                     <connections>
                                         <action selector="switchValueValueChanged:" destination="-1" eventType="valueChanged" id="DJl-nH-z5U"/>
                                     </connections>
@@ -719,7 +719,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Am-ZK-Ec5" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="irB-JP-qSV"/>
@@ -766,7 +766,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-th-xB4" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="xuw-gA-WSw"/>
@@ -813,7 +813,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN8-Gx-rOd" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="VdZ-bp-eau"/>
@@ -854,13 +854,13 @@
                             <rect key="frame" x="0.0" y="1632" width="375" height="96"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContentTransactionCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac8-FO-ea4">
-                                    <rect key="frame" x="8" y="8" width="181.5" height="19.5"/>
+                                    <rect key="frame" x="8" y="8" width="181" height="19.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shj-fm-q9L" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="kcP-VD-i7F"/>
@@ -873,7 +873,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-K9-BxR">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -907,7 +907,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLG-Lm-X4Z" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="QK3-ba-qjM"/>
@@ -954,7 +954,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-dI-e4g" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="wCD-zA-Y8L"/>
@@ -967,7 +967,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="06X-TZ-HKC">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1001,7 +1001,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-pK-Zro" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="SXR-JW-vJP"/>
@@ -1014,7 +1014,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qX-Ja-OJf">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -1048,7 +1048,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eth-FF-pSa" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="tgg-lz-dsb"/>
@@ -1061,7 +1061,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sof-kX-95T">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -1095,7 +1095,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgb-5l-yCp" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="RMK-yn-are"/>
@@ -1108,7 +1108,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FqA-q0-6pw">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1142,7 +1142,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efe-G1-LsR" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="ciz-R6-L9N"/>
@@ -1155,7 +1155,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-57-QE3">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -1189,7 +1189,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIH-Vn-swL" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="rOG-89-e7U"/>
@@ -1236,7 +1236,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Op-yC-33Z" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="EIq-B5-79q"/>
@@ -1283,7 +1283,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-FI-Zme" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="lLZ-tt-15a"/>
@@ -1330,7 +1330,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-Ll-jgS" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="c9Z-nC-2fq"/>
@@ -1377,7 +1377,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-Nz-lwM" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="sTX-cZ-Kcc"/>
@@ -1424,7 +1424,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-rm-puY" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="XIW-9e-aJ9"/>
@@ -1471,7 +1471,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8N-0I-aRF" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="E1h-My-WMT"/>
@@ -1484,7 +1484,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8g-q7-UzQ">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -1518,7 +1518,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-Bz-CRT" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="mFw-4E-dTm"/>
@@ -1531,7 +1531,7 @@
                                     </connections>
                                 </switch>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-EF-nMY">
-                                    <rect key="frame" x="8" y="43" width="359" height="30"/>
+                                    <rect key="frame" x="8" y="43.5" width="359" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -1565,7 +1565,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Srw-Er-J7t" userLabel="SeparatorView">
-                                    <rect key="frame" x="-0.5" y="95" width="375" height="1"/>
+                                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="JDe-Zk-KDV"/>
