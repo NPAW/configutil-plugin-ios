@@ -32,7 +32,6 @@ class ResourcesViewController: UIViewController {
     
     //MARK: Aux methods
     func setContainerView() {
-        containerView.backgroundColor = .red
         view.addSubview(containerView)
         
         containerView.translatesAutoresizingMaskIntoConstraints = false

@@ -17,6 +17,15 @@ target 'iOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for YouboraConfigUtils
+  # Pods for iOS
 
+end
+
+target 'iOS-Objc' do
+  project 'Example/iOS-Objc/iOS-Objc.xcodeproj'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for iOS-Objc
+  
 end

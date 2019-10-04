@@ -62,6 +62,7 @@ import UIKit
         }
     }
     
+    //MARK: Cells methods
     private func getViewCellBool(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigBoolCellView {
         let viewModel = YBConfigBoolViewModel(option: option, options: YouboraConfigManager.getOptions())
         
