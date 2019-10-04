@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YouboraConfigViewController" customModule="YouboraConfigUtils" customModuleProvider="target">
             <connections>
                 <outlet property="optionsList" destination="A5X-4l-wj0" id="n0Q-hq-FAS"/>
+                <outlet property="searchBar" destination="AeE-1R-gDL" id="i9c-yp-ezg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="xEM-s9-pDP"/>
             </connections>
         </placeholder>

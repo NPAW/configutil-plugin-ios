@@ -8,11 +8,12 @@
 
 import UIKit
 
-@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     let viewModel = YouboraConfigViewModel()
     
     @IBOutlet weak var optionsList: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     //MARK: View Methods
     override public func viewDidLoad() {
@@ -20,6 +21,8 @@ import UIKit
 
         let nibName = String(describing: YouboraConfigViewController.self)
         Bundle(for: self.classForCoder).loadNibNamed(nibName, owner: self, options: nil)
+        
+        self.searchBar.delegate = self
         
         YBConfigBoolCellView.registerCell(tableView: self.optionsList)
         YBConfigStringCellView.registerCell(tableView: self.optionsList)
@@ -35,7 +38,7 @@ import UIKit
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         viewModel.saveAllChanges()
     }
     
@@ -99,12 +102,21 @@ import UIKit
         return cell
     }
     
+    //MARK: Buttons methods
+    
     @IBAction func onSavePress(_ sender: Any) {
         viewModel.saveAllChanges()
     }
     
     @IBAction func onReset(_ sender: Any) {
         viewModel.resetAllChanges()
+        self.optionsList.reloadData()
+    }
+    
+    //MARK: Search methods
+    
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.updateSearch(text: searchText)
         self.optionsList.reloadData()
     }
 }
