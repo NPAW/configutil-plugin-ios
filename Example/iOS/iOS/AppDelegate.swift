@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YouboraConfigUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let tabviewController = UITabBarController()
+        
+        tabviewController.viewControllers = [
+            UINavigationController(rootViewController: ResourcesViewController())
+        ]
+        
+        self.window?.rootViewController = tabviewController
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		06927A6D2343AA19005127FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927A6C2343AA19005127FC /* AppDelegate.swift */; };
-		06927A6F2343AA19005127FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927A6E2343AA19005127FC /* ViewController.swift */; };
-		06927A722343AA19005127FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06927A702343AA19005127FC /* Main.storyboard */; };
 		06927A742343AA1A005127FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06927A732343AA1A005127FC /* Assets.xcassets */; };
 		06927A772343AA1A005127FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06927A752343AA1A005127FC /* LaunchScreen.storyboard */; };
 		06927A872343AC3C005127FC /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06927A842343AB8C005127FC /* YouboraConfigUtils.framework */; };
 		06927A882343AC3C005127FC /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06927A842343AB8C005127FC /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06927A8D2343AF4B005127FC /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06927A8C2343AF4B005127FC /* YouboraLib.framework */; };
 		06927A8E2343AF4B005127FC /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06927A8C2343AF4B005127FC /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06927AC72344FA29005127FC /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AC62344FA29005127FC /* ResourcesViewController.swift */; };
 		9EEA864D4BCD3384E530F87E /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ED0F57B7F653FFDF7C194F /* Pods_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +53,12 @@
 /* Begin PBXFileReference section */
 		06927A692343AA19005127FC /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06927A6C2343AA19005127FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06927A6E2343AA19005127FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		06927A712343AA19005127FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06927A732343AA1A005127FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06927A762343AA1A005127FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06927A782343AA1A005127FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06927A7F2343AB8C005127FC /* YouboraConfigUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouboraConfigUtils.xcodeproj; path = ../../YouboraConfigUtils.xcodeproj; sourceTree = "<group>"; };
 		06927A8C2343AF4B005127FC /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
+		06927AC62344FA29005127FC /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		63B9B45A7131DFCDB4C80759 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9170BFE82753CADDEFB0FEB4 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		97ED0F57B7F653FFDF7C194F /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,12 +101,13 @@
 		06927A6B2343AA19005127FC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				06927A8F23448DDB005127FC /* Model */,
+				06927A9023448DE0005127FC /* View */,
 				06927A6C2343AA19005127FC /* AppDelegate.swift */,
-				06927A6E2343AA19005127FC /* ViewController.swift */,
-				06927A702343AA19005127FC /* Main.storyboard */,
 				06927A732343AA1A005127FC /* Assets.xcassets */,
 				06927A752343AA1A005127FC /* LaunchScreen.storyboard */,
 				06927A782343AA1A005127FC /* Info.plist */,
+				06927AC62344FA29005127FC /* ResourcesViewController.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -119,6 +118,20 @@
 				06927A842343AB8C005127FC /* YouboraConfigUtils.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		06927A8F23448DDB005127FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06927A9023448DE0005127FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		156B5C2CE901EF5520F7DBB3 /* Frameworks */ = {
@@ -218,7 +231,6 @@
 			files = (
 				06927A772343AA1A005127FC /* LaunchScreen.storyboard in Resources */,
 				06927A742343AA1A005127FC /* Assets.xcassets in Resources */,
-				06927A722343AA19005127FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06927A6F2343AA19005127FC /* ViewController.swift in Sources */,
+				06927AC72344FA29005127FC /* ResourcesViewController.swift in Sources */,
 				06927A6D2343AA19005127FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,14 +282,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		06927A702343AA19005127FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				06927A712343AA19005127FC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		06927A752343AA1A005127FC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YouboraConfigViewController : UIViewController
-
-
-@end
+//@interface YouboraConfigViewController : UIViewController
+//
+//
+//@end
