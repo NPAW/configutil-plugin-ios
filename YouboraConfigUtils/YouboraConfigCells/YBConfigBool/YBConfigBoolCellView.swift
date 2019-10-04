@@ -14,11 +14,32 @@ class YBConfigBoolCellView: UITableViewCell {
     @IBOutlet weak var switcher: UISwitch!
     @IBOutlet weak var propertyName: UILabel!
     
+    private static var nibName:String {
+        get {
+            return String(describing: self.self)
+        }
+    }
+    
+    private static var bundle: Bundle {
+        get {
+            return Bundle(for: self.classForCoder())
+        }
+    }
+    
+    private static var nib:[Any]? {
+        get {
+            return  bundle.loadNibNamed(self.nibName, owner: nil, options: nil)
+        }
+    }
+    
+    static func registerCell(tableView: UITableView) {
+        tableView.register(UINib(nibName: nibName, bundle: bundle), forCellReuseIdentifier: Constants.boolCellId)
+    }
+    
     static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigBoolViewModel) -> YBConfigBoolCellView {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.boolCellId) as? YBConfigBoolCellView else {
-            let nibName = String(describing: self.self)
-            let cell = Bundle(for: self.classForCoder()).loadNibNamed(nibName, owner: nil, options: nil)![0] as! YBConfigBoolCellView
+           let cell = bundle.loadNibNamed(nibName, owner: nil, options: nil)![0] as! YBConfigBoolCellView
             
             cell.viewModel = viewModel
             

@@ -8,18 +8,39 @@
 
 import UIKit
 
-class YBConfigStringCellView: UITableViewCell, UITextFieldDelegate {
+class YBConfigStringCellView: UITableViewCell {
 
     var viewModel: YBConfigStringViewModel?
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var propertyName: UILabel!
     
+    private static var nibName:String {
+        get {
+            return String(describing: self.self)
+        }
+    }
+    
+    private static var bundle: Bundle {
+        get {
+            return Bundle(for: self.classForCoder())
+        }
+    }
+    
+    private static var nib:[Any]? {
+        get {
+            return  bundle.loadNibNamed(self.nibName, owner: nil, options: nil)
+        }
+    }
+    
+    static func registerCell(tableView: UITableView) {
+        tableView.register(UINib(nibName: nibName, bundle: bundle), forCellReuseIdentifier: Constants.stringCellId)
+    }
+    
     static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigStringViewModel) -> YBConfigStringCellView {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.boolCellId) as? YBConfigStringCellView else {
-            let nibName = String(describing: self.self)
-            let cell = Bundle(for: self.classForCoder()).loadNibNamed(nibName, owner: nil, options: nil)![0] as! YBConfigStringCellView
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stringCellId) as? YBConfigStringCellView else {
+            let cell = nib![0] as! YBConfigStringCellView
             
             cell.viewModel = viewModel
             
@@ -35,28 +56,10 @@ class YBConfigStringCellView: UITableViewCell, UITextFieldDelegate {
             return
         }
         
-        self.inputField.delegate = self
-        
         self.propertyName.text = viewModel.option.name
         self.inputField.text = viewModel.getValue()
         
-        self.inputField.addTarget(self, action: #selector(textDidChange(textField:)), for: .valueChanged)
-    }
-    
-    //MARK - UITextField Delegates
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        guard let viewModel = self.viewModel else {
-            return true
-        }
-        
-        if (viewModel.option.type == .String) {
-            return true
-        }
-        
-        let allowedCharacters = CharacterSet(charactersIn:"0123456789")
-        let characterSet = CharacterSet(charactersIn: string)
-        return allowedCharacters.isSuperset(of: characterSet)
+        self.inputField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
     }
     
     @objc func textDidChange(textField: UITextField) {

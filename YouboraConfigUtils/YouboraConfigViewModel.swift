@@ -22,4 +22,8 @@ class YouboraConfigViewModel {
     public func saveAllChanges() {
         YouboraConfigManager.save()
     }
+    
+    public func resetAllChanges() {
+        YouboraConfigManager.reset()
+    }
 }

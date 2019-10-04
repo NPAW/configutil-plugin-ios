@@ -15,5 +15,3 @@ FOUNDATION_EXPORT double YouboraConfigUtilsVersionNumber;
 FOUNDATION_EXPORT const unsigned char YouboraConfigUtilsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <YouboraConfigUtils/PublicHeader.h>
-
-#import <YouboraConfigUtils/YouboraConfigViewController.h>

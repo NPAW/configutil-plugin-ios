@@ -26,7 +26,7 @@ class YBConfigNumberViewModel {
         return value
     }
     
-    func updateValue(newValue: Double) {
+    func updateValue(newValue: Double?) {
         self.options.setValue(newValue, forKey: self.option.name)
         
     }

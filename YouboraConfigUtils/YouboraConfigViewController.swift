@@ -18,8 +18,13 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        let nibName = "\(String(describing: YouboraConfigViewController.self))-new"
+        let nibName = String(describing: YouboraConfigViewController.self)
         Bundle(for: self.classForCoder).loadNibNamed(nibName, owner: self, options: nil)
+        
+        YBConfigBoolCellView.registerCell(tableView: self.optionsList)
+        YBConfigStringCellView.registerCell(tableView: self.optionsList)
+        YBConfigNumberCellView.registerCell(tableView: self.optionsList)
+        YBConfigUnknownCellView.registerCell(tableView: self.optionsList)
         
         self.optionsList.delegate = self
         self.optionsList.dataSource = self
@@ -47,15 +52,10 @@ import UIKit
             return getViewCellBool(tableView: tableView, indexPath: indexPath, option: option)
         case .String:
              return getViewCellString(tableView: tableView, indexPath: indexPath, option: option)
-        default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.defaultCellId) else {
-                let cell = UITableViewCell(style: .default, reuseIdentifier: Constants.defaultCellId)
-                cell.textLabel?.text = viewModel.getOption(position: indexPath.row).name
-                return cell
-            }
-            
-            cell.textLabel?.text = viewModel.getOption(position: indexPath.row).name
-            return cell
+        case .Number:
+            return getViewCellNumber(tableView: tableView, indexPath: indexPath, option: option)
+        case .Unknown:
+            return getViewCellUnknown(tableView: tableView, indexPath: indexPath, option: option)
         }
     }
     
@@ -79,7 +79,32 @@ import UIKit
         return cell
     }
     
+    private func getViewCellNumber(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigNumberCellView {
+        let viewModel = YBConfigNumberViewModel(option: option, options: YouboraConfigManager.getOptions())
+        
+        let cell = YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
+        
+        cell.setupView()
+        
+        return cell
+    }
+    
+    private func getViewCellUnknown(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigUnknownCellView {
+        let viewModel = YBConfigUnknownViewModel(option: option, options: YouboraConfigManager.getOptions())
+        
+        let cell = YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
+        
+        cell.setupView()
+        
+        return cell
+    }
+    
     @IBAction func onSavePress(_ sender: Any) {
         viewModel.saveAllChanges()
+    }
+    
+    @IBAction func onReset(_ sender: Any) {
+        viewModel.resetAllChanges()
+        self.optionsList.reloadData()
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 public enum OptionType {
     case String
     case Bool
-    case Double
+    case Number
     case Unknown
 }
 
@@ -26,6 +26,9 @@ struct Constants {
     static let settingsNavTitle = "Youbora Settings"
     static let defaultCellId = "defaultCellId"
     static let boolCellId = "cellBoolIdentifier"
+    static let stringCellId = "cellStringIdentifier"
+    static let numberCellId = "cellNumberIdentifier"
+    static let unknownCellId = "cellUnknownIdentifier"
 }
 
 extension Constants {
@@ -60,14 +63,14 @@ extension Constants {
         Option(name: "contentIsLive", type: .Unknown),
         Option(name: "contentTitle", type: .String),
         Option(name: "program", type: .String),
-        Option(name: "contentDuration", type: .Double),
+        Option(name: "contentDuration", type: .Number),
         Option(name: "contentTransactionCode", type: .String),
-        Option(name: "contentBitrate", type: .Double),
+        Option(name: "contentBitrate", type: .Number),
         Option(name: "contentStreamingProtocol", type: .String),
-        Option(name: "contentThroughput", type: .Double),
+        Option(name: "contentThroughput", type: .Number),
         Option(name: "contentRendition", type: .String),
         Option(name: "contentCdn", type: .String),
-        Option(name: "contentFps", type: .Double),
+        Option(name: "contentFps", type: .Number),
         Option(name: "contentMetadata", type: .Unknown),
         Option(name: "contentMetrics", type: .Unknown),
         Option(name: "sessionMetrics", type: .Unknown),
@@ -96,15 +99,15 @@ extension Constants {
         Option(name: "contentEncodingCodecProfile", type: .String),
         Option(name: "contentEncodingContainerFormat", type: .String),
         Option(name: "adMetadata", type: .Unknown),
-        Option(name: "adsAfterStop", type: .Double),
+        Option(name: "adsAfterStop", type: .Number),
         Option(name: "adCampaign", type: .String),
         Option(name: "adTitle", type: .String),
         Option(name: "adResource", type: .String),
-        Option(name: "adGivenBreaks", type: .Double),
-        Option(name: "adExpectedBreaks", type: .Double),
+        Option(name: "adGivenBreaks", type: .Number),
+        Option(name: "adExpectedBreaks", type: .Number),
         Option(name: "adExpectedPattern", type: .Unknown),
         Option(name: "adBreaksTime", type: .Unknown),
-        Option(name: "adGivenAds", type: .Double),
+        Option(name: "adGivenAds", type: .Number),
         Option(name: "adCreativeId", type: .String),
         Option(name: "adProvider", type: .String),
         Option(name: "autoDetectBackground", type: .Bool),
