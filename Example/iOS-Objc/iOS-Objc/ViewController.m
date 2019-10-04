@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.child = [[YouboraConfigViewController alloc] init];
     self.containerView = [[UIView alloc] init];
     

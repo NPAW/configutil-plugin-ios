@@ -34,7 +34,6 @@ class YBConfigCell: UITableViewCell {
         tableView.register(UINib(nibName: customNibName, bundle: customBundle), forCellReuseIdentifier: cellIdentifier)
     }
     
-    
     static func getCellFromNib(tableView: UITableView, indexPath: IndexPath, cellIdentifier:String) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else {
             return customBundle.loadNibNamed(customNibName, owner: nil, options: nil)![0] as! UITableViewCell

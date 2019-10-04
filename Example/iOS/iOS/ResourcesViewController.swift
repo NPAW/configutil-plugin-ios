@@ -17,7 +17,7 @@ class ResourcesViewController: UIViewController {
     //MARK: View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        YouboraConfigManager.getOptions()
     }
     
     override func viewDidAppear(_ animated: Bool) {

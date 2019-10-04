@@ -71,13 +71,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06927A5F2343A95C005127FC /* Example */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
 		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +143,6 @@
 		4E41B5421EBA18B1003F8B80 = {
 			isa = PBXGroup;
 			children = (
-				06927A5F2343A95C005127FC /* Example */,
 				4E41B54E1EBA18B1003F8B80 /* YouboraConfigUtils */,
 				4E41B54D1EBA18B1003F8B80 /* Products */,
 				4EFBCEDF1EBB6C9E009138D8 /* Frameworks */,
