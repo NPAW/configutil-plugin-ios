@@ -8,38 +8,20 @@
 
 import UIKit
 
-class YBConfigUnknownCellView: UITableViewCell {
+class YBConfigUnknownCellView: UITableViewCell, CustomNibBuilder {
 
     var viewModel: YBConfigUnknownViewModel?
+    
     @IBOutlet weak var propertyName: UILabel!
     
-    private static var nibName:String {
-        get {
-            return String(describing: self.self)
-        }
-    }
-    
-    private static var bundle: Bundle {
-        get {
-            return Bundle(for: self.classForCoder())
-        }
-    }
-    
-    private static var nib:[Any]? {
-        get {
-            return  bundle.loadNibNamed(self.nibName, owner: nil, options: nil)
-        }
-    }
-    
     static func registerCell(tableView: UITableView) {
-        tableView.register(UINib(nibName: nibName, bundle: bundle), forCellReuseIdentifier: Constants.unknownCellId)
+        tableView.register(UINib(nibName: customNibName, bundle: customBundle), forCellReuseIdentifier: Constants.unknownCellId)
     }
     
     static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigUnknownViewModel) -> YBConfigUnknownCellView {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.numberCellId) as? YBConfigUnknownCellView else {
-            let nibName = String(describing: self.self)
-            let cell = bundle.loadNibNamed(nibName, owner: nil, options: nil)![0] as! YBConfigUnknownCellView
+            let cell = customBundle.loadNibNamed(customNibName, owner: nil, options: nil)![0] as! YBConfigUnknownCellView
             
             cell.viewModel = viewModel
             

@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CustomNibBuilder {
     
     let viewModel = YouboraConfigViewModel()
     
@@ -19,8 +19,7 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        let nibName = String(describing: YouboraConfigViewController.self)
-        Bundle(for: self.classForCoder).loadNibNamed(nibName, owner: self, options: nil)
+        YouboraConfigViewController.customBundle.loadNibNamed(YouboraConfigViewController.customNibName, owner: self, options: nil)
         
         self.searchBar.delegate = self
         

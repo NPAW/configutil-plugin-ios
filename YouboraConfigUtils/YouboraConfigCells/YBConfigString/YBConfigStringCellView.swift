@@ -8,39 +8,21 @@
 
 import UIKit
 
-class YBConfigStringCellView: UITableViewCell {
+class YBConfigStringCellView: UITableViewCell, CustomNibBuilder {
 
     var viewModel: YBConfigStringViewModel?
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var propertyName: UILabel!
     
-    private static var nibName:String {
-        get {
-            return String(describing: self.self)
-        }
-    }
-    
-    private static var bundle: Bundle {
-        get {
-            return Bundle(for: self.classForCoder())
-        }
-    }
-    
-    private static var nib:[Any]? {
-        get {
-            return  bundle.loadNibNamed(self.nibName, owner: nil, options: nil)
-        }
-    }
-    
     static func registerCell(tableView: UITableView) {
-        tableView.register(UINib(nibName: nibName, bundle: bundle), forCellReuseIdentifier: Constants.stringCellId)
+        tableView.register(UINib(nibName: customNibName, bundle: customBundle), forCellReuseIdentifier: Constants.stringCellId)
     }
     
     static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigStringViewModel) -> YBConfigStringCellView {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.stringCellId) as? YBConfigStringCellView else {
-            let cell = nib![0] as! YBConfigStringCellView
+            let cell = customNib![0] as! YBConfigStringCellView
             
             cell.viewModel = viewModel
             

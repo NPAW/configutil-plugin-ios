@@ -24,6 +24,7 @@
 		06DC5B1B234746AF008C7F2B /* YBConfigUnknownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B1A234746AF008C7F2B /* YBConfigUnknownViewModel.swift */; };
 		06DC5B1E234746ED008C7F2B /* YBConfigUnknownCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B1C234746ED008C7F2B /* YBConfigUnknownCellView.swift */; };
 		06DC5B1F234746ED008C7F2B /* YBConfigUnknownCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B1D234746ED008C7F2B /* YBConfigUnknownCellView.xib */; };
+		06DC5B53234759B5008C7F2B /* CustomNibBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B52234759B5008C7F2B /* CustomNibBuilder.swift */; };
 		4E41B5511EBA18B1003F8B80 /* YouboraConfigUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740DB4836F4C270DC1FC014D /* Pods_YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC16F8B80DDB52FA29A7EB0 /* Pods_YouboraConfigUtils.framework */; };
 		CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFE32B121836DB500491B84 /* YouboraLib.framework */; };
@@ -47,6 +48,7 @@
 		06DC5B1A234746AF008C7F2B /* YBConfigUnknownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigUnknownViewModel.swift; sourceTree = "<group>"; };
 		06DC5B1C234746ED008C7F2B /* YBConfigUnknownCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigUnknownCellView.swift; sourceTree = "<group>"; };
 		06DC5B1D234746ED008C7F2B /* YBConfigUnknownCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigUnknownCellView.xib; sourceTree = "<group>"; };
+		06DC5B52234759B5008C7F2B /* CustomNibBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNibBuilder.swift; sourceTree = "<group>"; };
 		205CA5B7790EDFE736A3287D /* Pods-YouboraConfigUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils/Pods-YouboraConfigUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		4E41B54C1EBA18B1003F8B80 /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraConfigUtils.h; sourceTree = "<group>"; };
@@ -76,12 +78,13 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		06927ACC2345F487005127FC /* Utils */ = {
+		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				06927ACD2345F494005127FC /* Constants.swift */,
+				06DC5B52234759B5008C7F2B /* CustomNibBuilder.swift */,
 			);
-			path = Utils;
+			path = "Utils & Helper & Extensions";
 			sourceTree = "<group>";
 		};
 		06927AD723462243005127FC /* YouboraConfigCells */ = {
@@ -166,7 +169,7 @@
 		4E41B54E1EBA18B1003F8B80 /* YouboraConfigUtils */ = {
 			isa = PBXGroup;
 			children = (
-				06927ACC2345F487005127FC /* Utils */,
+				06927ACC2345F487005127FC /* Utils & Helper & Extensions */,
 				06927AD723462243005127FC /* YouboraConfigCells */,
 				4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */,
 				4E41B5501EBA18B1003F8B80 /* Info.plist */,
@@ -238,11 +241,11 @@
 			};
 			buildConfigurationList = 4E41B5461EBA18B1003F8B80 /* Build configuration list for PBXProject "YouboraConfigUtils" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 4E41B5421EBA18B1003F8B80;
 			productRefGroup = 4E41B54D1EBA18B1003F8B80 /* Products */;
@@ -309,6 +312,7 @@
 				06927AE52346333D005127FC /* YBConfigStringCellView.swift in Sources */,
 				06927ACB2345F35C005127FC /* YouboraConfigManager.swift in Sources */,
 				06927AE2234632AF005127FC /* YBConfigStringViewModel.swift in Sources */,
+				06DC5B53234759B5008C7F2B /* CustomNibBuilder.swift in Sources */,
 				06927ADE23462571005127FC /* YBConfigBoolViewModel.swift in Sources */,
 				06DC5B1B234746AF008C7F2B /* YBConfigUnknownViewModel.swift in Sources */,
 			);

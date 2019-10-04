@@ -8,40 +8,20 @@
 
 import UIKit
 
-class YBConfigNumberCellView: UITableViewCell, UITextFieldDelegate {
-    
+class YBConfigNumberCellView: UITableViewCell, UITextFieldDelegate,CustomNibBuilder {
     var viewModel: YBConfigNumberViewModel?
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var propertyName: UILabel!
     
-    private static var nibName:String {
-        get {
-            return String(describing: self.self)
-        }
-    }
-    
-    private static var bundle: Bundle {
-        get {
-            return Bundle(for: self.classForCoder())
-        }
-    }
-    
-    private static var nib:[Any]? {
-        get {
-            return  bundle.loadNibNamed(self.nibName, owner: nil, options: nil)
-        }
-    }
-    
     static func registerCell(tableView: UITableView) {
-        tableView.register(UINib(nibName: nibName, bundle: bundle), forCellReuseIdentifier: Constants.numberCellId)
+        tableView.register(UINib(nibName: customNibName, bundle: customBundle), forCellReuseIdentifier: Constants.numberCellId)
     }
     
     static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigNumberViewModel) -> YBConfigNumberCellView {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.numberCellId) as? YBConfigNumberCellView else {
-            let nibName = String(describing: self.self)
-            let cell = bundle.loadNibNamed(nibName, owner: nil, options: nil)![0] as! YBConfigNumberCellView
+            let cell = customNib![0] as! YBConfigNumberCellView
             
             cell.viewModel = viewModel
             
