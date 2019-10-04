@@ -9,13 +9,21 @@
 import Foundation
 import YouboraLib
 
-class YBConfigNumberViewModel {
-    let option: Option
-    let options: YBOptions
+class YBConfigNumberViewModel:YBConfigViewModel {
+    override func getPropertyName() -> String {
+        return super.getPropertyName()+" (number)"
+    }
     
-    init(option: Option, options: YBOptions) {
-        self.option = option
-        self.options = options
+    func isNumber(value:String) -> Bool {
+        if value == "" {
+            return true
+        }
+        
+        guard let _ = Double(value) else {
+            return false
+        }
+        
+        return true
     }
     
     func getValue() -> Double? {

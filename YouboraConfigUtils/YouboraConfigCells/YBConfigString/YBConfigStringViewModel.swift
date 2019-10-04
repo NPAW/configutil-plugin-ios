@@ -9,15 +9,7 @@
 import Foundation
 import YouboraLib
 
-class YBConfigStringViewModel {
-    let option: Option
-    let options: YBOptions
-    
-    init(option: Option, options: YBOptions) {
-        self.option = option
-        self.options = options
-    }
-    
+class YBConfigStringViewModel: YBConfigViewModel {
     func getValue() -> String {
         guard let value = options.value(forKey: self.option.name) as? String else {
             return ""

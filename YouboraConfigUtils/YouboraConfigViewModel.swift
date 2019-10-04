@@ -26,12 +26,33 @@ class YouboraConfigViewModel {
         }
     }
     
+    public func getTitle() -> String {
+        return Constants.settingsNavTitle
+    }
+    
     public func getNumberOfOptions() -> Int {
         return options.count
     }
     
-    public func getOption(position: Int) -> Option  {
+    private func getOption(position: Int) -> Option  {
         return options[position]
+    }
+    
+    public func getOptionType(position: Int) -> OptionType {
+        return getOption(position: position).type
+    }
+    
+    public func getCellViewModel(position: Int) -> YBConfigViewModel {
+        switch getOptionType(position: position) {
+        case .Bool:
+            return YBConfigBoolViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        case .String:
+            return YBConfigStringViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        case .Number:
+            return YBConfigNumberViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        case .Unknown:
+            return YBConfigViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        }
     }
     
     public func saveAllChanges() {

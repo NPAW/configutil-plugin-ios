@@ -8,38 +8,21 @@
 
 import UIKit
 
-class YBConfigNumberCellView: UITableViewCell, UITextFieldDelegate,CustomNibBuilder {
-    var viewModel: YBConfigNumberViewModel?
+class YBConfigNumberCellView: YBConfigCell, UITextFieldDelegate {
     
     @IBOutlet weak var inputField: UITextField!
     @IBOutlet weak var propertyName: UILabel!
     
-    static func registerCell(tableView: UITableView) {
-        tableView.register(UINib(nibName: customNibName, bundle: customBundle), forCellReuseIdentifier: Constants.numberCellId)
-    }
+    static var cellIdentifier: String = Constants.numberCellId
     
-    static func initFromNib(tableView: UITableView, indexPath: IndexPath, viewModel: YBConfigNumberViewModel) -> YBConfigNumberCellView {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.numberCellId) as? YBConfigNumberCellView else {
-            let cell = customNib![0] as! YBConfigNumberCellView
-            
-            cell.viewModel = viewModel
-            
-            return cell
-        }
-        
-        cell.viewModel = viewModel
-        return cell
-    }
-    
-    func setupView() {
-        guard let viewModel = self.viewModel else {
+    override func setupView() {
+        guard let viewModel = self.viewModel as? YBConfigNumberViewModel else {
             return
         }
         
         self.inputField.delegate = self
         
-        self.propertyName.text = "\(viewModel.option.name) (number)"
+        self.propertyName.text = viewModel.getPropertyName()
         
         if let value = viewModel.getValue() {
             self.inputField.text = String(describing:  value)
@@ -53,19 +36,15 @@ class YBConfigNumberCellView: UITableViewCell, UITextFieldDelegate,CustomNibBuil
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let newValue = NSString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
         
-        if newValue == "" {
+        guard let viewModel = self.viewModel as? YBConfigNumberViewModel else {
             return true
         }
         
-        guard let _ = Double(newValue) else {
-            return false
-        }
-        
-        return true
+        return viewModel.isNumber(value: newValue)
     }
     
     @objc func textDidChange(textField: UITextField) {
-        guard let viewModel = self.viewModel,
+        guard let viewModel = self.viewModel as? YBConfigNumberViewModel,
             let text = textField.text else {
             return
         }

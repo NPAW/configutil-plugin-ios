@@ -1,5 +1,5 @@
 //
-//  YBConfigNumberViewModel.swift
+//  YbConfigViewModel.swift
 //  YouboraConfigUtils
 //
 //  Created by nice on 04/10/2019.
@@ -9,12 +9,16 @@
 import Foundation
 import YouboraLib
 
-class YBConfigUnknownViewModel {
+class YBConfigViewModel {
     let option: Option
     let options: YBOptions
     
     init(option: Option, options: YBOptions) {
         self.option = option
         self.options = options
+    }
+    
+    func getPropertyName() -> String {
+        return self.option.name
     }
 }

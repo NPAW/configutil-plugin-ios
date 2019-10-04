@@ -8,31 +8,33 @@
 
 import UIKit
 
-@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CustomNibBuilder {
+@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     let viewModel = YouboraConfigViewModel()
     
     @IBOutlet weak var optionsList: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
+    
     //MARK: View Methods
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        YouboraConfigViewController.customBundle.loadNibNamed(YouboraConfigViewController.customNibName, owner: self, options: nil)
+        Bundle(for: self.classForCoder).loadNibNamed(String(describing: YouboraConfigViewController.self), owner: self, options: nil)
         
         self.searchBar.delegate = self
         
-        YBConfigBoolCellView.registerCell(tableView: self.optionsList)
-        YBConfigStringCellView.registerCell(tableView: self.optionsList)
-        YBConfigNumberCellView.registerCell(tableView: self.optionsList)
-        YBConfigUnknownCellView.registerCell(tableView: self.optionsList)
+        YBConfigBoolCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
+        YBConfigStringCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigStringCellView.cellIdentifier)
+        YBConfigNumberCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
+        YBConfigUnknownCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
         
         self.optionsList.delegate = self
         self.optionsList.dataSource = self
         self.optionsList.rowHeight = UITableView.automaticDimension
         
-        self.navigationItem.title = Constants.settingsNavTitle;
+        self.navigationItem.title = viewModel.getTitle();
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -48,58 +50,26 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let option = viewModel.getOption(position: indexPath.row)
-        switch option.type {
-        case .Bool:
-            return getViewCellBool(tableView: tableView, indexPath: indexPath, option: option)
-        case .String:
-             return getViewCellString(tableView: tableView, indexPath: indexPath, option: option)
-        case .Number:
-            return getViewCellNumber(tableView: tableView, indexPath: indexPath, option: option)
-        case .Unknown:
-            return getViewCellUnknown(tableView: tableView, indexPath: indexPath, option: option)
-        }
+        let cell = getCellForIndexPath(tableView: tableView, indexPath: indexPath)
+        
+        cell.setupView()
+        
+        return cell
     }
     
     //MARK: Cells methods
-    private func getViewCellBool(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigBoolCellView {
-        let viewModel = YBConfigBoolViewModel(option: option, options: YouboraConfigManager.getOptions())
-        
-        let cell = YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
-        
-        cell.setupView()
-        
-        return cell
-    }
-    
-    private func getViewCellString(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigStringCellView {
-        let viewModel = YBConfigStringViewModel(option: option, options: YouboraConfigManager.getOptions())
-        
-        let cell = YBConfigStringCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
-        
-        cell.setupView()
-        
-        return cell
-    }
-    
-    private func getViewCellNumber(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigNumberCellView {
-        let viewModel = YBConfigNumberViewModel(option: option, options: YouboraConfigManager.getOptions())
-        
-        let cell = YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
-        
-        cell.setupView()
-        
-        return cell
-    }
-    
-    private func getViewCellUnknown(tableView: UITableView, indexPath: IndexPath, option: Option) -> YBConfigUnknownCellView {
-        let viewModel = YBConfigUnknownViewModel(option: option, options: YouboraConfigManager.getOptions())
-        
-        let cell = YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: viewModel)
-        
-        cell.setupView()
-        
-        return cell
+    private func getCellForIndexPath(tableView: UITableView, indexPath:IndexPath) -> YBConfigCell {
+        let cellViewModel = viewModel.getCellViewModel(position: indexPath.row)
+        switch viewModel.getOptionType(position: indexPath.row) {
+        case .Bool:
+            return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
+        case .String:
+            return YBConfigStringCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigStringCellView.cellIdentifier)
+        case .Number:
+            return YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
+        case .Unknown:
+            return YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
+        }
     }
     
     //MARK: Buttons methods
