@@ -8,11 +8,11 @@
 
 import Foundation
 
-public enum OptionType {
-    case String
-    case Bool
-    case Number
-    case Unknown
+@objc public enum OptionType : Int {
+    case String = 0
+    case Bool = 1
+    case Number = 2
+    case Unknown = 3
 }
 
 
