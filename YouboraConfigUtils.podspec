@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   
   # Swift version
-  s.swift_version = "5.0"
+  s.swift_version = "5.0", "5.1"
 
   # Source Location
   s.source       = { :git => "https://bitbucket.org/npaw/configutil-plugin-ios.git", :tag => "#{s.version}" }
@@ -29,8 +29,4 @@ Pod::Spec.new do |s|
   # Source files
   s.source_files  = "YouboraConfigUtils/**/*.{swift,h,m}"
   s.public_header_files = "YouboraConfigUtils/**/*.h"
-
-  # Project settings
-  s.requires_arc = true
-  s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) YOUBORALIB_VERSION=' + s.version.to_s }
 end
