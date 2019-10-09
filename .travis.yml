@@ -1,8 +1,73 @@
+language: swift
 os: osx
 osx_image: xcode10.3
-language: swift
 
 branches:
   only:
-  - master
-  - /^\d+\.\d+\.\d+$/
+    - master
+    - /^\d+\.\d+\.\d+$/
+
+stages:
+  - name: lint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: carthage
+    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
+  - name: test
+    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
+  # - name: deploy
+  #   if: branch =~ ^\d+\.\d+\.\d+$
+
+jobs:
+  include:
+    - &pod
+      stage: lint
+      install: gem install cocoapods -v '~> 1.7.0'
+      script: pod lib lint --fail-fast --allow-warnings
+
+    - &carthage
+      stage: carthage
+      name: iOS
+      env: PLATFORM=ios
+      before_install:
+        - brew update
+        - brew outdated carthage || brew upgrade carthage
+      before_script: |
+        sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
+        sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
+    # - <<: *carthage
+    #   name: tvOS
+    #   env: PLATFORM=tvos
+    # - <<: *carthage
+    #   name: macOS
+    #   env: PLATFORM=macos
+
+    - &test
+      stage: test
+      name: iOS
+      xcode_scheme: "YouboraConfigUtils"
+      xcode_project: YouboraConfigUtils.xcodeproj
+      xcode_destination: "platform=iOS Simulator,OS=12.2,name=iPhone SE"
+      before_install:
+        - brew update
+        - brew outdated carthage || brew upgrade carthage
+      install:
+        - carthage update
+      after_success: bash <(curl -s https://codecov.io/bash)
+    # - <<: *test
+    #   name: tvOS
+    #   xcode_scheme: "YouboraLib tvOS"
+    #   xcode_destination: "platform=tvOS Simulator,OS=12.2,name=Apple TV"
+    #This one below stays commented since it seems that there is some problems with the mocking, will have to go back to it
+    # - <<: *test
+    #   name: macOS
+    #   xcode_scheme: 'YouboraLib OSX'
+    #   xcode_destination: 'platform=macOS'
+
+    - name: "`pod trunk push`"
+      stage: deploy
+      install: gem install cocoapods -v '~> 1.7.0'
+      script: |
+        set -exo pipefail
+        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
