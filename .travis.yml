@@ -14,7 +14,7 @@ stages:
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: test
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: deploy
+  - name: testtag #deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
