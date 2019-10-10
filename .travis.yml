@@ -23,10 +23,11 @@ jobs:
       stage: testtag
       name: test tag
       env:
-        - INFO_PLIST="$PROJECT_DIRECTORY/$APP_NAME/Info.plist"
+        - AppName="YouboraConfigUtils"
+        - INFO_PLIST="$PWD/$AppName/Info.plist"
       script: |
         echo "Version $TRAVIS_TAG" 
-        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" YouboraConfigUtils.podspec
+        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
         /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
         /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
     # - &pod
