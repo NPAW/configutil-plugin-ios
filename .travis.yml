@@ -14,8 +14,8 @@ stages:
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: test
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
-  # - name: deploy
-  #   if: branch =~ ^\d+\.\d+\.\d+$
+  - name: deploy
+    if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
   include:
@@ -23,12 +23,11 @@ jobs:
     #   stage: lint
     #   install: gem install cocoapods -v '~> 1.7.0'
     #   script: pod lib lint --fail-fast --allow-warnings
-
     - &carthage
       stage: carthage
       name: iOS
       env: PLATFORM=ios
-      install: pod install && carthage update  --platform $PLATFORM
+      install: pod deintegrate && carthage update  --platform $PLATFORM
       before_install:
         - brew update
         - brew outdated carthage || brew upgrade carthage
