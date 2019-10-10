@@ -35,7 +35,7 @@ jobs:
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --platform $PLATFORM  --verbose
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM --verbose
     # - <<: *carthage
     #   name: tvOS
     #   env: PLATFORM=tvos
@@ -53,7 +53,7 @@ jobs:
         - brew update
         - brew outdated carthage || brew upgrade carthage
       install:
-        - carthage update
+        - carthage update  --platform $PLATFORM
       after_success: bash <(curl -s https://codecov.io/bash)
     # - <<: *test
     #   name: tvOS
@@ -64,11 +64,10 @@ jobs:
     #   name: macOS
     #   xcode_scheme: 'YouboraLib OSX'
     #   xcode_destination: 'platform=macOS'
-
-    - name: "`pod trunk push`"
-      stage: deploy
-      install: gem install cocoapods -v '~> 1.7.0'
-      script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-      after_failure: cat pod.log | grep error
+    # - name: "`pod trunk push`"
+    #   stage: deploy
+    #   install: gem install cocoapods -v '~> 1.7.0'
+    #   script: |
+    #     set -exo pipefail
+    #     pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+    #   after_failure: cat pod.log | grep error
