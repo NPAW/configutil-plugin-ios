@@ -8,28 +8,17 @@ branches:
     - /^\d+\.\d+\.\d+$/
 
 stages:
-  - name: testtag #lint
+  - name: lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: test
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: testtag #deploy
-    if: branch =~ ^\d+\.\d+\.\d+$
+  # - name: deploy
+  #   if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
   include:
-    - &testtag
-      stage: testtag
-      name: test tag
-      env:
-        - AppName="YouboraConfigUtils"
-        - INFO_PLIST="$PWD/$AppName/Info.plist"
-      script: |
-        echo "Version $TRAVIS_TAG" 
-        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
-        /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
-        /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
     # - &pod
     #   stage: lint
     #   install: gem install cocoapods -v '~> 1.7.0'
@@ -52,10 +41,15 @@ jobs:
     # - <<: *carthage
     #   name: macOS
     #   env: PLATFORM=macos
-    # - name: "`pod trunk push`"
-    #   stage: deploy
-    #   install: gem install cocoapods -v '~> 1.7.0'
-    #   script: |
-    #     set -exo pipefail
-    #     pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-    #   after_failure: cat pod.log | grep error
+    - name: "`pod trunk push`"
+      stage: deploy
+      install: gem install cocoapods -v '~> 1.7.0'
+      before_script: |
+        echo "Version $TRAVIS_TAG" 
+        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
+        /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
+        /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
+      script: |
+        set -exo pipefail
+        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
