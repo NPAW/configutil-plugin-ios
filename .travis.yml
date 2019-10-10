@@ -22,7 +22,9 @@ jobs:
     - &testtag
       stage: testtag
       name: test tag
-      script: echo "Version $TRAVIS_TAG"
+      script: |
+        echo "Version $TRAVIS_TAG" 
+        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" YouboraConfigUtils.podspec
     # - &pod
     #   stage: lint
     #   install: gem install cocoapods -v '~> 1.7.0'
