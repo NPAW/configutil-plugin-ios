@@ -8,13 +8,13 @@ branches:
     - /^\d+\.\d+\.\d+$/
 
 stages:
-  - name: lint
+  - name: testtag #lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: test
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: testtag
+  - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
