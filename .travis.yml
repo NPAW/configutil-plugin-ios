@@ -44,11 +44,11 @@ jobs:
     - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
-      before_script: |
-        echo "Version $TRAVIS_TAG" 
-        sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
-        /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
-        /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
+      before_script:
+        - echo "Version $TRAVIS_TAG"
+        - sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
+        - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
+        - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
       script: |
         set -exo pipefail
         pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
