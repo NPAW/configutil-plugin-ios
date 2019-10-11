@@ -9,7 +9,7 @@ branches:
 
 stages:
   - name: lint
-    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/ #NOT branch =~ ^\d+\.\d+\.\d+$
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
   # - name: carthage
   #   if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
@@ -24,9 +24,9 @@ env:
 jobs:
   include:
      - &pod
+      stage: lint
       osx_image: xcode9.2
       env: SWIFT=4.0
-      stage: lint
       install: gem install cocoapods -v '~> 1.7.0'
       script: pod lib lint --subspec=PromiseKit/CorePromise --fail-fast --swift-version=$SWIFT
       - <<: *pod
