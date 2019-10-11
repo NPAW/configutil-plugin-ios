@@ -11,7 +11,7 @@ env:
 
 branches:
   only:
-    - $BRANCH
+    - test-travis
     - /^\d+\.\d+\.\d+$/
 
 stages:
@@ -20,7 +20,7 @@ stages:
   # - name: carthage
   #   if: branch = $BRANCH OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    if: branch = $BRANCH OR branch =~ /^\d+\.\d+\.\d+$/
+    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   # - name: deploy
   #   if: branch =~ ^\d+\.\d+\.\d+$
 jobs:
