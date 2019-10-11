@@ -17,6 +17,11 @@ stages:
   - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
+env:
+  global:
+    - APP_NAME = YouboraConfigUtils
+    - INFO_PLIST = $PWD/$AppName/Info.plist
+
 jobs:
   include:
     # - &pod
@@ -45,11 +50,13 @@ jobs:
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
       before_script:
+      script:
         - echo "Version $TRAVIS_TAG"
-        - sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $AppName.podspec
-        - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
-        - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
-      script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+        - echo "Version $INFO_PLIST"
+        - echo "Version $APP_NAME"
+        # - sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
+        # - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
+        # - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
+        # set -exo pipefail
+        # pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
