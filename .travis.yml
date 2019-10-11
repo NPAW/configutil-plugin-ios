@@ -17,7 +17,7 @@ env:
 stages:
   - name: lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
-  - name: carthage
+  - name: carthage_iOS
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
@@ -44,12 +44,11 @@ jobs:
     - <<: *pod
       osx_image: xcode11
       env: SWIFT=5.1
-    - &carthage
-      stage: carthage
+    - &carthage_iOS
+      stage: carthage_iOS
       name: Swift 4.1.51 / Xcode 10.2 #Swift 4.1.2 / Xcode 9.4.1
-      env: PLATFORM=ios
       osx_image: xcode10.3 #xcode9.4
-      install: carthage update --platform $PLATFORM --verbose
+      install: carthage update --platform ios --verbose
       before_install:
         - pod deintegrate
         - brew update
@@ -65,7 +64,7 @@ jobs:
     # - <<: *carthage
     #   osx_image: xcode10.3
     #   name: Swift 4.1.51 / Xcode 10.2
-    - <<: *carthage
+    - <<: *carthage_iOS
       osx_image: xcode11
       name: Swift 4.1.52 / Xcode 10.2
     # - <<: *carthage
