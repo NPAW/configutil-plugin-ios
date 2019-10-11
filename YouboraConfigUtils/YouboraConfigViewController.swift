@@ -32,7 +32,7 @@ import UIKit
         
         self.optionsList.delegate = self
         self.optionsList.dataSource = self
-        #if compiler(<5.0)
+        #if swift(<5.0)
             self.optionsList.rowHeight = UITableViewAutomaticDimension
         #else
             self.optionsList.rowHeight = UITableView.automaticDimension
