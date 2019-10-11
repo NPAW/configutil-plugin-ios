@@ -32,10 +32,10 @@ import UIKit
         
         self.optionsList.delegate = self
         self.optionsList.dataSource = self
-        #if swift(<5.0)
-            self.optionsList.rowHeight = UITableViewAutomaticDimension
-        #else
+        #if swift(>=4.0)
             self.optionsList.rowHeight = UITableView.automaticDimension
+        #else
+            self.optionsList.rowHeight = UITableViewAutomaticDimension
         #endif
         self.navigationItem.title = viewModel.getTitle();
     }
