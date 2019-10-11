@@ -19,8 +19,8 @@ stages:
 
 env:
   global:
-    - APP_NAME = YouboraConfigUtils
-    - INFO_PLIST = $PWD/$AppName/Info.plist
+    - APP_NAME = "YouboraConfigUtils"
+    - INFO_PLIST = "$PWD/$AppName/Info.plist"
 
 jobs:
   include:
