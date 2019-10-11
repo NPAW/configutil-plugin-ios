@@ -48,9 +48,9 @@ jobs:
     #   env: SWIFT=5.1
     - &carthage
       stage: carthage
-      name: Swift 4.1.2 / Xcode 9.4.1
+      name: Swift 4.1.51 / Xcode 10.2 #Swift 4.1.2 / Xcode 9.4.1
       env: PLATFORM=ios
-      osx_image: xcode9.4
+      osx_image: xcode10.3 #xcode9.4
       install: carthage update --platform $PLATFORM --verbose
       before_install:
         - pod deintegrate
@@ -60,12 +60,12 @@ jobs:
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
       script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
-    - <<: *carthage
-      osx_image: xcode10.1
-      name: Swift 4.1.50 / Xcode 10.1
-    - <<: *carthage
-      osx_image: xcode10.3
-      name: Swift 4.1.51 / Xcode 10.2
+    # - <<: *carthage
+    #   osx_image: xcode10.1
+    #   name: Swift 4.1.50 / Xcode 10.1
+    # - <<: *carthage
+    #   osx_image: xcode10.3
+    #   name: Swift 4.1.51 / Xcode 10.2
     - <<: *carthage
       osx_image: xcode11
       name: Swift 4.1.52 / Xcode 10.2
