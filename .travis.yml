@@ -25,34 +25,35 @@ stages:
   #   if: branch =~ ^\d+\.\d+\.\d+$
 jobs:
   include:
-    - &pod
-      stage: lint
-      osx_image: xcode9.4 #xcode9.2
-      env: SWIFT=4.1 #SWIFT=4.0
-      install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --swift-version=$SWIFT --verbose
+    # - &pod
+    #   stage: lint
+    #   osx_image: xcode9.4 #xcode9.2
+    #   env: SWIFT=4.1 #SWIFT=4.0
+    #   install: gem install cocoapods -v '~> 1.7.0'
+    #   script: pod lib lint --fail-fast --swift-version=$SWIFT --verbose
+    # # - <<: *pod
+    # #   osx_image: xcode9.4
+    # #   env: SWIFT=4.1
     # - <<: *pod
-    #   osx_image: xcode9.4
-    #   env: SWIFT=4.1
-    - <<: *pod
-      osx_image: xcode10.1
-      env: SWIFT=4.2
-    - <<: *pod
-      osx_image: xcode10.3
-      env: SWIFT=4.3
-    - <<: *pod
-      osx_image: xcode10.3
-      env: SWIFT=5.0
-    - <<: *pod
-      osx_image: xcode11
-      env: SWIFT=5.1
+    #   osx_image: xcode10.1
+    #   env: SWIFT=4.2
+    # - <<: *pod
+    #   osx_image: xcode10.3
+    #   env: SWIFT=4.3
+    # - <<: *pod
+    #   osx_image: xcode10.3
+    #   env: SWIFT=5.0
+    # - <<: *pod
+    #   osx_image: xcode11
+    #   env: SWIFT=5.1
     - &carthage
       stage: carthage
       name: Swift 4.1.2 / Xcode 9.4.1
       env: PLATFORM=ios
       osx_image: xcode9.4
-      install: pod deintegrate && carthage update --platform $PLATFORM --verbose
+      install: carthage update --platform $PLATFORM --verbose
       before_install:
+        - pod deintegrate
         - brew update
         - brew outdated carthage || brew upgrade carthage
       before_script: |
