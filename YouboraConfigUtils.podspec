@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   
   # Swift version
-  s.swift_version = "5.0", "5.1"
+  s.swift_version = "4.0", "4.1", "4.2", "4.3", "5.0", "5.1"
 
   # Source Location
   s.source       = { :git => "https://bitbucket.org/npaw/configutil-plugin-ios.git", :tag => "#{s.version}" }
