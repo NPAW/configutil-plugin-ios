@@ -2,6 +2,11 @@ language: swift
 os: osx
 osx_image: xcode10.3
 
+branches:
+  only:
+    - test-travis
+    - /^\d+\.\d+\.\d+$/
+
 env:
   global:
     - FAKE_VERSION=1.0.1
@@ -9,16 +14,11 @@ env:
     - INFO_PLIST=$PWD/$APP_NAME/Info.plist
     - BRANCH=test-travis
 
-branches:
-  only:
-    - test-travis
-    - /^\d+\.\d+\.\d+$/
-
 stages:
   - name: lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
-  # - name: carthage
-  #   if: branch = $BRANCH OR branch =~ /^\d+\.\d+\.\d+$/
+  - name: carthage
+    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   # - name: deploy
@@ -46,18 +46,28 @@ jobs:
     - <<: *pod
       osx_image: xcode11
       env: SWIFT=5.1
-    # - &carthage
-    #   stage: carthage
-    #   name: iOS
-    #   env: PLATFORM=ios
-    #   install: pod deintegrate && carthage update  --platform $PLATFORM
-    #   before_install:
-    #     - brew update
-    #     - brew outdated carthage || brew upgrade carthage
-    #   before_script: |
-    #     sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-    #     sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-    #   script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
+    - &carthage
+      stage: carthage
+      name: Swift 4.1.2 / Xcode 9.4.1
+      env: PLATFORM=ios
+      osx_image: xcode9.4
+      install: pod deintegrate && carthage update  --platform $PLATFORM
+      before_install:
+        - brew update
+        - brew outdated carthage || brew upgrade carthage
+      before_script: |
+        sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
+        sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
+    - <<: *carthage
+      osx_image: xcode10.1
+      name: Swift 4.1.50 / Xcode 10.1
+    - <<: *carthage
+      osx_image: xcode10.3
+      name: Swift 4.1.51 / Xcode 10.2
+    - <<: *carthage
+      osx_image: xcode11
+      name: Swift 4.1.52 / Xcode 10.2
     # - <<: *carthage
     #   name: tvOS
     #   env: PLATFORM=tvos
