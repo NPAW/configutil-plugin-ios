@@ -2,36 +2,38 @@ language: swift
 os: osx
 osx_image: xcode10.3
 
+env:
+  global:
+    - FAKE_VERSION=1.0.1
+    - APP_NAME=YouboraConfigUtils
+    - INFO_PLIST=$PWD/$APP_NAME/Info.plist
+    - BRANCH=test-travis
+
 branches:
   only:
-    - test-travis
+    - $BRANCH
     - /^\d+\.\d+\.\d+$/
 
 stages:
   - name: lint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   # - name: carthage
-  #   if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
+  #   if: branch = $BRANCH OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
+    if: branch = $BRANCH OR branch =~ /^\d+\.\d+\.\d+$/
   # - name: deploy
   #   if: branch =~ ^\d+\.\d+\.\d+$
-env:
-  global:
-    - FAKE_VERSION=1.0.1
-    - APP_NAME=YouboraConfigUtils
-    - INFO_PLIST=$PWD/$APP_NAME/Info.plist
 jobs:
   include:
     - &pod
       stage: lint
-      osx_image: xcode9.2
-      env: SWIFT=4.0
+      osx_image: xcode9.4 #xcode9.2
+      env: SWIFT=4.1 #SWIFT=4.0
       install: gem install cocoapods -v '~> 1.7.0'
       script: pod lib lint --fail-fast --swift-version=$SWIFT --verbose
-    - <<: *pod
-      osx_image: xcode9.4
-      env: SWIFT=4.1
+    # - <<: *pod
+    #   osx_image: xcode9.4
+    #   env: SWIFT=4.1
     - <<: *pod
       osx_image: xcode10.1
       env: SWIFT=4.2
