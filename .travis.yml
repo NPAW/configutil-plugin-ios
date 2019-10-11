@@ -50,13 +50,9 @@ jobs:
       install: gem install cocoapods -v '~> 1.7.0'
       before_script:
       script:
-        - echo "Version $TRAVIS_TAG"
-        - echo "Version $FAKE_VERSION"
-        - echo "Version $INFO_PLIST"
-        - echo "Version $APP_NAME"
-        # - sed -i '' "s/s.version = '0.0.1'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
-        # - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
-        # - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $TRAVIS_TAG" "$INFO_PLIST"
-        # set -exo pipefail
-        # pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+        - sed -i '' "s/s.version = '1.0.0'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
+        - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
+        - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $FAKE_VERSION" "$INFO_PLIST"
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
