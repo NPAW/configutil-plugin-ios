@@ -17,9 +17,10 @@ stages:
   # - name: deploy
   #   if: branch =~ ^\d+\.\d+\.\d+$
 env:
-  - FAKE_VERSION=1.0.1
-  - APP_NAME=YouboraConfigUtils
-  - INFO_PLIST=$PWD/$AppName/Info.plist
+  global:
+    - FAKE_VERSION=1.0.1
+    - APP_NAME=YouboraConfigUtils
+    - INFO_PLIST=$PWD/$AppName/Info.plist
 jobs:
   include:
     # - &pod
