@@ -9,7 +9,7 @@ branches:
 
 stages:
   - name: lint
-    if: NOT branch =~ ^\d+\.\d+\.\d+$
+    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/ #NOT branch =~ ^\d+\.\d+\.\d+$
   # - name: carthage
   #   if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
