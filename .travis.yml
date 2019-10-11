@@ -20,32 +20,30 @@ stages:
   - name: carthage
     if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    if: branch = test-travis OR branch =~ /^\d+\.\d+\.\d+$/
-  # - name: deploy
-  #   if: branch =~ ^\d+\.\d+\.\d+$
+    if: branch =~ ^\d+\.\d+\.\d+$
 jobs:
   include:
-    # - &pod
-    #   stage: lint
-    #   osx_image: xcode9.4 #xcode9.2
-    #   env: SWIFT=4.1 #SWIFT=4.0
-    #   install: gem install cocoapods -v '~> 1.7.0'
-    #   script: pod lib lint --fail-fast --swift-version=$SWIFT --verbose
-    # # - <<: *pod
-    # #   osx_image: xcode9.4
-    # #   env: SWIFT=4.1
+    - &pod
+      stage: lint
+      osx_image: xcode9.4 #xcode9.2
+      env: SWIFT=4.1 #SWIFT=4.0
+      install: gem install cocoapods -v '~> 1.7.0'
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --verbose
     # - <<: *pod
-    #   osx_image: xcode10.1
-    #   env: SWIFT=4.2
-    # - <<: *pod
-    #   osx_image: xcode10.3
-    #   env: SWIFT=4.3
-    # - <<: *pod
-    #   osx_image: xcode10.3
-    #   env: SWIFT=5.0
-    # - <<: *pod
-    #   osx_image: xcode11
-    #   env: SWIFT=5.1
+    #   osx_image: xcode9.4
+    #   env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
     - &carthage
       stage: carthage
       name: Swift 4.1.51 / Xcode 10.2 #Swift 4.1.2 / Xcode 9.4.1
@@ -60,6 +58,7 @@ jobs:
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
       script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
+    # UNCOMMENT WHEN YOUBORA LIB SUPPORTS SWIFT 4.0
     # - <<: *carthage
     #   osx_image: xcode10.1
     #   name: Swift 4.1.50 / Xcode 10.1
@@ -83,6 +82,6 @@ jobs:
         - sed -i '' "s/s.version = '1.0.0'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
         - /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $TRAVIS_BUILD_NUMBER" "$INFO_PLIST"
         - /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $FAKE_VERSION" "$INFO_PLIST"
-        # - set -exo pipefail
-        # - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
