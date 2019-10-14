@@ -9,7 +9,7 @@
 import Foundation
 import YouboraLib
 
-class YBConfigBoolViewModel:YBConfigViewModel {
+class YBConfigBoolViewModel: YBConfigViewModel {
     func getValue() -> Bool {
         guard let value = options.value(forKey: self.option.name) as? Bool else {
             return false

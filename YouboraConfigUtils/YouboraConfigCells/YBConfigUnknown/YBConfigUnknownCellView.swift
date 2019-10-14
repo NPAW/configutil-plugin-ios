@@ -10,7 +10,6 @@ import UIKit
 
 class YBConfigUnknownCellView: YBConfigCell {
     @IBOutlet weak var propertyName: UILabel!
-    
     static var cellIdentifier: String = Constants.unknownCellId
     
     override func setupView() {

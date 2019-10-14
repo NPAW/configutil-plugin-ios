@@ -9,17 +9,17 @@
 import Foundation
 import YouboraLib
 
-class YBConfigNumberViewModel:YBConfigViewModel {
+class YBConfigNumberViewModel: YBConfigViewModel {
     override func getPropertyName() -> String {
         return super.getPropertyName()+" (number)"
     }
     
-    func isNumber(value:String) -> Bool {
+    func isNumber(value: String) -> Bool {
         if value == "" {
             return true
         }
         
-        guard let _ = Double(value) else {
+        if Double(value) != nil {
             return false
         }
         

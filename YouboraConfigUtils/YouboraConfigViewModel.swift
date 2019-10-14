@@ -13,16 +13,14 @@ class YouboraConfigViewModel {
     private var searchText = ""
     
     private var isSearching: Bool {
-        get {
-            return searchText != ""
-        }
+        return searchText != ""
     }
     
     private var options: [Option] {
-        get {
-            if !isSearching { return Constants.options}
-            
-            return Constants.options.filter{option in return option.name.lowercased().contains(searchText)}
+        if !isSearching { return Constants.options}
+        
+        return Constants.options.filter { option in
+            return option.name.lowercased().contains(searchText)
         }
     }
     
@@ -34,7 +32,7 @@ class YouboraConfigViewModel {
         return options.count
     }
     
-    private func getOption(position: Int) -> Option  {
+    private func getOption(position: Int) -> Option {
         return options[position]
     }
     
@@ -44,13 +42,13 @@ class YouboraConfigViewModel {
     
     public func getCellViewModel(position: Int) -> YBConfigViewModel {
         switch getOptionType(position: position) {
-        case .Bool:
+        case .bool:
             return YBConfigBoolViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
-        case .String:
+        case .string:
             return YBConfigStringViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
-        case .Number:
+        case .number:
             return YBConfigNumberViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
-        case .Unknown:
+        case .unknown:
             return YBConfigViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
         }
     }

@@ -15,9 +15,7 @@ import UIKit
     @IBOutlet weak var optionsList: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
-    
-    //MARK: View Methods
+    // MARK: View Methods
     override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +35,7 @@ import UIKit
         #else
             self.optionsList.rowHeight = UITableViewAutomaticDimension
         #endif
-        self.navigationItem.title = viewModel.getTitle();
+        self.navigationItem.title = viewModel.getTitle()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -46,36 +44,37 @@ import UIKit
         viewModel.saveAllChanges()
     }
     
-    //MARK: Table view data source
-    
+    // MARK: Table view data source
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.getNumberOfOptions()
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = getCellForIndexPath(tableView: tableView, indexPath: indexPath)
+        guard let cell = getCellForIndexPath(tableView: tableView, indexPath: indexPath) else {
+            return UITableViewCell(style: .default, reuseIdentifier: "defaultCell")
+        }
         
         cell.setupView()
         
         return cell
     }
     
-    //MARK: Cells methods
-    private func getCellForIndexPath(tableView: UITableView, indexPath:IndexPath) -> YBConfigCell {
+    // MARK: Cells methods
+    private func getCellForIndexPath(tableView: UITableView, indexPath: IndexPath) -> YBConfigCell? {
         let cellViewModel = viewModel.getCellViewModel(position: indexPath.row)
         switch viewModel.getOptionType(position: indexPath.row) {
-        case .Bool:
-            return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
-        case .String:
-            return YBConfigStringCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigStringCellView.cellIdentifier)
-        case .Number:
-            return YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath , viewModel: cellViewModel, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
-        case .Unknown:
+        case .bool:
+            return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
+        case .string:
+            return YBConfigStringCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigStringCellView.cellIdentifier)
+        case .number:
+            return YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
+        case .unknown:
             return YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
         }
     }
     
-    //MARK: Buttons methods
+    // MARK: Buttons methods
     
     @IBAction func onSavePress(_ sender: Any) {
         viewModel.saveAllChanges()
@@ -86,7 +85,7 @@ import UIKit
         self.optionsList.reloadData()
     }
     
-    //MARK: Search methods
+    // MARK: Search methods
     
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.updateSearch(text: searchText)

@@ -66,6 +66,7 @@ jobs:
     - <<: *carthage_iOS
       osx_image: xcode11
       name: Swift 4.1.52 / Xcode 10.2
+      env: PLATFORM=ios
     # - <<: *carthage
     #   name: tvOS
     #   env: PLATFORM=tvos

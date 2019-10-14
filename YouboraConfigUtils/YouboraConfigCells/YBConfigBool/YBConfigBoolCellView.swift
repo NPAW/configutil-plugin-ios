@@ -10,7 +10,7 @@ import UIKit
 
 class YBConfigBoolCellView: YBConfigCell {
     
-    static var cellIdentifier:String = Constants.boolCellId
+    static var cellIdentifier: String = Constants.boolCellId
     
     @IBOutlet weak var switcher: UISwitch!
     @IBOutlet weak var propertyName: UILabel!

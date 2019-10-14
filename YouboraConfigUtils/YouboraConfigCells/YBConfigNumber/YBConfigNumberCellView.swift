@@ -25,14 +25,13 @@ class YBConfigNumberCellView: YBConfigCell, UITextFieldDelegate {
         self.propertyName.text = viewModel.getPropertyName()
         
         if let value = viewModel.getValue() {
-            self.inputField.text = String(describing:  value)
+            self.inputField.text = String(describing: value)
         }
-        
         
         self.inputField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
     }
     
-    //MARK - UITextField Delegates
+    // MARK: UITextField Delegates
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let newValue = NSString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
         
@@ -52,4 +51,3 @@ class YBConfigNumberCellView: YBConfigCell, UITextFieldDelegate {
         viewModel.updateValue(newValue: Double(text))
     }
 }
-
