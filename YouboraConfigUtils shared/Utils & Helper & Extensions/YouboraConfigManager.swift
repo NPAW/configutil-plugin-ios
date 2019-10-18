@@ -24,7 +24,7 @@ public class YouboraConfigManager: NSObject {
         self.save()
     }
     
-    @objc static public func getOptions() -> YBOptions {
+    @discardableResult @objc static public func getOptions() -> YBOptions {
         guard let options = self.options else {
             guard let data = UserDefaults.standard.data(forKey: Constants.youborasettings) else {
                 reset()

@@ -1,13 +1,12 @@
 //
 //  AppDelegate.swift
-//  iOS
+//  tvOS
 //
-//  Created by nice on 01/10/2019.
+//  Created by nice on 14/10/2019.
 //  Copyright © 2019 nice. All rights reserved.
 //
 
 import UIKit
-import Pods_YouboraConfigUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,25 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let tabviewController = UITabBarController()
-        
-        tabviewController.viewControllers = [
-            UINavigationController(rootViewController: ResourcesViewController())
-        ]
-        
-        self.window?.rootViewController = tabviewController
-        
-        self.window?.makeKeyAndVisible()
-        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

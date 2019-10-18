@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E41B54B1EBA18B1003F8B80"
-               BuildableName = "YouboraConfigUtils.framework"
-               BlueprintName = "YouboraConfigUtils"
+               BuildableName = "YouboraConfigUtils iOS.framework"
+               BlueprintName = "YouboraConfigUtils iOS"
                ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E41B54B1EBA18B1003F8B80"
-            BuildableName = "YouboraConfigUtils.framework"
-            BlueprintName = "YouboraConfigUtils"
+            BuildableName = "YouboraConfigUtils iOS.framework"
+            BlueprintName = "YouboraConfigUtils iOS"
             ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E41B54B1EBA18B1003F8B80"
-            BuildableName = "YouboraConfigUtils.framework"
-            BlueprintName = "YouboraConfigUtils"
+            BuildableName = "YouboraConfigUtils iOS.framework"
+            BlueprintName = "YouboraConfigUtils iOS"
             ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

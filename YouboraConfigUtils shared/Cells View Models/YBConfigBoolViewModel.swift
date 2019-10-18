@@ -18,8 +18,15 @@ class YBConfigBoolViewModel: YBConfigViewModel {
         return value
     }
     
+    func getSegmentValue() -> Int {
+        return self.getValue() ? 0 : 1
+    }
+    
+    func updateValue(newValue: Int) {
+        self.updateValue(newValue: newValue == 0 ? true : false)
+    }
+    
     func updateValue(newValue: Bool) {
         self.options.setValue(newValue, forKey: self.option.name)
-        
     }
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellBoolIdentifier" rowHeight="196" id="fBs-An-CcD" customClass="YBConfigBoolCellView" customModule="YouboraConfigUtils_tvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="196"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBs-An-CcD" id="S0Q-fX-qc8">
+                <rect key="frame" x="0.0" y="0.0" width="168" height="196"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miv-3r-O5j">
+                        <rect key="frame" x="10" y="10" width="164" height="116"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9KU-Kz-YAJ">
+                        <rect key="frame" x="10" y="136" width="164" height="51"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Fsa-ZZ-MKD"/>
+                        </constraints>
+                        <segments>
+                            <segment title="On"/>
+                            <segment title="Off"/>
+                        </segments>
+                        <connections>
+                            <action selector="onSegmentChange:" destination="fBs-An-CcD" eventType="valueChanged" id="TGQ-h2-2dZ"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9KU-Kz-YAJ" secondAttribute="trailing" constant="10" id="66D-Yj-Ra1"/>
+                    <constraint firstItem="miv-3r-O5j" firstAttribute="top" secondItem="S0Q-fX-qc8" secondAttribute="top" constant="10" id="6Ip-7c-kD3"/>
+                    <constraint firstAttribute="bottom" secondItem="9KU-Kz-YAJ" secondAttribute="bottom" constant="10" id="9LM-2G-MDo"/>
+                    <constraint firstItem="9KU-Kz-YAJ" firstAttribute="top" secondItem="miv-3r-O5j" secondAttribute="bottom" constant="10" id="bt2-OR-nPA"/>
+                    <constraint firstItem="9KU-Kz-YAJ" firstAttribute="leading" secondItem="S0Q-fX-qc8" secondAttribute="leading" constant="10" id="hiz-Jn-PWQ"/>
+                    <constraint firstItem="miv-3r-O5j" firstAttribute="leading" secondItem="S0Q-fX-qc8" secondAttribute="leading" constant="10" id="kUg-NI-lhq"/>
+                    <constraint firstAttribute="trailing" secondItem="miv-3r-O5j" secondAttribute="trailing" constant="10" id="xdR-Vo-aeg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="1ks-Xo-ai1"/>
+            <connections>
+                <outlet property="propertyName" destination="miv-3r-O5j" id="lsT-uu-Hes"/>
+                <outlet property="switcher" destination="9KU-Kz-YAJ" id="Jnd-O4-jPB"/>
+            </connections>
+            <point key="canvasLocation" x="404" y="183"/>
+        </tableViewCell>
+    </objects>
+</document>

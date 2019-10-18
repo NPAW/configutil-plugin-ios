@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class YBConfigCell: UITableViewCell {
     var viewModel: YBConfigViewModel?

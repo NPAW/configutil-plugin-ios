@@ -7,14 +7,14 @@
 //
 
 import Foundation
-import YouboraConfigUtils
+import UIKit
 
 class ResourcesViewController: UIViewController {
     
     let child = YouboraConfigViewController()
     let containerView = UIView()
     
-    //MARK: View Controller Methods
+    // MARK: View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         YouboraConfigManager.getOptions()
@@ -30,7 +30,7 @@ class ResourcesViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    //MARK: Aux methods
+    // MARK: Aux methods
     func setContainerView() {
         view.addSubview(containerView)
         
