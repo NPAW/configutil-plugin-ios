@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import YouboraConfigUtils_iOS
 
 class ResourcesViewController: UIViewController {
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Pods_YouboraConfigUtils
+import YouboraConfigUtils_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

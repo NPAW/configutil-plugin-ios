@@ -3,7 +3,7 @@
 
 workspace 'YouboraConfigUtils.xcworkspace'
 
-target 'YouboraConfigUtils iOS' do
+target 'YouboraConfigUtils_iOS' do
   project 'YouboraConfigUtils.xcodeproj'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -12,7 +12,7 @@ target 'YouboraConfigUtils iOS' do
 
 end
 
-target 'YouboraConfigUtils macOS' do
+target 'YouboraConfigUtils_macOS' do
   project 'YouboraConfigUtils.xcodeproj'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -21,7 +21,7 @@ target 'YouboraConfigUtils macOS' do
 
 end
 
-target 'YouboraConfigUtils tvOS' do
+target 'YouboraConfigUtils_tvOS' do
   project 'YouboraConfigUtils.xcodeproj'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!

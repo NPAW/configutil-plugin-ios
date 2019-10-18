@@ -11,4 +11,3 @@ included:
   - YouboraConfigUtils iOS
   - YouboraConfigUtils macOS
   - YouboraConfigUtils tvOS
-  - Example
