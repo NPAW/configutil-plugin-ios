@@ -40,7 +40,7 @@ class YouboraConfigViewModel {
         return getOption(position: position).type
     }
     
-    public func getCellViewModel(position: Int) -> YBConfigViewModel {
+    public func getConfigViewModel(position: Int) -> YBConfigViewModel {
         switch getOptionType(position: position) {
         case .bool:
             return YBConfigBoolViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
@@ -50,6 +50,19 @@ class YouboraConfigViewModel {
             return YBConfigNumberViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
         case .unknown:
             return YBConfigViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        }
+    }
+    
+    public func getOptionTypeString(position: Int) -> String {
+        switch self.getOption(position: position).type {
+        case .bool:
+            return "Boolean"
+        case .number:
+            return "Number"
+        case .string:
+            return "String"
+        default:
+            return "Unknown"
         }
     }
     

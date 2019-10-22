@@ -61,7 +61,7 @@ import UIKit
     
     // MARK: Cells methods
     private func getCellForIndexPath(tableView: UITableView, indexPath: IndexPath) -> YBConfigCell? {
-        let cellViewModel = viewModel.getCellViewModel(position: indexPath.row)
+        let cellViewModel = viewModel.getConfigViewModel(position: indexPath.row)
         switch viewModel.getOptionType(position: indexPath.row) {
         case .bool:
             return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)

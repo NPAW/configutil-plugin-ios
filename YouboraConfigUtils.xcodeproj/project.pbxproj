@@ -14,15 +14,12 @@
 		0605A45E2354B53900C1EF7D /* YouboraConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACA2345F35C005127FC /* YouboraConfigManager.swift */; };
 		0605A4602354B5A400C1EF7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACD2345F494005127FC /* Constants.swift */; };
 		0605A4612354B5B500C1EF7D /* YBConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B5623477C40008C7F2B /* YBConfigViewModel.swift */; };
-		0605A4642354B5B900C1EF7D /* YBConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B542347610D008C7F2B /* YBConfigCell.swift */; };
 		0605A4682354B5CB00C1EF7D /* YBConfigNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AE823465291005127FC /* YBConfigNumberViewModel.swift */; };
 		0605A46B2354B5D400C1EF7D /* YBConfigStringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AE1234632AF005127FC /* YBConfigStringViewModel.swift */; };
 		0605A4702354B5DD00C1EF7D /* YBConfigBoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ADD23462571005127FC /* YBConfigBoolViewModel.swift */; };
-		0605A4782354B80B00C1EF7D /* YBConfigBoolCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605A4762354B80B00C1EF7D /* YBConfigBoolCellView.swift */; };
-		0605A4792354B80B00C1EF7D /* YBConfigBoolCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0605A4772354B80B00C1EF7D /* YBConfigBoolCellView.xib */; };
-		0605A47C2354BB7A00C1EF7D /* PropsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0605A47B2354BB7A00C1EF7D /* PropsListViewController.xib */; };
-		0605A4812354BD4000C1EF7D /* PropsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605A4802354BD4000C1EF7D /* PropsListViewController.swift */; };
-		06110F802355C10700AED3B4 /* YouboraConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06110F7F2355C10700AED3B4 /* YouboraConfigViewController.swift */; };
+		0605A4792354B80B00C1EF7D /* YBConfigBoolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0605A4772354B80B00C1EF7D /* YBConfigBoolView.xib */; };
+		0605A47C2354BB7A00C1EF7D /* YouboraConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0605A47B2354BB7A00C1EF7D /* YouboraConfigViewController.xib */; };
+		0605A4812354BD4000C1EF7D /* YouboraConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605A4802354BD4000C1EF7D /* YouboraConfigViewController.swift */; };
 		06927AC92345EF56005127FC /* YouboraConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AC82345EF56005127FC /* YouboraConfigViewController.swift */; };
 		06927ACB2345F35C005127FC /* YouboraConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACA2345F35C005127FC /* YouboraConfigManager.swift */; };
 		06927ACE2345F494005127FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACD2345F494005127FC /* Constants.swift */; };
@@ -35,6 +32,17 @@
 		06927AE52346333D005127FC /* YBConfigStringCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AE32346333D005127FC /* YBConfigStringCellView.swift */; };
 		06927AE62346333D005127FC /* YBConfigStringCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06927AE42346333D005127FC /* YBConfigStringCellView.xib */; };
 		06927AE923465291005127FC /* YBConfigNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AE823465291005127FC /* YBConfigNumberViewModel.swift */; };
+		06A41BFE235EEB5C00ECAE6B /* YBConfigStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41BF9235EEB4700ECAE6B /* YBConfigStringView.swift */; };
+		06A41C00235EEB7200ECAE6B /* YBConfigStringView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41BFF235EEB7200ECAE6B /* YBConfigStringView.xib */; };
+		06A41C05235F204C00ECAE6B /* PropCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C03235F204C00ECAE6B /* PropCollectionViewCell.swift */; };
+		06A41C06235F204C00ECAE6B /* PropCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41C04235F204C00ECAE6B /* PropCollectionViewCell.xib */; };
+		06A41C0B235F3B2700ECAE6B /* YBConfigNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C0A235F3B2700ECAE6B /* YBConfigNumberView.swift */; };
+		06A41C0D235F3B3100ECAE6B /* YBConfigNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41C0C235F3B3100ECAE6B /* YBConfigNumberView.xib */; };
+		06C85606235A0D8000633071 /* YBConfigBoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C85605235A0D8000633071 /* YBConfigBoolView.swift */; };
+		06C85608235A0DA500633071 /* YBConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C85607235A0DA500633071 /* YBConfigView.swift */; };
+		06C8560B235A0FF200633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
+		06C8560C235A119A00633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
+		06C8560D235A119B00633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
 		06DC5B1723472FCC008C7F2B /* YBConfigNumberCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B1523472FCC008C7F2B /* YBConfigNumberCellView.swift */; };
 		06DC5B1823472FCC008C7F2B /* YBConfigNumberCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B1623472FCC008C7F2B /* YBConfigNumberCellView.xib */; };
 		06DC5B1E234746ED008C7F2B /* YBConfigUnknownCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B1C234746ED008C7F2B /* YBConfigUnknownCellView.swift */; };
@@ -55,11 +63,9 @@
 		0605A43C2354B49600C1EF7D /* YouboraConfigUtils_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraConfigUtils_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605A43E2354B49600C1EF7D /* YouboraConfigUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraConfigUtils.h; sourceTree = "<group>"; };
 		0605A43F2354B49600C1EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0605A4762354B80B00C1EF7D /* YBConfigBoolCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigBoolCellView.swift; sourceTree = "<group>"; };
-		0605A4772354B80B00C1EF7D /* YBConfigBoolCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigBoolCellView.xib; sourceTree = "<group>"; };
-		0605A47B2354BB7A00C1EF7D /* PropsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropsListViewController.xib; sourceTree = "<group>"; };
-		0605A4802354BD4000C1EF7D /* PropsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropsListViewController.swift; sourceTree = "<group>"; };
-		06110F7F2355C10700AED3B4 /* YouboraConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigViewController.swift; sourceTree = "<group>"; };
+		0605A4772354B80B00C1EF7D /* YBConfigBoolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigBoolView.xib; sourceTree = "<group>"; };
+		0605A47B2354BB7A00C1EF7D /* YouboraConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YouboraConfigViewController.xib; sourceTree = "<group>"; };
+		0605A4802354BD4000C1EF7D /* YouboraConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigViewController.swift; sourceTree = "<group>"; };
 		06927AC82345EF56005127FC /* YouboraConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigViewController.swift; sourceTree = "<group>"; };
 		06927ACA2345F35C005127FC /* YouboraConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigManager.swift; sourceTree = "<group>"; };
 		06927ACD2345F494005127FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -72,6 +78,15 @@
 		06927AE32346333D005127FC /* YBConfigStringCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigStringCellView.swift; sourceTree = "<group>"; };
 		06927AE42346333D005127FC /* YBConfigStringCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigStringCellView.xib; sourceTree = "<group>"; };
 		06927AE823465291005127FC /* YBConfigNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigNumberViewModel.swift; sourceTree = "<group>"; };
+		06A41BF9235EEB4700ECAE6B /* YBConfigStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigStringView.swift; sourceTree = "<group>"; };
+		06A41BFF235EEB7200ECAE6B /* YBConfigStringView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigStringView.xib; sourceTree = "<group>"; };
+		06A41C03235F204C00ECAE6B /* PropCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropCollectionViewCell.swift; sourceTree = "<group>"; };
+		06A41C04235F204C00ECAE6B /* PropCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropCollectionViewCell.xib; sourceTree = "<group>"; };
+		06A41C0A235F3B2700ECAE6B /* YBConfigNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigNumberView.swift; sourceTree = "<group>"; };
+		06A41C0C235F3B3100ECAE6B /* YBConfigNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigNumberView.xib; sourceTree = "<group>"; };
+		06C85605235A0D8000633071 /* YBConfigBoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigBoolView.swift; sourceTree = "<group>"; };
+		06C85607235A0DA500633071 /* YBConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigView.swift; sourceTree = "<group>"; };
+		06C8560A235A0FF200633071 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		06DC5B1523472FCC008C7F2B /* YBConfigNumberCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigNumberCellView.swift; sourceTree = "<group>"; };
 		06DC5B1623472FCC008C7F2B /* YBConfigNumberCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigNumberCellView.xib; sourceTree = "<group>"; };
 		06DC5B1C234746ED008C7F2B /* YBConfigUnknownCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigUnknownCellView.swift; sourceTree = "<group>"; };
@@ -140,8 +155,7 @@
 		0605A40F2354AFA300C1EF7D /* YouboraConfigUtils shared */ = {
 			isa = PBXGroup;
 			children = (
-				06DC5B542347610D008C7F2B /* YBConfigCell.swift */,
-				06927AD723462243005127FC /* Cells View Models */,
+				06927AD723462243005127FC /* Config View Models */,
 				06927AD323460C52005127FC /* YouboraConfigViewModel.swift */,
 				06927ACC2345F487005127FC /* Utils & Helper & Extensions */,
 			);
@@ -151,9 +165,8 @@
 		0605A43D2354B49600C1EF7D /* YouboraConfigUtils tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				0605A4852354BF6E00C1EF7D /* Cells */,
-				06110F7E2355C0BF00AED3B4 /* YouboraConfigViewController */,
-				0605A47D2354BCD600C1EF7D /* PropsListViewController */,
+				0605A4852354BF6E00C1EF7D /* Config Views */,
+				0605A47D2354BCD600C1EF7D /* YouboraConfigViewController */,
 				0605A43E2354B49600C1EF7D /* YouboraConfigUtils.h */,
 				0605A43F2354B49600C1EF7D /* Info.plist */,
 			);
@@ -172,24 +185,26 @@
 		0605A4752354B7D600C1EF7D /* YBConfigBool */ = {
 			isa = PBXGroup;
 			children = (
-				0605A4762354B80B00C1EF7D /* YBConfigBoolCellView.swift */,
-				0605A4772354B80B00C1EF7D /* YBConfigBoolCellView.xib */,
+				0605A4772354B80B00C1EF7D /* YBConfigBoolView.xib */,
+				06C85605235A0D8000633071 /* YBConfigBoolView.swift */,
 			);
 			path = YBConfigBool;
 			sourceTree = "<group>";
 		};
-		0605A47D2354BCD600C1EF7D /* PropsListViewController */ = {
+		0605A47D2354BCD600C1EF7D /* YouboraConfigViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0605A47B2354BB7A00C1EF7D /* PropsListViewController.xib */,
-				0605A4802354BD4000C1EF7D /* PropsListViewController.swift */,
+				06A41C02235F202B00ECAE6B /* Prop Cell */,
+				0605A47B2354BB7A00C1EF7D /* YouboraConfigViewController.xib */,
+				0605A4802354BD4000C1EF7D /* YouboraConfigViewController.swift */,
 			);
-			path = PropsListViewController;
+			path = YouboraConfigViewController;
 			sourceTree = "<group>";
 		};
 		0605A4822354BE1A00C1EF7D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				06DC5B542347610D008C7F2B /* YBConfigCell.swift */,
 				06DC5B192347468F008C7F2B /* YBConfigUnknown */,
 				0605A4842354BE4A00C1EF7D /* YBConfigNumber */,
 				0605A4832354BE2100C1EF7D /* YBConfigString */,
@@ -216,32 +231,28 @@
 			path = YBConfigNumber;
 			sourceTree = "<group>";
 		};
-		0605A4852354BF6E00C1EF7D /* Cells */ = {
+		0605A4852354BF6E00C1EF7D /* Config Views */ = {
 			isa = PBXGroup;
 			children = (
+				06C85607235A0DA500633071 /* YBConfigView.swift */,
 				0605A4752354B7D600C1EF7D /* YBConfigBool */,
+				06A41BF8235EEAFA00ECAE6B /* YBConfigString */,
+				06A41C09235F3B0100ECAE6B /* YBConfigNumber */,
 			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		06110F7E2355C0BF00AED3B4 /* YouboraConfigViewController */ = {
-			isa = PBXGroup;
-			children = (
-				06110F7F2355C10700AED3B4 /* YouboraConfigViewController.swift */,
-			);
-			path = YouboraConfigViewController;
+			path = "Config Views";
 			sourceTree = "<group>";
 		};
 		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				06C85609235A0FE500633071 /* Extensions */,
 				06927ACA2345F35C005127FC /* YouboraConfigManager.swift */,
 				06927ACD2345F494005127FC /* Constants.swift */,
 			);
 			path = "Utils & Helper & Extensions";
 			sourceTree = "<group>";
 		};
-		06927AD723462243005127FC /* Cells View Models */ = {
+		06927AD723462243005127FC /* Config View Models */ = {
 			isa = PBXGroup;
 			children = (
 				06DC5B5623477C40008C7F2B /* YBConfigViewModel.swift */,
@@ -249,7 +260,42 @@
 				06927AE1234632AF005127FC /* YBConfigStringViewModel.swift */,
 				06927ADD23462571005127FC /* YBConfigBoolViewModel.swift */,
 			);
-			path = "Cells View Models";
+			path = "Config View Models";
+			sourceTree = "<group>";
+		};
+		06A41BF8235EEAFA00ECAE6B /* YBConfigString */ = {
+			isa = PBXGroup;
+			children = (
+				06A41BF9235EEB4700ECAE6B /* YBConfigStringView.swift */,
+				06A41BFF235EEB7200ECAE6B /* YBConfigStringView.xib */,
+			);
+			path = YBConfigString;
+			sourceTree = "<group>";
+		};
+		06A41C02235F202B00ECAE6B /* Prop Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06A41C03235F204C00ECAE6B /* PropCollectionViewCell.swift */,
+				06A41C04235F204C00ECAE6B /* PropCollectionViewCell.xib */,
+			);
+			path = "Prop Cell";
+			sourceTree = "<group>";
+		};
+		06A41C09235F3B0100ECAE6B /* YBConfigNumber */ = {
+			isa = PBXGroup;
+			children = (
+				06A41C0A235F3B2700ECAE6B /* YBConfigNumberView.swift */,
+				06A41C0C235F3B3100ECAE6B /* YBConfigNumberView.xib */,
+			);
+			path = YBConfigNumber;
+			sourceTree = "<group>";
+		};
+		06C85609235A0FE500633071 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				06C8560A235A0FF200633071 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		06DC5B192347468F008C7F2B /* YBConfigUnknown */ = {
@@ -475,8 +521,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0605A47C2354BB7A00C1EF7D /* PropsListViewController.xib in Resources */,
-				0605A4792354B80B00C1EF7D /* YBConfigBoolCellView.xib in Resources */,
+				0605A47C2354BB7A00C1EF7D /* YouboraConfigViewController.xib in Resources */,
+				06A41C00235EEB7200ECAE6B /* YBConfigStringView.xib in Resources */,
+				0605A4792354B80B00C1EF7D /* YBConfigBoolView.xib in Resources */,
+				06A41C0D235F3B3100ECAE6B /* YBConfigNumberView.xib in Resources */,
+				06A41C06235F204C00ECAE6B /* PropCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C8560C235A119A00633071 /* UIView.swift in Sources */,
 				0605A40E2354AF8700C1EF7D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,16 +677,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C8560B235A0FF200633071 /* UIView.swift in Sources */,
 				0605A45B2354B51200C1EF7D /* YouboraConfigViewModel.swift in Sources */,
-				06110F802355C10700AED3B4 /* YouboraConfigViewController.swift in Sources */,
+				06A41C05235F204C00ECAE6B /* PropCollectionViewCell.swift in Sources */,
+				06A41C0B235F3B2700ECAE6B /* YBConfigNumberView.swift in Sources */,
 				0605A46B2354B5D400C1EF7D /* YBConfigStringViewModel.swift in Sources */,
-				0605A4812354BD4000C1EF7D /* PropsListViewController.swift in Sources */,
+				06C85606235A0D8000633071 /* YBConfigBoolView.swift in Sources */,
+				0605A4812354BD4000C1EF7D /* YouboraConfigViewController.swift in Sources */,
 				0605A4702354B5DD00C1EF7D /* YBConfigBoolViewModel.swift in Sources */,
 				0605A45E2354B53900C1EF7D /* YouboraConfigManager.swift in Sources */,
-				0605A4642354B5B900C1EF7D /* YBConfigCell.swift in Sources */,
-				0605A4782354B80B00C1EF7D /* YBConfigBoolCellView.swift in Sources */,
 				0605A4602354B5A400C1EF7D /* Constants.swift in Sources */,
+				06C85608235A0DA500633071 /* YBConfigView.swift in Sources */,
 				0605A4682354B5CB00C1EF7D /* YBConfigNumberViewModel.swift in Sources */,
+				06A41BFE235EEB5C00ECAE6B /* YBConfigStringView.swift in Sources */,
 				0605A4612354B5B500C1EF7D /* YBConfigViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +708,7 @@
 				06927AC92345EF56005127FC /* YouboraConfigViewController.swift in Sources */,
 				06927AE52346333D005127FC /* YBConfigStringCellView.swift in Sources */,
 				06DC5B552347610D008C7F2B /* YBConfigCell.swift in Sources */,
+				06C8560D235A119B00633071 /* UIView.swift in Sources */,
 				06927ACB2345F35C005127FC /* YouboraConfigManager.swift in Sources */,
 				06927AE2234632AF005127FC /* YBConfigStringViewModel.swift in Sources */,
 				06927ADE23462571005127FC /* YBConfigBoolViewModel.swift in Sources */,

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YBConfigNumberView" customModule="YouboraConfigUtils_tvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-aW-NSA">
+                    <rect key="frame" x="100" y="517" width="1720" height="46"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-Hx-i8g">
+                    <rect key="frame" x="100" y="70" width="1810" height="46"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Pmt-tb-8Ig" firstAttribute="trailing" secondItem="R7E-aW-NSA" secondAttribute="trailing" constant="10" id="d6O-8e-4cz"/>
+                <constraint firstItem="R7E-aW-NSA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eYl-e2-Ogt"/>
+                <constraint firstItem="R7E-aW-NSA" firstAttribute="leading" secondItem="Pmt-tb-8Ig" secondAttribute="leading" constant="10" id="hq5-Tv-VKs"/>
+                <constraint firstItem="Pmt-tb-8Ig" firstAttribute="trailing" secondItem="fIu-Hx-i8g" secondAttribute="trailing" constant="-80" id="tbE-b6-GFq"/>
+                <constraint firstItem="fIu-Hx-i8g" firstAttribute="top" secondItem="Pmt-tb-8Ig" secondAttribute="top" constant="10" id="wBR-BW-F0d"/>
+                <constraint firstItem="fIu-Hx-i8g" firstAttribute="leading" secondItem="Pmt-tb-8Ig" secondAttribute="leading" constant="10" id="xKN-2z-eDx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
+            <connections>
+                <outlet property="inputTextField" destination="R7E-aW-NSA" id="ErP-es-fCP"/>
+                <outlet property="propLabel" destination="fIu-Hx-i8g" id="I92-qr-OfB"/>
+            </connections>
+        </view>
+    </objects>
+</document>

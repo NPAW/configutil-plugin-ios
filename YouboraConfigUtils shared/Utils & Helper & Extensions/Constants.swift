@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 @objc public enum OptionType: Int {
     case string = 0
@@ -28,6 +29,8 @@ struct Constants {
     static let stringCellId = "cellStringIdentifier"
     static let numberCellId = "cellNumberIdentifier"
     static let unknownCellId = "cellUnknownIdentifier"
+    static let propCellHighlighted = UIColor(red: 116/255, green: 0/255, blue: 124/255, alpha: 1)
+    static let propCellSelected = UIColor(red: 0/255, green: 119/255, blue: 57/255, alpha: 1)
 }
 
 extension Constants {
