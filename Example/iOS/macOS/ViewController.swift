@@ -11,10 +11,12 @@ import YouboraConfigUtils_macOS
 
 class ViewController: NSViewController {
     
+    let child = YouboraConfigViewController().initFromXIB()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.addChild(YouboraConfigViewController())
+        child.insertIntoParent(parentViewController: self)
         
         // Do any additional setup after loading the view.
     }

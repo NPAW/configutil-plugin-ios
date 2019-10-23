@@ -4,7 +4,7 @@
 workspace 'YouboraConfigUtils.xcworkspace'
 
 def common_pods
-  pod 'YouboraLib', '6.5.8-beta'
+  pod 'YouboraLib', '6.5.8'
 end
 
 target 'YouboraConfigUtils_iOS' do
@@ -87,5 +87,9 @@ target 'iOS-Objc' do
   use_frameworks!
   
   # Pods for iOS-Objc
+
+  platform :ios, '9.0'
+
+  common_pods
   
 end

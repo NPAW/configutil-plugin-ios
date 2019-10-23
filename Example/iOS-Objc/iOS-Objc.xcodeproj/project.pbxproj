@@ -3,39 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0550D5192F02ADFE10261BAB /* Pods_iOS_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB662D52994D254CBB2675E /* Pods_iOS_Objc.framework */; };
+		06A41C5123607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */; };
+		06A41C5223607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06DC5B2E23475149008C7F2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B2D23475149008C7F2B /* AppDelegate.m */; };
 		06DC5B3123475149008C7F2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B3023475149008C7F2B /* ViewController.m */; };
 		06DC5B3423475149008C7F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B3223475149008C7F2B /* Main.storyboard */; };
 		06DC5B362347514A008C7F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B352347514A008C7F2B /* Assets.xcassets */; };
 		06DC5B392347514A008C7F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B372347514A008C7F2B /* LaunchScreen.storyboard */; };
 		06DC5B3C2347514A008C7F2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B3B2347514A008C7F2B /* main.m */; };
-		06DC5B4523475284008C7F2B /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC5B4423475284008C7F2B /* YouboraLib.framework */; };
-		06DC5B4623475284008C7F2B /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC5B4423475284008C7F2B /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		06DC5B4E234752B1008C7F2B /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC5B4D234752A4008C7F2B /* YouboraConfigUtils.framework */; };
-		06DC5B4F234752B1008C7F2B /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC5B4D234752A4008C7F2B /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		06DC5B4C234752A4008C7F2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06DC5B48234752A4008C7F2B /* YouboraConfigUtils.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4E41B54C1EBA18B1003F8B80;
-			remoteInfo = YouboraConfigUtils;
-		};
-		06DC5B50234752B1008C7F2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 06DC5B48234752A4008C7F2B /* YouboraConfigUtils.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E41B54B1EBA18B1003F8B80;
-			remoteInfo = YouboraConfigUtils;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		06DC5B4723475284008C7F2B /* Embed Frameworks */ = {
@@ -44,8 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				06DC5B4F234752B1008C7F2B /* YouboraConfigUtils.framework in Embed Frameworks */,
-				06DC5B4623475284008C7F2B /* YouboraLib.framework in Embed Frameworks */,
+				06A41C5223607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06DC5B2923475149008C7F2B /* iOS-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06DC5B2C23475149008C7F2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06DC5B2D23475149008C7F2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,8 +44,6 @@
 		06DC5B382347514A008C7F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06DC5B3A2347514A008C7F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06DC5B3B2347514A008C7F2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		06DC5B4423475284008C7F2B /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
-		06DC5B48234752A4008C7F2B /* YouboraConfigUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouboraConfigUtils.xcodeproj; path = ../../YouboraConfigUtils.xcodeproj; sourceTree = "<group>"; };
 		285E49013BCA88FA28FFDCF4 /* Pods-iOS-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Objc.debug.xcconfig"; path = "Target Support Files/Pods-iOS-Objc/Pods-iOS-Objc.debug.xcconfig"; sourceTree = "<group>"; };
 		3BB662D52994D254CBB2675E /* Pods_iOS_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA27C24F473C7A02148FD6D7 /* Pods-iOS-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-Objc.release.xcconfig"; path = "Target Support Files/Pods-iOS-Objc/Pods-iOS-Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,8 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06DC5B4E234752B1008C7F2B /* YouboraConfigUtils.framework in Frameworks */,
-				06DC5B4523475284008C7F2B /* YouboraLib.framework in Frameworks */,
+				06A41C5123607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Frameworks */,
 				0550D5192F02ADFE10261BAB /* Pods_iOS_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,8 +65,7 @@
 		06DC5B2023475149008C7F2B = {
 			isa = PBXGroup;
 			children = (
-				06DC5B48234752A4008C7F2B /* YouboraConfigUtils.xcodeproj */,
-				06DC5B4423475284008C7F2B /* YouboraLib.framework */,
+				06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */,
 				06DC5B2B23475149008C7F2B /* iOS-Objc */,
 				06DC5B2A23475149008C7F2B /* Products */,
 				0A8E9DA9F86A2BDB900FAB1E /* Pods */,
@@ -118,14 +95,6 @@
 				06DC5B3B2347514A008C7F2B /* main.m */,
 			);
 			path = "iOS-Objc";
-			sourceTree = "<group>";
-		};
-		06DC5B49234752A4008C7F2B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				06DC5B4D234752A4008C7F2B /* YouboraConfigUtils.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0A8E9DA9F86A2BDB900FAB1E /* Pods */ = {
@@ -163,7 +132,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				06DC5B51234752B1008C7F2B /* PBXTargetDependency */,
 			);
 			name = "iOS-Objc";
 			productName = "iOS-Objc";
@@ -195,28 +163,12 @@
 			mainGroup = 06DC5B2023475149008C7F2B;
 			productRefGroup = 06DC5B2A23475149008C7F2B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 06DC5B49234752A4008C7F2B /* Products */;
-					ProjectRef = 06DC5B48234752A4008C7F2B /* YouboraConfigUtils.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				06DC5B2823475149008C7F2B /* iOS-Objc */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		06DC5B4D234752A4008C7F2B /* YouboraConfigUtils.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = YouboraConfigUtils.framework;
-			remoteRef = 06DC5B4C234752A4008C7F2B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		06DC5B2723475149008C7F2B /* Resources */ = {
@@ -285,14 +237,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		06DC5B51234752B1008C7F2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YouboraConfigUtils;
-			targetProxy = 06DC5B50234752B1008C7F2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		06DC5B3223475149008C7F2B /* Main.storyboard */ = {
@@ -434,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

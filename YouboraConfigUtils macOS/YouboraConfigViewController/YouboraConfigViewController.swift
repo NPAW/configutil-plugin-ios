@@ -9,43 +9,45 @@
 import Cocoa
 
 @objc open class YouboraConfigViewController: NSViewController {
+    
+    private var adjustsToParent = false
+    
+    @IBOutlet weak var button: NSButton!
+    
+    private var classType: String {
+        return String(describing: type(of: self))
+    }
+    
+    private var myBundle: Bundle {
+        return Bundle(for: self.classForCoder)
+    }
+    
+    public func initFromXIB() -> YouboraConfigViewController {
+        return YouboraConfigViewController(nibName: classType, bundle: myBundle)
+    }
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Cenas")
-        // Do view setup here.
     }
     
-    open override func loadView() {
-        print("Cenas")
+    open override func awakeFromNib() {
+        if let parentViewController = self.parent {
+            
+            self.view.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                NSLayoutConstraint(item: parentViewController.view, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: parentViewController.view, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: parentViewController.view, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0),
+                NSLayoutConstraint(item: parentViewController.view, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0)
+                ])
+        }
     }
     
-    open override func present(_ viewController: NSViewController, asPopoverRelativeTo positioningRect: NSRect, of positioningView: NSView, preferredEdge: NSRectEdge, behavior: NSPopover.Behavior) {
-        print("Cenas")
+    // MARK: - Aux view controller methods
+    
+    open func insertIntoParent(parentViewController: NSViewController) {
+        parentViewController.addChild(self)
+        parentViewController.view.addSubview(self.view)
     }
-    
-    open override func present(_ viewController: NSViewController, animator: NSViewControllerPresentationAnimator) {
-        print("Cenas")
-    }
-    
-    // MARK: - ViewController Methods
-    
-//    open override func didMove(toParent parent: NSViewController?) {
-//        guard let parent = parent else {
-//            return
-//        }
-//
-//        parent.view.addSubview(self.view)
-//
-//        self.view.translatesAutoresizingMaskIntoConstraints = false
-//
-//        parent.view.addConstraints([
-//            parent.view.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0),
-//            parent.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0),
-//            parent.view.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
-//            parent.view.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0)
-//            ])
-//    }
-    
 }

@@ -9,22 +9,22 @@
 import Foundation
 import YouboraLib
 
-public class YouboraConfigManager: NSObject {
+@objcMembers public class YouboraConfigManager: NSObject {
     static private var options: YBOptions?
     
-    @objc static public func save() {
+     static public func save() {
         guard let options = self.options else {
             return
         }
         UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: options), forKey: Constants.youborasettings)
     }
     
-    @objc static public func reset() {
+    static public func reset() {
         self.options = YBOptions()
         self.save()
     }
     
-    @discardableResult @objc static public func getOptions() -> YBOptions {
+    @discardableResult static public func getOptions() -> YBOptions {
         guard let options = self.options else {
             guard let data = UserDefaults.standard.data(forKey: Constants.youborasettings) else {
                 reset()

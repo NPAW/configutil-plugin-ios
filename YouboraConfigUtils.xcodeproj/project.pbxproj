@@ -243,7 +243,6 @@
 		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				06A41C392360460500ECAE6B /* Protocols */,
 				06C85609235A0FE500633071 /* Extensions */,
 				06927ACA2345F35C005127FC /* YouboraConfigManager.swift */,
 				06927ACD2345F494005127FC /* Constants.swift */,
@@ -296,13 +295,6 @@
 				06A41C15235F5A2900ECAE6B /* YouboraConfigViewController.xib */,
 			);
 			path = YouboraConfigViewController;
-			sourceTree = "<group>";
-		};
-		06A41C392360460500ECAE6B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		06C85609235A0FE500633071 /* Extensions */ = {
