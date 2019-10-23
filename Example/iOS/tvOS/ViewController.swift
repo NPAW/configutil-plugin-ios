@@ -11,13 +11,12 @@ import YouboraConfigUtils_tvOS
 
 class ViewController: UIViewController {
     
-    let child = YouboraConfigViewController()
+    let child = YouboraConfigViewController().initFromXIB()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         YouboraConfigManager.getOptions()
         
-        self.addChild(child)
-        child.didMove(toParent: self)
+        child.insertIntoParent(parentViewController: self)
     }
 }

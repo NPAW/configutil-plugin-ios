@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0605A4092354AF0C00C1EF7D /* YouboraConfigUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0605A4072354AF0C00C1EF7D /* YouboraConfigUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0605A40E2354AF8700C1EF7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACD2345F494005127FC /* Constants.swift */; };
 		0605A4402354B49600C1EF7D /* YouboraConfigUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0605A43E2354B49600C1EF7D /* YouboraConfigUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0605A45B2354B51200C1EF7D /* YouboraConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AD323460C52005127FC /* YouboraConfigViewModel.swift */; };
 		0605A45E2354B53900C1EF7D /* YouboraConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACA2345F35C005127FC /* YouboraConfigManager.swift */; };
@@ -38,10 +37,13 @@
 		06A41C06235F204C00ECAE6B /* PropCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41C04235F204C00ECAE6B /* PropCollectionViewCell.xib */; };
 		06A41C0B235F3B2700ECAE6B /* YBConfigNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C0A235F3B2700ECAE6B /* YBConfigNumberView.swift */; };
 		06A41C0D235F3B3100ECAE6B /* YBConfigNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41C0C235F3B3100ECAE6B /* YBConfigNumberView.xib */; };
+		06A41C16235F5A2900ECAE6B /* YouboraConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C14235F5A2900ECAE6B /* YouboraConfigViewController.swift */; };
+		06A41C17235F5A2900ECAE6B /* YouboraConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A41C15235F5A2900ECAE6B /* YouboraConfigViewController.xib */; };
+		06A41C3723603F6D00ECAE6B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C3623603F6D00ECAE6B /* UIViewController.swift */; };
+		06A41C3823603F6D00ECAE6B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A41C3623603F6D00ECAE6B /* UIViewController.swift */; };
 		06C85606235A0D8000633071 /* YBConfigBoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C85605235A0D8000633071 /* YBConfigBoolView.swift */; };
 		06C85608235A0DA500633071 /* YBConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C85607235A0DA500633071 /* YBConfigView.swift */; };
 		06C8560B235A0FF200633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
-		06C8560C235A119A00633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
 		06C8560D235A119B00633071 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C8560A235A0FF200633071 /* UIView.swift */; };
 		06DC5B1723472FCC008C7F2B /* YBConfigNumberCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B1523472FCC008C7F2B /* YBConfigNumberCellView.swift */; };
 		06DC5B1823472FCC008C7F2B /* YBConfigNumberCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B1623472FCC008C7F2B /* YBConfigNumberCellView.xib */; };
@@ -49,14 +51,14 @@
 		06DC5B1F234746ED008C7F2B /* YBConfigUnknownCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DC5B1D234746ED008C7F2B /* YBConfigUnknownCellView.xib */; };
 		06DC5B552347610D008C7F2B /* YBConfigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B542347610D008C7F2B /* YBConfigCell.swift */; };
 		06DC5B5723477C40008C7F2B /* YBConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DC5B5623477C40008C7F2B /* YBConfigViewModel.swift */; };
-		369BF61423F8447B4CFF529E /* Pods_YouboraConfigUtils_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BACF4D432695F4EFAA67FFA /* Pods_YouboraConfigUtils_tvOS.framework */; };
-		49EEC34B77C1E07D0381221E /* Pods_YouboraConfigUtils_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86296786C82CE04AAF7F4132 /* Pods_YouboraConfigUtils_macOS.framework */; };
+		0D5367F1DDA33A2308C7773A /* Pods_YouboraConfigUtils_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8F30886AFB90D626A4FBB20 /* Pods_YouboraConfigUtils_macOS.framework */; };
+		48B3F01823D2A9B9A4777007 /* Pods_YouboraConfigUtils_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED158D2EC04C50D5052608A /* Pods_YouboraConfigUtils_iOS.framework */; };
 		4E41B5511EBA18B1003F8B80 /* YouboraConfigUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFE32B121836DB500491B84 /* YouboraLib.framework */; };
-		FAE5F110F01B06E4478E604A /* Pods_YouboraConfigUtils_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74466B89999FFEFCC428C78F /* Pods_YouboraConfigUtils_iOS.framework */; };
+		5AF263623AF3BCFCBC7BC861 /* Pods_YouboraConfigUtils_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC75CE6443DE92C294192168 /* Pods_YouboraConfigUtils_tvOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B6877981B6E522E164E421 /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_macOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_macOS/Pods-YouboraConfigUtils_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		0605A4052354AF0B00C1EF7D /* YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605A4072354AF0C00C1EF7D /* YouboraConfigUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraConfigUtils.h; sourceTree = "<group>"; };
 		0605A4082354AF0C00C1EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +86,9 @@
 		06A41C04235F204C00ECAE6B /* PropCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropCollectionViewCell.xib; sourceTree = "<group>"; };
 		06A41C0A235F3B2700ECAE6B /* YBConfigNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigNumberView.swift; sourceTree = "<group>"; };
 		06A41C0C235F3B3100ECAE6B /* YBConfigNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigNumberView.xib; sourceTree = "<group>"; };
+		06A41C14235F5A2900ECAE6B /* YouboraConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigViewController.swift; sourceTree = "<group>"; };
+		06A41C15235F5A2900ECAE6B /* YouboraConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YouboraConfigViewController.xib; sourceTree = "<group>"; };
+		06A41C3623603F6D00ECAE6B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		06C85605235A0D8000633071 /* YBConfigBoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigBoolView.swift; sourceTree = "<group>"; };
 		06C85607235A0DA500633071 /* YBConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigView.swift; sourceTree = "<group>"; };
 		06C8560A235A0FF200633071 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -93,25 +98,18 @@
 		06DC5B1D234746ED008C7F2B /* YBConfigUnknownCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigUnknownCellView.xib; sourceTree = "<group>"; };
 		06DC5B542347610D008C7F2B /* YBConfigCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigCell.swift; sourceTree = "<group>"; };
 		06DC5B5623477C40008C7F2B /* YBConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigViewModel.swift; sourceTree = "<group>"; };
-		1F8813CAF2718A8A7D66FAB0 /* Pods-YouboraConfigUtils macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils macOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils macOS/Pods-YouboraConfigUtils macOS.release.xcconfig"; sourceTree = "<group>"; };
-		3E7FE61588CF5980626EDF8C /* Pods-YouboraConfigUtils_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_iOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_iOS/Pods-YouboraConfigUtils_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		4BACF4D432695F4EFAA67FFA /* Pods_YouboraConfigUtils_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BC015337716F206A971A0CF /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_macOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_macOS/Pods-YouboraConfigUtils_macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		321DD0724E53E2213D38EF57 /* Pods-YouboraConfigUtils_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_iOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_iOS/Pods-YouboraConfigUtils_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3ED158D2EC04C50D5052608A /* Pods_YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E41B54C1EBA18B1003F8B80 /* YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E41B54F1EBA18B1003F8B80 /* YouboraConfigUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouboraConfigUtils.h; sourceTree = "<group>"; };
 		4E41B5501EBA18B1003F8B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53B2AF71F173A777B67A9CB7 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_tvOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_tvOS/Pods-YouboraConfigUtils_tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5D5311E874DF630DB5A2FF59 /* Pods-YouboraConfigUtils iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils iOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils iOS/Pods-YouboraConfigUtils iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5FA7E36EF6FAFF7B499B6A1B /* Pods-YouboraConfigUtils iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils iOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils iOS/Pods-YouboraConfigUtils iOS.release.xcconfig"; sourceTree = "<group>"; };
-		74466B89999FFEFCC428C78F /* Pods_YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		856D571B08B3EBFA292DFC04 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_macOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_macOS/Pods-YouboraConfigUtils_macOS.release.xcconfig"; sourceTree = "<group>"; };
-		86296786C82CE04AAF7F4132 /* Pods_YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DC4609B03CBD341400922F8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_tvOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_tvOS/Pods-YouboraConfigUtils_tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		980622F0AF301BB3C5619430 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_iOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_iOS/Pods-YouboraConfigUtils_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		B27B6AC6F25DCB3DC2A7C179 /* Pods-YouboraConfigUtils macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils macOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils macOS/Pods-YouboraConfigUtils macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		808DF72ACB9FDCBC4CEF3ED8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_tvOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_tvOS/Pods-YouboraConfigUtils_tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		833B016A970FC388F04C3408 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_macOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_macOS/Pods-YouboraConfigUtils_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		A93CAE2812B3A082E5AB4126 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_tvOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_tvOS/Pods-YouboraConfigUtils_tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F30886AFB90D626A4FBB20 /* Pods_YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFE32B121836DB500491B84 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
-		D2D7D54C6DE15017C9D9C751 /* Pods-YouboraConfigUtils tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils tvOS.release.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils tvOS/Pods-YouboraConfigUtils tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		FB35B40D5FBD6F06D9AAB2BE /* Pods-YouboraConfigUtils tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils tvOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils tvOS/Pods-YouboraConfigUtils tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FC75CE6443DE92C294192168 /* Pods_YouboraConfigUtils_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraConfigUtils_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBDB1CE90A9C9FEA6352A74 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraConfigUtils_iOS.debug.xcconfig"; path = "Target Support Files/Pods-YouboraConfigUtils_iOS/Pods-YouboraConfigUtils_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EEC34B77C1E07D0381221E /* Pods_YouboraConfigUtils_macOS.framework in Frameworks */,
+				0D5367F1DDA33A2308C7773A /* Pods_YouboraConfigUtils_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369BF61423F8447B4CFF529E /* Pods_YouboraConfigUtils_tvOS.framework in Frameworks */,
+				5AF263623AF3BCFCBC7BC861 /* Pods_YouboraConfigUtils_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFE32B221836DB500491B84 /* YouboraLib.framework in Frameworks */,
-				FAE5F110F01B06E4478E604A /* Pods_YouboraConfigUtils_iOS.framework in Frameworks */,
+				48B3F01823D2A9B9A4777007 /* Pods_YouboraConfigUtils_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +143,7 @@
 		0605A4062354AF0C00C1EF7D /* YouboraConfigUtils macOS */ = {
 			isa = PBXGroup;
 			children = (
+				06A41C13235F57CC00ECAE6B /* YouboraConfigViewController */,
 				0605A4072354AF0C00C1EF7D /* YouboraConfigUtils.h */,
 				0605A4082354AF0C00C1EF7D /* Info.plist */,
 			);
@@ -245,6 +243,7 @@
 		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				06A41C392360460500ECAE6B /* Protocols */,
 				06C85609235A0FE500633071 /* Extensions */,
 				06927ACA2345F35C005127FC /* YouboraConfigManager.swift */,
 				06927ACD2345F494005127FC /* Constants.swift */,
@@ -290,10 +289,27 @@
 			path = YBConfigNumber;
 			sourceTree = "<group>";
 		};
+		06A41C13235F57CC00ECAE6B /* YouboraConfigViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06A41C14235F5A2900ECAE6B /* YouboraConfigViewController.swift */,
+				06A41C15235F5A2900ECAE6B /* YouboraConfigViewController.xib */,
+			);
+			path = YouboraConfigViewController;
+			sourceTree = "<group>";
+		};
+		06A41C392360460500ECAE6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		06C85609235A0FE500633071 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				06C8560A235A0FF200633071 /* UIView.swift */,
+				06A41C3623603F6D00ECAE6B /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,18 +326,12 @@
 		2BD9E3FADA74AEBE6C318DDF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D5311E874DF630DB5A2FF59 /* Pods-YouboraConfigUtils iOS.debug.xcconfig */,
-				5FA7E36EF6FAFF7B499B6A1B /* Pods-YouboraConfigUtils iOS.release.xcconfig */,
-				B27B6AC6F25DCB3DC2A7C179 /* Pods-YouboraConfigUtils macOS.debug.xcconfig */,
-				1F8813CAF2718A8A7D66FAB0 /* Pods-YouboraConfigUtils macOS.release.xcconfig */,
-				FB35B40D5FBD6F06D9AAB2BE /* Pods-YouboraConfigUtils tvOS.debug.xcconfig */,
-				D2D7D54C6DE15017C9D9C751 /* Pods-YouboraConfigUtils tvOS.release.xcconfig */,
-				980622F0AF301BB3C5619430 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */,
-				3E7FE61588CF5980626EDF8C /* Pods-YouboraConfigUtils_iOS.release.xcconfig */,
-				4BC015337716F206A971A0CF /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */,
-				856D571B08B3EBFA292DFC04 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */,
-				53B2AF71F173A777B67A9CB7 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */,
-				8DC4609B03CBD341400922F8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */,
+				FFBDB1CE90A9C9FEA6352A74 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */,
+				321DD0724E53E2213D38EF57 /* Pods-YouboraConfigUtils_iOS.release.xcconfig */,
+				02B6877981B6E522E164E421 /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */,
+				833B016A970FC388F04C3408 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */,
+				A93CAE2812B3A082E5AB4126 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */,
+				808DF72ACB9FDCBC4CEF3ED8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -365,9 +375,9 @@
 			isa = PBXGroup;
 			children = (
 				CDFE32B121836DB500491B84 /* YouboraLib.framework */,
-				74466B89999FFEFCC428C78F /* Pods_YouboraConfigUtils_iOS.framework */,
-				86296786C82CE04AAF7F4132 /* Pods_YouboraConfigUtils_macOS.framework */,
-				4BACF4D432695F4EFAA67FFA /* Pods_YouboraConfigUtils_tvOS.framework */,
+				3ED158D2EC04C50D5052608A /* Pods_YouboraConfigUtils_iOS.framework */,
+				B8F30886AFB90D626A4FBB20 /* Pods_YouboraConfigUtils_macOS.framework */,
+				FC75CE6443DE92C294192168 /* Pods_YouboraConfigUtils_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -406,7 +416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0605A40A2354AF0C00C1EF7D /* Build configuration list for PBXNativeTarget "YouboraConfigUtils_macOS" */;
 			buildPhases = (
-				B8464BBFD76B6FAEE7762D69 /* [CP] Check Pods Manifest.lock */,
+				BE786D48AFCF70140C02744A /* [CP] Check Pods Manifest.lock */,
 				0605A4002354AF0B00C1EF7D /* Headers */,
 				0605A4012354AF0B00C1EF7D /* Sources */,
 				0605A4022354AF0B00C1EF7D /* Frameworks */,
@@ -426,7 +436,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0605A4412354B49600C1EF7D /* Build configuration list for PBXNativeTarget "YouboraConfigUtils_tvOS" */;
 			buildPhases = (
-				1CFC47163124910AD6D06CF2 /* [CP] Check Pods Manifest.lock */,
+				482962BED0073DE7424ECECF /* [CP] Check Pods Manifest.lock */,
 				0605A4372354B49600C1EF7D /* Headers */,
 				0605A4382354B49600C1EF7D /* Sources */,
 				0605A4392354B49600C1EF7D /* Frameworks */,
@@ -446,7 +456,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E41B5541EBA18B1003F8B80 /* Build configuration list for PBXNativeTarget "YouboraConfigUtils_iOS" */;
 			buildPhases = (
-				3FBCAAEC64AE1B293A8BFEAE /* [CP] Check Pods Manifest.lock */,
+				7EFE225886A51D6D6920C563 /* [CP] Check Pods Manifest.lock */,
 				4E41B5471EBA18B1003F8B80 /* Sources */,
 				4E41B5481EBA18B1003F8B80 /* Frameworks */,
 				4E41B5491EBA18B1003F8B80 /* Headers */,
@@ -474,6 +484,7 @@
 					0605A4042354AF0B00C1EF7D = {
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = DAR8GLKRWU;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 					0605A43B2354B49600C1EF7D = {
@@ -514,6 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06A41C17235F5A2900ECAE6B /* YouboraConfigViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +607,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		1CFC47163124910AD6D06CF2 /* [CP] Check Pods Manifest.lock */ = {
+		482962BED0073DE7424ECECF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -617,7 +629,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3FBCAAEC64AE1B293A8BFEAE /* [CP] Check Pods Manifest.lock */ = {
+		7EFE225886A51D6D6920C563 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -639,7 +651,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8464BBFD76B6FAEE7762D69 /* [CP] Check Pods Manifest.lock */ = {
+		BE786D48AFCF70140C02744A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -668,8 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06C8560C235A119A00633071 /* UIView.swift in Sources */,
-				0605A40E2354AF8700C1EF7D /* Constants.swift in Sources */,
+				06A41C16235F5A2900ECAE6B /* YouboraConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +702,7 @@
 				0605A4682354B5CB00C1EF7D /* YBConfigNumberViewModel.swift in Sources */,
 				06A41BFE235EEB5C00ECAE6B /* YBConfigStringView.swift in Sources */,
 				0605A4612354B5B500C1EF7D /* YBConfigViewModel.swift in Sources */,
+				06A41C3823603F6D00ECAE6B /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +724,7 @@
 				06927ACB2345F35C005127FC /* YouboraConfigManager.swift in Sources */,
 				06927AE2234632AF005127FC /* YBConfigStringViewModel.swift in Sources */,
 				06927ADE23462571005127FC /* YBConfigBoolViewModel.swift in Sources */,
+				06A41C3723603F6D00ECAE6B /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,9 +733,10 @@
 /* Begin XCBuildConfiguration section */
 		0605A40B2354AF0C00C1EF7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BC015337716F206A971A0CF /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */;
+			baseConfigurationReference = 02B6877981B6E522E164E421 /* Pods-YouboraConfigUtils_macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -733,26 +747,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		0605A40C2354AF0C00C1EF7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 856D571B08B3EBFA292DFC04 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */;
+			baseConfigurationReference = 833B016A970FC388F04C3408 /* Pods-YouboraConfigUtils_macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -763,23 +781,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		0605A4422354B49600C1EF7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53B2AF71F173A777B67A9CB7 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */;
+			baseConfigurationReference = A93CAE2812B3A082E5AB4126 /* Pods-YouboraConfigUtils_tvOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -791,7 +811,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "YouboraConfigUtils tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -806,13 +826,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.4;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
 		0605A4432354B49600C1EF7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DC4609B03CBD341400922F8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */;
+			baseConfigurationReference = 808DF72ACB9FDCBC4CEF3ED8 /* Pods-YouboraConfigUtils_tvOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -824,7 +844,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "YouboraConfigUtils tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -837,7 +857,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.4;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -892,6 +912,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -947,6 +968,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -960,7 +982,7 @@
 		};
 		4E41B5551EBA18B1003F8B80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 980622F0AF301BB3C5619430 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */;
+			baseConfigurationReference = FFBDB1CE90A9C9FEA6352A74 /* Pods-YouboraConfigUtils_iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -969,10 +991,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -987,7 +1006,7 @@
 		};
 		4E41B5561EBA18B1003F8B80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E7FE61588CF5980626EDF8C /* Pods-YouboraConfigUtils_iOS.release.xcconfig */;
+			baseConfigurationReference = 321DD0724E53E2213D38EF57 /* Pods-YouboraConfigUtils_iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -996,10 +1015,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -3,11 +3,18 @@
 
 workspace 'YouboraConfigUtils.xcworkspace'
 
+def common_pods
+  pod 'YouboraLib', '6.5.8-beta'
+end
+
 target 'YouboraConfigUtils_iOS' do
   project 'YouboraConfigUtils.xcodeproj'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  platform :ios, '9.0'
+
+  common_pods
   # Pods for YouboraConfigUtils
 
 end
@@ -17,6 +24,9 @@ target 'YouboraConfigUtils_macOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  platform :osx, '10.10'
+
+  common_pods
   # Pods for YouboraConfigUtils
 
 end
@@ -26,6 +36,9 @@ target 'YouboraConfigUtils_tvOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  platform :tvos, '9.0'
+  
+  common_pods
   # Pods for YouboraConfigUtils
 
 end
@@ -36,6 +49,35 @@ target 'iOS' do
   use_frameworks!
 
   # Pods for iOS
+
+  platform :ios, '9.0'
+
+  common_pods
+end
+
+target 'macOS' do 
+  project 'Example/iOS/iOS.xcodeproj'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOS
+
+  platform :osx, '10.10'
+
+  common_pods
+
+end
+
+target 'tvOS' do 
+  project 'Example/iOS/iOS.xcodeproj'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOS
+
+  platform :tvos, '9.0'
+  
+  common_pods
 
 end
 

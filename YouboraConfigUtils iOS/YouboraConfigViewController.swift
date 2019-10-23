@@ -9,7 +9,6 @@
 import UIKit
 
 @objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
     let viewModel = YouboraConfigViewModel()
     
     @IBOutlet weak var optionsList: UITableView!
@@ -19,8 +18,6 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        Bundle(for: self.classForCoder).loadNibNamed(String(describing: YouboraConfigViewController.self), owner: self, options: nil)
-        
         self.searchBar.delegate = self
         
         YBConfigBoolCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
