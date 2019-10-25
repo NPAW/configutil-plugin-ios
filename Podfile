@@ -93,3 +93,29 @@ target 'iOS-Objc' do
   common_pods
   
 end
+
+target 'macOS-Objc' do
+  project 'Example/iOS-Objc/iOS-Objc.xcodeproj'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for iOS-Objc
+
+  platform :ios, '9.0'
+
+  common_pods
+  
+end
+
+target 'tvOS-Objc' do
+  project 'Example/iOS-Objc/iOS-Objc.xcodeproj'
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  # Pods for tvOS-Objc
+
+  platform :ios, '9.0'
+
+  common_pods
+  
+end
