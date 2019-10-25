@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.author       = { "Nice People at Work" => "support@nicepeopleatwork.com" }
 
-  s.dependency 'YouboraLib'
+  s.dependency 'YouboraLib', '~> 6.5.0'
   
   # Platforms
   s.ios.deployment_target = "9.0"

@@ -13,6 +13,8 @@ env:
     - ADAPTER_VERSION_TAG=YOUBORA_CONFIG_UTILS_VERSION_SETTING
 
 stages:
+   - name: swiftLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
@@ -22,6 +24,11 @@ stages:
 
 jobs:
   include:
+    - &lint
+      stage: swiftLint
+      install: pod deintegrate
+      script:
+        - xcodebuild build
     - &pod
       stage: podLint
       osx_image: xcode9.2
