@@ -39,6 +39,9 @@ struct Constants {
     #elseif os(OSX)
     static let propCellHighlighted = NSColor(red: 116/255, green: 0/255, blue: 124/255, alpha: 1)
     #endif
+    static let numberOfColumnsInMacOS = 3
+    static let spaceBetweenItemsInMacOS = 7
+    static let maxItemHeightInMacOS = 200
 }
 
 extension Constants {

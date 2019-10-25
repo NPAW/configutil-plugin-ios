@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wgs-d6-tJd">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wgs-d6-tJd">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,11 +32,11 @@
             <objects>
                 <viewController id="pF5-ny-waG" customClass="MainViewController" customModule="macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uBj-F2-5fN">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1100" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="0uz-DF-iSs">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ZCl-sc-Q3k"/>
                                 </constraints>
@@ -45,10 +45,10 @@
                                 </connections>
                             </containerView>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="L53-Ap-Rnd">
-                                <rect key="frame" x="200" y="0.0" width="600" height="500"/>
+                                <rect key="frame" x="200" y="0.0" width="900" height="600"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="SDi-b0-WWx"/>
-                                    <constraint firstAttribute="height" constant="500" id="iNK-TK-vls"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="900" id="SDi-b0-WWx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="iNK-TK-vls"/>
                                 </constraints>
                             </containerView>
                         </subviews>

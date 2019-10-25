@@ -29,6 +29,12 @@
 		061B0C362361FB7C00157C1E /* YBConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B0C352361FB7C00157C1E /* YBConfigView.swift */; };
 		061B0C3E2361FE3500157C1E /* YBConfigBoolCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B0C3C2361FE3500157C1E /* YBConfigBoolCollectionView.swift */; };
 		061B0C3F2361FE3500157C1E /* YBConfigBoolCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061B0C3D2361FE3500157C1E /* YBConfigBoolCollectionView.xib */; };
+		061B0C4C23632CCF00157C1E /* YBConfigStringCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B0C4B23632CCF00157C1E /* YBConfigStringCollectionView.swift */; };
+		061B0C4E23632D6100157C1E /* YBConfigStringCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061B0C4D23632D6100157C1E /* YBConfigStringCollectionView.xib */; };
+		061B0C512363320A00157C1E /* YBConfigNumberCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B0C502363320A00157C1E /* YBConfigNumberCollectionView.swift */; };
+		061B0C532363339F00157C1E /* YBConfigNumberCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061B0C522363339F00157C1E /* YBConfigNumberCollectionView.xib */; };
+		061B0C562363363300157C1E /* YBConfigUnknownCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B0C552363363300157C1E /* YBConfigUnknownCollectionView.swift */; };
+		061B0C582363363C00157C1E /* YBConfigUnknownCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061B0C572363363B00157C1E /* YBConfigUnknownCollectionView.xib */; };
 		06927AC92345EF56005127FC /* YouboraConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AC82345EF56005127FC /* YouboraConfigViewController.swift */; };
 		06927ACB2345F35C005127FC /* YouboraConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACA2345F35C005127FC /* YouboraConfigManager.swift */; };
 		06927ACE2345F494005127FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927ACD2345F494005127FC /* Constants.swift */; };
@@ -81,6 +87,12 @@
 		061B0C352361FB7C00157C1E /* YBConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigView.swift; sourceTree = "<group>"; };
 		061B0C3C2361FE3500157C1E /* YBConfigBoolCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigBoolCollectionView.swift; sourceTree = "<group>"; };
 		061B0C3D2361FE3500157C1E /* YBConfigBoolCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigBoolCollectionView.xib; sourceTree = "<group>"; };
+		061B0C4B23632CCF00157C1E /* YBConfigStringCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigStringCollectionView.swift; sourceTree = "<group>"; };
+		061B0C4D23632D6100157C1E /* YBConfigStringCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigStringCollectionView.xib; sourceTree = "<group>"; };
+		061B0C502363320A00157C1E /* YBConfigNumberCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigNumberCollectionView.swift; sourceTree = "<group>"; };
+		061B0C522363339F00157C1E /* YBConfigNumberCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigNumberCollectionView.xib; sourceTree = "<group>"; };
+		061B0C552363363300157C1E /* YBConfigUnknownCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YBConfigUnknownCollectionView.swift; sourceTree = "<group>"; };
+		061B0C572363363B00157C1E /* YBConfigUnknownCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YBConfigUnknownCollectionView.xib; sourceTree = "<group>"; };
 		06927AC82345EF56005127FC /* YouboraConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigViewController.swift; sourceTree = "<group>"; };
 		06927ACA2345F35C005127FC /* YouboraConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouboraConfigManager.swift; sourceTree = "<group>"; };
 		06927ACD2345F494005127FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -258,7 +270,10 @@
 		061B0C342361FB3900157C1E /* Config Views */ = {
 			isa = PBXGroup;
 			children = (
+				061B0C542363360400157C1E /* YBConfigUnknown */,
 				061B0C352361FB7C00157C1E /* YBConfigView.swift */,
+				061B0C4F236331EC00157C1E /* YBConfigNumber */,
+				061B0C4A23632C8900157C1E /* YBConfigString */,
 				061B0C372361FDC000157C1E /* YBConfigBool */,
 			);
 			path = "Config Views";
@@ -271,6 +286,33 @@
 				061B0C3D2361FE3500157C1E /* YBConfigBoolCollectionView.xib */,
 			);
 			path = YBConfigBool;
+			sourceTree = "<group>";
+		};
+		061B0C4A23632C8900157C1E /* YBConfigString */ = {
+			isa = PBXGroup;
+			children = (
+				061B0C4B23632CCF00157C1E /* YBConfigStringCollectionView.swift */,
+				061B0C4D23632D6100157C1E /* YBConfigStringCollectionView.xib */,
+			);
+			path = YBConfigString;
+			sourceTree = "<group>";
+		};
+		061B0C4F236331EC00157C1E /* YBConfigNumber */ = {
+			isa = PBXGroup;
+			children = (
+				061B0C502363320A00157C1E /* YBConfigNumberCollectionView.swift */,
+				061B0C522363339F00157C1E /* YBConfigNumberCollectionView.xib */,
+			);
+			path = YBConfigNumber;
+			sourceTree = "<group>";
+		};
+		061B0C542363360400157C1E /* YBConfigUnknown */ = {
+			isa = PBXGroup;
+			children = (
+				061B0C552363363300157C1E /* YBConfigUnknownCollectionView.swift */,
+				061B0C572363363B00157C1E /* YBConfigUnknownCollectionView.xib */,
+			);
+			path = YBConfigUnknown;
 			sourceTree = "<group>";
 		};
 		06927ACC2345F487005127FC /* Utils & Helper & Extensions */ = {
@@ -551,8 +593,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061B0C582363363C00157C1E /* YBConfigUnknownCollectionView.xib in Resources */,
+				061B0C532363339F00157C1E /* YBConfigNumberCollectionView.xib in Resources */,
 				061B0C3F2361FE3500157C1E /* YBConfigBoolCollectionView.xib in Resources */,
 				06A41C17235F5A2900ECAE6B /* YouboraConfigViewController.xib in Resources */,
+				061B0C4E23632D6100157C1E /* YBConfigStringCollectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,11 +756,14 @@
 				06A41C16235F5A2900ECAE6B /* YouboraConfigViewController.swift in Sources */,
 				061B0C2E2361F76900157C1E /* Constants.swift in Sources */,
 				061B0C362361FB7C00157C1E /* YBConfigView.swift in Sources */,
+				061B0C4C23632CCF00157C1E /* YBConfigStringCollectionView.swift in Sources */,
 				061B0C3E2361FE3500157C1E /* YBConfigBoolCollectionView.swift in Sources */,
 				061B0C302361F86B00157C1E /* YBConfigBoolViewModel.swift in Sources */,
 				061B0C322361F87F00157C1E /* YBConfigNumberViewModel.swift in Sources */,
 				061B0C312361F87A00157C1E /* YBConfigStringViewModel.swift in Sources */,
 				061B0C2F2361F85F00157C1E /* YBConfigViewModel.swift in Sources */,
+				061B0C512363320A00157C1E /* YBConfigNumberCollectionView.swift in Sources */,
+				061B0C562363363300157C1E /* YBConfigUnknownCollectionView.swift in Sources */,
 				061B0C332361F8F200157C1E /* YouboraConfigManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

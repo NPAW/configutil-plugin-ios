@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="propName" destination="IV1-Sp-dTN" id="NsO-7d-1qE"/>
                 <outlet property="propType" destination="aui-dY-EP4" id="LXg-TL-LOs"/>
+                <outlet property="segmentControl" destination="5lB-4M-9bq" id="4qP-5p-rEc"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="PPO-Gh-f9P"/>
             </connections>
         </collectionViewItem>
@@ -22,7 +23,7 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-Sp-dTN">
                     <rect key="frame" x="8" y="235" width="464" height="27"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="77B-7j-gzf">
+                    <textFieldCell key="cell" alignment="center" title="Label" id="77B-7j-gzf">
                         <font key="font" size="22" name=".AppleSystemUIFont"/>
                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -36,12 +37,27 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-4M-9bq">
+                    <rect key="frame" x="205" y="124" width="71" height="24"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="qaS-7u-vF6">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment label="ON" width="32"/>
+                            <segment label="Off" width="32" selected="YES" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didChangeSegment:" target="f0w-KO-UJJ" id="zai-2D-FRl"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <constraints>
                 <constraint firstItem="IV1-Sp-dTN" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="99m-jo-djh"/>
                 <constraint firstItem="IV1-Sp-dTN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="IRe-fQ-x7Q"/>
                 <constraint firstAttribute="bottom" secondItem="aui-dY-EP4" secondAttribute="bottom" constant="10" id="UIB-w8-EZh"/>
                 <constraint firstItem="aui-dY-EP4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="aeD-Qh-TXh"/>
+                <constraint firstItem="5lB-4M-9bq" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="cFl-gp-BWG"/>
+                <constraint firstItem="5lB-4M-9bq" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="fGy-EH-2SP"/>
                 <constraint firstAttribute="trailing" secondItem="aui-dY-EP4" secondAttribute="trailing" constant="10" id="iBy-Nr-RzI"/>
                 <constraint firstAttribute="trailing" secondItem="IV1-Sp-dTN" secondAttribute="trailing" constant="10" id="vdf-yi-KcZ"/>
             </constraints>

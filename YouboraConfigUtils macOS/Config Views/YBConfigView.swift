@@ -11,22 +11,30 @@ import Cocoa
 typealias UpdateClosure = () -> Void
 
 class YBConfigView: NSCollectionViewItem {
-    var viewModel: YBConfigViewModel?
-    
-    public var typeName: String {
-        return String(describing: YBConfigView.self)
+    public var viewModel: YBConfigViewModel? {
+        didSet {
+            self.didSetViewModel()
+        }
     }
     
-    public var customIdentifier: NSUserInterfaceItemIdentifier {
-        return NSUserInterfaceItemIdentifier(rawValue: typeName)
+    public var typeName: String { return String(describing: YBConfigView.self) }
+    
+    public var customIdentifier: NSUserInterfaceItemIdentifier { return NSUserInterfaceItemIdentifier(rawValue: typeName) }
+    
+    var customBundle: Bundle { return Bundle.init(for: self.classForCoder) }
+    
+    var customNib: NSNib? { return NSNib(nibNamed: typeName, bundle: customBundle) }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.darkGray.cgColor
     }
     
-    var customBundle: Bundle {
-        return Bundle.init(for: self.classForCoder)
-    }
-    
-    var customNib: NSNib? {
-        return NSNib(nibNamed: typeName, bundle: customBundle)
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.layer?.cornerRadius = 6
     }
     
     public func registerCell(collectionView: NSCollectionView) {
@@ -36,5 +44,9 @@ class YBConfigView: NSCollectionViewItem {
     public func makeItem(collectionView: NSCollectionView, indexPath: IndexPath) -> YBConfigView? {
         return collectionView.makeItem(withIdentifier: customIdentifier, for: indexPath) as? YBConfigView
     }
+    
+    public func setWithViewModel(viewModel: YBConfigViewModel) { self.viewModel = viewModel }
+    
+    public func didSetViewModel() {}
     
 }

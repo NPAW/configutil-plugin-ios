@@ -12,21 +12,27 @@ class YBConfigBoolCollectionView: YBConfigView {
     
     @IBOutlet weak var propName: NSTextField!
     @IBOutlet weak var propType: NSTextField!
-
+    @IBOutlet weak var segmentControl: NSSegmentedControl!
+    
     override public var typeName: String {
         return String(describing: YBConfigBoolCollectionView.self)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    
+    override func didSetViewModel() {
+        guard let viewModel = self.viewModel as? YBConfigBoolViewModel else {
+            return
+        }
+        
+        self.propName.stringValue = viewModel.getPropertyName()
+        self.propType.stringValue = "[Bool]"
+        self.segmentControl.selectedSegment = viewModel.getSegmentValue()
     }
     
-    public func setViewWithData(name: String, type: String) {
-        self.propName.stringValue = name
-        self.propType.stringValue = "[\(type)]"
+    @IBAction func didChangeSegment(_ sender: Any) {
+        guard let viewModel = self.viewModel as? YBConfigBoolViewModel else {
+            return
+        }
+        
+        viewModel.updateValue(newValue: self.segmentControl.selectedSegment)
     }
-    
-    
-    
 }

@@ -9,7 +9,7 @@
 import Cocoa
 import CoreFoundation
 
-@objc open class YouboraConfigViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource {
+@objc open class YouboraConfigViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var propsCollectionView: NSCollectionView!
     let viewModel = YouboraConfigViewModel()
@@ -30,6 +30,9 @@ import CoreFoundation
         super.viewDidLoad()
         
         YBConfigBoolCollectionView().registerCell(collectionView: self.propsCollectionView)
+        YBConfigStringCollectionView().registerCell(collectionView: self.propsCollectionView)
+        YBConfigNumberCollectionView().registerCell(collectionView: self.propsCollectionView)
+        YBConfigUnknownCollectionView().registerCell(collectionView: self.propsCollectionView)
         
         self.propsCollectionView.delegate = self
         self.propsCollectionView.dataSource = self
@@ -42,17 +45,38 @@ import CoreFoundation
     }
     
     public func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        guard let cell = YBConfigBoolCollectionView().makeItem(collectionView: collectionView, indexPath: indexPath) as? YBConfigBoolCollectionView else {
+        let collectionViewModel = viewModel.getConfigViewModel(position: indexPath.item)
+        
+        var cell: YBConfigView?
+        
+        switch collectionViewModel.option.type {
+        case .bool: cell = YBConfigBoolCollectionView().makeItem(collectionView: collectionView, indexPath: indexPath)
+        case .string: cell = YBConfigStringCollectionView().makeItem(collectionView: collectionView, indexPath: indexPath)
+        case .number: cell = YBConfigNumberCollectionView().makeItem(collectionView: collectionView, indexPath: indexPath)
+        case .unknown: cell = YBConfigUnknownCollectionView().makeItem(collectionView: collectionView, indexPath: indexPath)
+        }
+        
+        guard let configCell = cell else {
             return NSCollectionViewItem()
         }
         
-        return cell
+        configCell.setWithViewModel(viewModel: collectionViewModel)
+        
+        return configCell
+    }
+    
+    public func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
+        let totalSize = (collectionView.frame.size.width / CGFloat(Constants.numberOfColumnsInMacOS))
+        let size = totalSize - CGFloat(Constants.spaceBetweenItemsInMacOS)
+        
+        return NSSize(width: size, height: size > CGFloat(Constants.maxItemHeightInMacOS) ? CGFloat(Constants.maxItemHeightInMacOS) : size )
     }
     
     // MARK: - Search field methods
     
     @IBAction func didSearch(_ sender: NSSearchField) {
         viewModel.updateSearch(text: sender.stringValue)
+        self.propsCollectionView.reloadData()
     }
     
     // MARK: - Aux view controller methods
@@ -72,5 +96,14 @@ import CoreFoundation
     
     open func removeFromContainer() {
         self.view.removeFromSuperview()
+    }
+    
+    // MARK: - Buttons Configuration
+    
+    @IBAction func onSavePress(_ sender: Any) { self.viewModel.saveAllChanges() }
+    
+    @IBAction func onResetPress(_ sender: Any) {
+        self.viewModel.resetAllChanges()
+        self.propsCollectionView.reloadData()
     }
 }

@@ -30,13 +30,13 @@
                     </connections>
                 </searchField>
                 <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-Ma-KnI">
-                    <rect key="frame" x="10" y="10" width="818" height="424"/>
+                    <rect key="frame" x="10" y="41" width="818" height="393"/>
                     <clipView key="contentView" drawsBackground="NO" id="6Qq-g6-kaB">
-                        <rect key="frame" x="0.0" y="0.0" width="818" height="424"/>
+                        <rect key="frame" x="0.0" y="0.0" width="818" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView id="C2J-uy-sLE">
-                                <rect key="frame" x="0.0" y="0.0" width="818" height="424"/>
+                                <rect key="frame" x="0.0" y="0.0" width="818" height="393"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dmm-nm-YCE">
                                     <size key="itemSize" width="50" height="50"/>
@@ -51,18 +51,54 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="X8w-gJ-10s">
-                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <rect key="frame" x="802" y="0.0" width="16" height="364"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
+                <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOM-bb-SUU">
+                    <rect key="frame" x="10" y="10" width="818" height="21"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bV2-0n-5c9">
+                            <rect key="frame" x="-6" y="-7" width="400" height="32"/>
+                            <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zZ4-CD-Gdg">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onSavePress:" target="-2" id="AsX-Jf-h22"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-t2-KdM">
+                            <rect key="frame" x="390" y="-7" width="434" height="32"/>
+                            <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FeM-KM-cLP">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onResetPress:" target="-2" id="EI0-De-EES"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Bm4-Ma-KnI" secondAttribute="trailing" constant="10" id="HHi-DX-HM5"/>
+                <constraint firstItem="DOM-bb-SUU" firstAttribute="top" secondItem="Bm4-Ma-KnI" secondAttribute="bottom" constant="10" id="L3X-zR-Fht"/>
                 <constraint firstAttribute="trailing" secondItem="QGA-fi-BjC" secondAttribute="trailing" constant="10" id="LMO-Vl-LIx"/>
-                <constraint firstAttribute="bottom" secondItem="Bm4-Ma-KnI" secondAttribute="bottom" constant="10" id="TdR-rx-6e6"/>
                 <constraint firstItem="Bm4-Ma-KnI" firstAttribute="top" secondItem="QGA-fi-BjC" secondAttribute="bottom" constant="10" id="U3g-4Q-fWz"/>
+                <constraint firstAttribute="trailing" secondItem="DOM-bb-SUU" secondAttribute="trailing" constant="10" id="XEu-aU-y9S"/>
                 <constraint firstItem="Bm4-Ma-KnI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="ard-8K-dhY"/>
                 <constraint firstItem="QGA-fi-BjC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="hMS-SF-T7W"/>
+                <constraint firstItem="DOM-bb-SUU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="jSm-Nx-zHc"/>
+                <constraint firstAttribute="bottom" secondItem="DOM-bb-SUU" secondAttribute="bottom" constant="10" id="kdX-U1-Ffc"/>
                 <constraint firstItem="QGA-fi-BjC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="x0m-iU-bG1"/>
             </constraints>
             <point key="canvasLocation" x="76" y="93"/>
