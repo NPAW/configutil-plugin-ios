@@ -25,7 +25,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 nice. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<string>main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

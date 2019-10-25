@@ -7,7 +7,12 @@
 //
 
 import Foundation
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UIKit
+#elseif os(OSX)
+import Cocoa
+#endif
+
 
 @objc public enum OptionType: Int {
     case string = 0
@@ -29,7 +34,11 @@ struct Constants {
     static let stringCellId = "cellStringIdentifier"
     static let numberCellId = "cellNumberIdentifier"
     static let unknownCellId = "cellUnknownIdentifier"
+    #if os(iOS) || os(watchOS) || os(tvOS)
     static let propCellHighlighted = UIColor(red: 116/255, green: 0/255, blue: 124/255, alpha: 1)
+    #elseif os(OSX)
+    static let propCellHighlighted = NSColor(red: 116/255, green: 0/255, blue: 124/255, alpha: 1)
+    #endif
 }
 
 extension Constants {

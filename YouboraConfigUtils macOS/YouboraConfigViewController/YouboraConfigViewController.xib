@@ -8,25 +8,64 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="YouboraConfigViewController" customModule="YouboraConfigUtils_macOS" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="UaV-dR-yaF" id="ubO-MO-ICv"/>
+                <outlet property="propsCollectionView" destination="C2J-uy-sLE" id="9yG-7Z-vTO"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+        <customView appearanceType="darkAqua" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="838" height="476"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaV-dR-yaF">
-                    <rect key="frame" x="200" y="118" width="81" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hQz-ew-Qbc">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGA-fi-BjC">
+                    <rect key="frame" x="10" y="444" width="818" height="22"/>
+                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="a6n-wW-5IV">
                         <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </searchFieldCell>
+                    <connections>
+                        <action selector="didSearch:" target="-2" id="VUm-oq-ABp"/>
+                    </connections>
+                </searchField>
+                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm4-Ma-KnI">
+                    <rect key="frame" x="10" y="10" width="818" height="424"/>
+                    <clipView key="contentView" drawsBackground="NO" id="6Qq-g6-kaB">
+                        <rect key="frame" x="0.0" y="0.0" width="818" height="424"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView id="C2J-uy-sLE">
+                                <rect key="frame" x="0.0" y="0.0" width="818" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="dmm-nm-YCE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                </collectionViewFlowLayout>
+                                <color key="primaryBackgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="SkG-lM-BAv">
+                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="X8w-gJ-10s">
+                        <rect key="frame" x="234" y="1" width="15" height="143"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Bm4-Ma-KnI" secondAttribute="trailing" constant="10" id="HHi-DX-HM5"/>
+                <constraint firstAttribute="trailing" secondItem="QGA-fi-BjC" secondAttribute="trailing" constant="10" id="LMO-Vl-LIx"/>
+                <constraint firstAttribute="bottom" secondItem="Bm4-Ma-KnI" secondAttribute="bottom" constant="10" id="TdR-rx-6e6"/>
+                <constraint firstItem="Bm4-Ma-KnI" firstAttribute="top" secondItem="QGA-fi-BjC" secondAttribute="bottom" constant="10" id="U3g-4Q-fWz"/>
+                <constraint firstItem="Bm4-Ma-KnI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="ard-8K-dhY"/>
+                <constraint firstItem="QGA-fi-BjC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="10" id="hMS-SF-T7W"/>
+                <constraint firstItem="QGA-fi-BjC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="x0m-iU-bG1"/>
+            </constraints>
+            <point key="canvasLocation" x="76" y="93"/>
         </customView>
     </objects>
 </document>

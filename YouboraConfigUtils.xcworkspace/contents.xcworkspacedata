@@ -5,12 +5,12 @@
       location = "group:YouboraConfigUtils.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Example/iOS/iOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Example/iOS-Objc/iOS-Objc.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Example/iOS/iOS.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
