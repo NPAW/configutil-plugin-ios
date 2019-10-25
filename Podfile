@@ -99,9 +99,9 @@ target 'macOS-Objc' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  # Pods for iOS-Objc
+  # Pods for macOS-Objc
 
-  platform :ios, '9.0'
+  platform :osx, '10.10'
 
   common_pods
   
@@ -114,7 +114,7 @@ target 'tvOS-Objc' do
   
   # Pods for tvOS-Objc
 
-  platform :ios, '9.0'
+  platform :tvos, '9.0'
 
   common_pods
   

@@ -9,7 +9,7 @@
 import Cocoa
 import CoreFoundation
 
-@objc open class YouboraConfigViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
+@objcMembers public class YouboraConfigViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var propsCollectionView: NSCollectionView!
     let viewModel = YouboraConfigViewModel()

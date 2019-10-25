@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <YouboraConfigUtils_tvOS/YouboraConfigUtils_tvOS-Swift.h>
 
 @interface ViewController ()
+
+@property YouboraConfigViewController * child;
 
 @end
 
@@ -16,7 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [YouboraConfigManager getOptions];
+    
+    self.child = [[YouboraConfigViewController alloc] initFromXIB];
+    
+    [self.child insertIntoParentWithParentViewController:self];
 }
 
 

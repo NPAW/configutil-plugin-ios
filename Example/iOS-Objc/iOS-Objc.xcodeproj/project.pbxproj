@@ -18,6 +18,10 @@
 		061B0CA723633D7600157C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061B0CA623633D7600157C1E /* Assets.xcassets */; };
 		061B0CAA23633D7600157C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061B0CA823633D7600157C1E /* Main.storyboard */; };
 		061B0CAD23633D7600157C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 061B0CAC23633D7600157C1E /* main.m */; };
+		061B0CB723633F3700157C1E /* YouboraConfigUtils_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061B0CB623633F3700157C1E /* YouboraConfigUtils_macOS.framework */; };
+		061B0CB823633F3700157C1E /* YouboraConfigUtils_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 061B0CB623633F3700157C1E /* YouboraConfigUtils_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		061B0CBB2363445700157C1E /* YouboraConfigUtils_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061B0CBA2363445700157C1E /* YouboraConfigUtils_tvOS.framework */; };
+		061B0CBC2363445700157C1E /* YouboraConfigUtils_tvOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 061B0CBA2363445700157C1E /* YouboraConfigUtils_tvOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06327C0FB5F2171A8744027F /* Pods_tvOS_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C08F47D5D4E5294C561CA0 /* Pods_tvOS_Objc.framework */; };
 		06A41C5123607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */; };
 		06A41C5223607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,6 +35,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		061B0CB923633F3800157C1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				061B0CB823633F3700157C1E /* YouboraConfigUtils_macOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		061B0CBD2363445800157C1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				061B0CBC2363445700157C1E /* YouboraConfigUtils_tvOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06DC5B4723475284008C7F2B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +91,8 @@
 		061B0CAB23633D7600157C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061B0CAC23633D7600157C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		061B0CAE23633D7600157C1E /* macOS_Objc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_Objc.entitlements; sourceTree = "<group>"; };
+		061B0CB623633F3700157C1E /* YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		061B0CBA2363445700157C1E /* YouboraConfigUtils_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06DC5B2923475149008C7F2B /* iOS-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06DC5B2C23475149008C7F2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061B0CBB2363445700157C1E /* YouboraConfigUtils_tvOS.framework in Frameworks */,
 				06327C0FB5F2171A8744027F /* Pods_tvOS_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061B0CB723633F3700157C1E /* YouboraConfigUtils_macOS.framework in Frameworks */,
 				46234BBF6FFF71F4F824BC62 /* Pods_macOS_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +179,8 @@
 		06DC5B2023475149008C7F2B = {
 			isa = PBXGroup;
 			children = (
+				061B0CBA2363445700157C1E /* YouboraConfigUtils_tvOS.framework */,
+				061B0CB623633F3700157C1E /* YouboraConfigUtils_macOS.framework */,
 				06A41C5023607F2D00ECAE6B /* YouboraConfigUtils_iOS.framework */,
 				06DC5B2B23475149008C7F2B /* iOS-Objc */,
 				061B0C8823633D1A00157C1E /* tvOS-Objc */,
@@ -221,6 +253,7 @@
 				061B0C8423633D1A00157C1E /* Frameworks */,
 				061B0C8523633D1A00157C1E /* Resources */,
 				AEEA7B5F8359210036FEE2A2 /* [CP] Embed Pods Frameworks */,
+				061B0CBD2363445800157C1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +273,7 @@
 				061B0C9B23633D7500157C1E /* Frameworks */,
 				061B0C9C23633D7500157C1E /* Resources */,
 				E13A4385AAA99238E27B6E8B /* [CP] Embed Pods Frameworks */,
+				061B0CB923633F3800157C1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -539,6 +573,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "tvOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,6 +595,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "tvOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,6 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "macOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,6 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "macOS-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
