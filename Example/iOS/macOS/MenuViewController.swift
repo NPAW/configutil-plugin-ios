@@ -16,7 +16,6 @@ enum NaviagationOptions {
 
 typealias NavigationClosure = (_ option: NaviagationOptions) -> Void
 
-
 class MenuViewController: NSViewController {
 
     var navigateTo: NavigationClosure?
@@ -25,7 +24,6 @@ class MenuViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
     }
-    
     
     @IBAction func onConfigPress(_ sender: Any) {
         guard let navigateTo = self.navigateTo else {

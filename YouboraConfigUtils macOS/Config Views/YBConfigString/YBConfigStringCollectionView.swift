@@ -31,8 +31,6 @@ class YBConfigStringCollectionView: YBConfigView {
         self.propTextField.stringValue = viewModel.getValue()
     }
     
-    
-    
     @IBAction func textDidEndEditing(_ textField: NSTextField) {
         guard let viewModel = self.viewModel as? YBConfigStringViewModel else {
             return

@@ -29,7 +29,6 @@ class MainViewController: NSViewController {
         }
     }
     
-    
     // MARK: - Menu methods
     
     func setupMenuToNavigate() {

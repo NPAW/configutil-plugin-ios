@@ -13,7 +13,6 @@ import UIKit
 import Cocoa
 #endif
 
-
 @objc public enum OptionType: Int {
     case string = 0
     case bool = 1

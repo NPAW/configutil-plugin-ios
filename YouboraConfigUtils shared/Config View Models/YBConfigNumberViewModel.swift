@@ -9,8 +9,6 @@
 import Foundation
 import YouboraLib
 
-
-
 class YBConfigNumberViewModel: YBConfigViewModel {
     override func getPropertyName() -> String {
         return super.getPropertyName()+" (number)"

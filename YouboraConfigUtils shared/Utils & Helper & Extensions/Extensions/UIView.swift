@@ -15,7 +15,7 @@ extension UIView {
     }
     
     func loadFromNib(nibName: String) -> UIView? {
-        return customNib(nibName:nibName).instantiate(withOwner: self, options: nil)[0] as? UIView
+        return customNib(nibName: nibName).instantiate(withOwner: self, options: nil)[0] as? UIView
     }
     
     func insertInContainer(container: UIView) {
