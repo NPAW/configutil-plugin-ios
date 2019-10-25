@@ -66,8 +66,8 @@ class YouboraConfigViewModel {
         }
     }
     
-    public func saveAllChanges() {
-        YouboraConfigManager.save()
+    @discardableResult public func saveAllChanges() -> Bool {
+        return YouboraConfigManager.save()
     }
     
     public func resetAllChanges() {

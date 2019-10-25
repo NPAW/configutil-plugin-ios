@@ -12,11 +12,12 @@ import YouboraLib
 @objcMembers public class YouboraConfigManager: NSObject {
     static private var options: YBOptions?
     
-     static public func save() {
+     @discardableResult static public func save() -> Bool {
         guard let options = self.options else {
-            return
+            return false
         }
         UserDefaults.standard.set(NSKeyedArchiver.archivedData(withRootObject: options), forKey: Constants.youborasettings)
+        return true
     }
     
     static public func reset() {

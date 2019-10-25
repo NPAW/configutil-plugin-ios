@@ -53,11 +53,7 @@ import UIKit
     }
     
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let lastSelectedConfigView = self.selectedConfigView {
-            lastSelectedConfigView.deleteView()
-            lastSelectedConfigView.valueDidUpdate = nil
-            self.selectedConfigView = nil
-        }
+        removeLastConfigView()
         
         let configViewModel = viewModel.getConfigViewModel(position: indexPath.row)
         
@@ -78,6 +74,14 @@ import UIKit
             }
         }
         
+    }
+    
+    func removeLastConfigView() {
+        if let lastSelectedConfigView = self.selectedConfigView {
+            lastSelectedConfigView.deleteView()
+            lastSelectedConfigView.valueDidUpdate = nil
+            self.selectedConfigView = nil
+        }
     }
     
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -119,11 +123,11 @@ import UIKit
     
     @IBAction func pressToReset(_ sender: Any) {
         self.viewModel.resetAllChanges()
+        self.propsCollectionView.reloadData()
+        removeLastConfigView()
     }
     
-    @IBAction func pressToSave(_ sender: Any) {
-        self.viewModel.saveAllChanges()
-    }
+    @IBAction func pressToSave(_ sender: Any) { self.viewModel.saveAllChanges() }
     
     // MARK: - UISearchController Methods
     
