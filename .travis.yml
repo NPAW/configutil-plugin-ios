@@ -13,7 +13,7 @@ env:
     - ADAPTER_VERSION_TAG=YOUBORA_CONFIG_UTILS_VERSION_SETTING
 
 stages:
-   - name: swiftLint
+  - name: swiftLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
