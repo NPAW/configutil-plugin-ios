@@ -23,12 +23,12 @@ extension UIViewController {
     }
     
     @objc public func insertIntoParent(parentViewController: UIViewController) {
-        #if os(iOS)
-        parentViewController.addChildViewController(self)
-        self.didMove(toParentViewController: parentViewController)
-        #elseif os(tvOS)
-        parentViewController.addChild(self)
-        self.didMove(toParent: parentViewController)
+        #if swift(<4.2)
+            parentViewController.addChildViewController(self)
+            self.didMove(toParentViewController: parentViewController)
+        #else
+            parentViewController.addChild(self)
+            self.didMove(toParent: parentViewController)
         #endif
        
         parentViewController.view.addSubview(self.view)
