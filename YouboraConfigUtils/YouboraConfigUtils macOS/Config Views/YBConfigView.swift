@@ -23,7 +23,13 @@ class YBConfigView: NSCollectionViewItem {
     
     var customBundle: Bundle { return Bundle.init(for: self.classForCoder) }
     
-    var customNib: NSNib? { return NSNib(nibNamed: typeName, bundle: customBundle) }
+    var customNib: NSNib? {
+        #if swift(>=4.2)
+        return NSNib(nibNamed: typeName, bundle: customBundle)
+        #else
+        return NSNib(nibNamed: NSNib.Name(rawValue: typeName), bundle: customBundle)
+        #endif
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

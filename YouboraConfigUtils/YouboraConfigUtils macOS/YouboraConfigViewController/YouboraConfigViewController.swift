@@ -23,7 +23,11 @@ import CoreFoundation
     }
     
     public func initFromXIB() -> YouboraConfigViewController {
-        return YouboraConfigViewController(nibName: classType, bundle: myBundle)
+        #if swift(>=4.2)
+            return YouboraConfigViewController(nibName: classType, bundle: myBundle)
+        #else
+            return YouboraConfigViewController(nibName: NSNib.Name(rawValue: classType), bundle: myBundle)
+        #endif
     }
 
     override open func viewDidLoad() {
