@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PropCollectionViewCell" id="Rz2-K0-ksD" customClass="PropCollectionViewCell" customModule="YouboraConfigUtils_tvOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="233"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mO-Rk-WV8">
+                        <rect key="frame" x="10" y="10" width="415" height="28"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                        <color key="textColor" red="0.70706500259705773" green="0.70706500259705773" blue="0.70706500259705773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQp-Ln-T8v">
+                        <rect key="frame" x="10" y="94" width="415" height="46"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-Hc-uPQ">
+                        <rect key="frame" x="10" y="198" width="415" height="25"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                        <color key="textColor" red="0.70706500260000005" green="0.70706500260000005" blue="0.70706500260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wQp-Ln-T8v" firstAttribute="centerY" secondItem="Rz2-K0-ksD" secondAttribute="centerY" id="Cdm-nA-4xV"/>
+                <constraint firstItem="wQp-Ln-T8v" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="10" id="F8X-wB-bd3"/>
+                <constraint firstItem="2mO-Rk-WV8" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="10" id="JfW-qt-8fN"/>
+                <constraint firstAttribute="trailing" secondItem="8Zc-Hc-uPQ" secondAttribute="trailing" constant="10" id="XCp-mK-cYF"/>
+                <constraint firstItem="8Zc-Hc-uPQ" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="10" id="czZ-Wv-1fR"/>
+                <constraint firstItem="2mO-Rk-WV8" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" constant="10" id="g1K-EI-ARM"/>
+                <constraint firstAttribute="trailing" secondItem="wQp-Ln-T8v" secondAttribute="trailing" constant="10" id="uws-gN-hO6"/>
+                <constraint firstAttribute="bottom" secondItem="8Zc-Hc-uPQ" secondAttribute="bottom" constant="10" id="wBZ-Us-XO9"/>
+                <constraint firstAttribute="trailing" secondItem="2mO-Rk-WV8" secondAttribute="trailing" constant="10" id="zTe-uc-oE9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
+            <size key="customSize" width="435" height="237"/>
+            <connections>
+                <outlet property="propNameLabel" destination="2mO-Rk-WV8" id="0Cp-hV-WUI"/>
+                <outlet property="propType" destination="8Zc-Hc-uPQ" id="FNh-68-EO4"/>
+                <outlet property="propValueLabel" destination="wQp-Ln-T8v" id="YQN-n9-Ddx"/>
+            </connections>
+            <point key="canvasLocation" x="-96.5" y="36.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

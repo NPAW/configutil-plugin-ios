@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: ad52510547c3a3a44820e2a8585d2c1549b26b7a
+PODS:
+  - YouboraLib (6.5.8)
+
+DEPENDENCIES:
+  - YouboraLib (~> 6.5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YouboraLib
+
+SPEC CHECKSUMS:
+  YouboraLib: 87e023e76dd68dfc3fcdebcfb984adc6774706f7
+
+PODFILE CHECKSUM: 665d67740b47af8ab6af60534613ffb99c65ec27
 
 COCOAPODS: 1.7.5

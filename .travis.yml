@@ -1,73 +1,95 @@
-language: swift
 os: osx
 osx_image: xcode10.3
+language: swift
 
-branches:
-  only:
-    - master
-    - /^\d+\.\d+\.\d+$/
+env:
+  global:
+    - APP_NAME=YouboraConfigUtils
+    - INFO_PLIST=$PWD/$APP_NAME/Info.plist
+    - INFO_PLIST_TV_OS=$PWD/$APP_NAME tvOS/Info.plist
+    - INFO_PLIST_MAC_OS=$PWD/$APP_NAME macOS/Info.plist
+    - PLATFORMS=ios,tvos,macos
+    - GENERIC_VERSION=0.0.1
+    - ADAPTER_VERSION_TAG=YOUBORA_CONFIG_UTILS_VERSION_SETTING
 
 stages:
-  - name: lint
+  - name: swiftLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
-    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
-  - name: test
-    if: branch = master OR branch =~ /^\d+\.\d+\.\d+$/
-  # - name: deploy
-  #   if: branch =~ ^\d+\.\d+\.\d+$
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: deploy
+    if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
   include:
+    - &lint
+      stage: swiftLint
+      install: pod update && pod install
+      script:
+        - xcodebuild -workspace $APP_NAME.xcworkspace -scheme $APP_NAME
     - &pod
-      stage: lint
-      install: gem install cocoapods -v '~> 1.7.0'
-      script: pod lib lint --fail-fast --allow-warnings
-
+      stage: podLint
+      osx_image: xcode9.2
+      env: SWIFT=4.0
+      install: gem install cocoapods
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+      after_failure: cat pod.log | grep error
+    - <<: *pod
+      osx_image: xcode9.4
+      env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
     - &carthage
       stage: carthage
-      name: iOS
-      env: PLATFORM=ios
-      before_install:
-        - brew update
-        - brew outdated carthage || brew upgrade carthage
+      name: Swift 4.0.3 / Xcode 9.2
+      osx_image: xcode9.2
+      install:
+        - rm -f Cartfile.private
+        - gem update xcodeproj
+        - gem install cocoapods
+        - pod deintegrate
+        - carthage update --platform $PLATFORMS --cache-builds
       before_script: |
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
-      script: carthage build --no-skip-current --configuration Release --platform $PLATFORM
-    # - <<: *carthage
-    #   name: tvOS
-    #   env: PLATFORM=tvos
-    # - <<: *carthage
-    #   name: macOS
-    #   env: PLATFORM=macos
-
-    - &test
-      stage: test
-      name: iOS
-      xcode_scheme: "YouboraConfigUtils"
-      xcode_project: YouboraConfigUtils.xcodeproj
-      xcode_destination: "platform=iOS Simulator,OS=12.2,name=iPhone SE"
+      script: carthage build --no-skip-current --configuration Release --platform $PLATFORMS
+    - <<: *carthage
+      osx_image: xcode9.3
+      name: Swift 4.1.0 / Xcode 9.3.1
+    - <<: *carthage
+      osx_image: xcode9.4
+      name: Swift 4.1.2 / Xcode 9.4.1
+    - <<: *carthage
+      osx_image: xcode10.1
+      name: Swift 4.1.50 / Xcode 10.1
+    - <<: *carthage
+      osx_image: xcode10.3
+      name: Swift 4.1.51 / Xcode 10.3
+    - <<: *carthage
+      osx_image: xcode11
+      name: Swift 4.1.52 / Xcode 11
       before_install:
-        - brew update
-        - brew outdated carthage || brew upgrade carthage
-      install:
-        - carthage update
-      after_success: bash <(curl -s https://codecov.io/bash)
-    # - <<: *test
-    #   name: tvOS
-    #   xcode_scheme: "YouboraLib tvOS"
-    #   xcode_destination: "platform=tvOS Simulator,OS=12.2,name=Apple TV"
-    #This one below stays commented since it seems that there is some problems with the mocking, will have to go back to it
-    # - <<: *test
-    #   name: macOS
-    #   xcode_scheme: 'YouboraLib OSX'
-    #   xcode_destination: 'platform=macOS'
-
+        - pod deintegrate
+        - rm -f Cartfile.private
     - name: "`pod trunk push`"
       stage: deploy
       install: gem install cocoapods -v '~> 1.7.0'
-      script: |
-        set -exo pipefail
-        pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      before_script:
+        - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
+        - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj
+      script:
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
       after_failure: cat pod.log | grep error
