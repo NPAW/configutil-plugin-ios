@@ -372,6 +372,17 @@
 			path = YouboraConfigViewController;
 			sourceTree = "<group>";
 		};
+		06AD4F2B2366DD5D004A13AC /* YouboraConfigUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0605A40F2354AFA300C1EF7D /* YouboraConfigUtils shared */,
+				4E41B54E1EBA18B1003F8B80 /* YouboraConfigUtils iOS */,
+				0605A4062354AF0C00C1EF7D /* YouboraConfigUtils macOS */,
+				0605A43D2354B49600C1EF7D /* YouboraConfigUtils tvOS */,
+			);
+			path = YouboraConfigUtils;
+			sourceTree = "<group>";
+		};
 		06C85609235A0FE500633071 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,10 +417,7 @@
 		4E41B5421EBA18B1003F8B80 = {
 			isa = PBXGroup;
 			children = (
-				0605A40F2354AFA300C1EF7D /* YouboraConfigUtils shared */,
-				4E41B54E1EBA18B1003F8B80 /* YouboraConfigUtils iOS */,
-				0605A4062354AF0C00C1EF7D /* YouboraConfigUtils macOS */,
-				0605A43D2354B49600C1EF7D /* YouboraConfigUtils tvOS */,
+				06AD4F2B2366DD5D004A13AC /* YouboraConfigUtils */,
 				4E41B54D1EBA18B1003F8B80 /* Products */,
 				4EFBCEDF1EBB6C9E009138D8 /* Frameworks */,
 				2BD9E3FADA74AEBE6C318DDF /* Pods */,
@@ -831,7 +839,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -866,7 +874,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -896,7 +904,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "YouboraConfigUtils tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -930,7 +938,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "YouboraConfigUtils tvOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
@@ -1080,7 +1088,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1106,7 +1114,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtils iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
