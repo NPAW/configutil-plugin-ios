@@ -29,13 +29,19 @@ jobs:
       install: pod update && pod install
       script:
         - xcodebuild -workspace $APP_NAME.xcworkspace -scheme $APP_NAME
+      after_failure:
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
+
     - &pod
       stage: podLint
       osx_image: xcode9.2
       env: SWIFT=4.0
       install: pod update && pod install
       script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
-      after_failure: cat pod.log | grep error
+      after_failure:
+        - cat pod.log
+        - grep error
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
     - <<: *pod
       osx_image: xcode9.4
       env: SWIFT=4.1
@@ -51,6 +57,7 @@ jobs:
     - <<: *pod
       osx_image: xcode11
       env: SWIFT=5.1
+
     - &carthage
       stage: carthage
       name: Swift 4.0.3 / Xcode 9.2
@@ -65,6 +72,8 @@ jobs:
         sed -i '' "s/SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;/SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
         sed -i '' "s/GCC_TREAT_WARNINGS_AS_ERRORS = NO;/GCC_TREAT_WARNINGS_AS_ERRORS = YES;/" *.xcodeproj/project.pbxproj
       script: carthage build --no-skip-current --configuration Release --platform $PLATFORMS
+      after_failure:
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
     - <<: *carthage
       osx_image: xcode9.3
       name: Swift 4.1.0 / Xcode 9.3.1
@@ -83,6 +92,7 @@ jobs:
       before_install:
         - pod deintegrate
         - rm -f Cartfile.private
+
     - name: "`pod trunk push`"
       stage: deploy
       install: pod update && pod install
