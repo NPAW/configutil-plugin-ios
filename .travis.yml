@@ -33,7 +33,7 @@ jobs:
       stage: podLint
       osx_image: xcode9.2
       env: SWIFT=4.0
-      install: gem install cocoapods
+      install: pod update && pod install
       script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
       after_failure: cat pod.log | grep error
     - <<: *pod
@@ -85,7 +85,7 @@ jobs:
         - rm -f Cartfile.private
     - name: "`pod trunk push`"
       stage: deploy
-      install: gem install cocoapods -v '~> 1.7.0'
+      install: pod update && pod install
       before_script:
         - sed -i '' "s/s.version = '$GENERIC_VERSION'/s.version = '$TRAVIS_TAG'/g" $APP_NAME.podspec
         - sed -i '' "s/$ADAPTER_VERSION_TAG = $GENERIC_VERSION;/$ADAPTER_VERSION_TAG = $TRAVIS_TAG;/g" $APP_NAME.xcodeproj/project.pbxproj
