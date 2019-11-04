@@ -12,7 +12,7 @@ import YouboraLib
 @objcMembers public class YouboraConfigManager: NSObject {
     static private var options: YBOptions?
     
-     @discardableResult static public func save() -> Bool {
+     @discardableResult static internal func save() -> Bool {
         guard let options = self.options else {
             return false
         }
@@ -20,7 +20,7 @@ import YouboraLib
         return true
     }
     
-    static public func reset() {
+    static internal func reset() {
         self.options = YBOptions()
         self.save()
     }
