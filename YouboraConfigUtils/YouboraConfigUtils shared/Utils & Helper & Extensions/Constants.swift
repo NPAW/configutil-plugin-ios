@@ -13,14 +13,14 @@ import UIKit
 import Cocoa
 #endif
 
-@objc public enum OptionType: Int {
+enum OptionType: Int {
     case string = 0
     case bool = 1
     case number = 2
     case unknown = 3
 }
 
-public struct Option {
+struct Option {
     let name: String
     let type: OptionType
 }

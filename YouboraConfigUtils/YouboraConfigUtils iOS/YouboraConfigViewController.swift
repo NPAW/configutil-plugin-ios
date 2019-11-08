@@ -8,15 +8,24 @@
 
 import UIKit
 
-@objc public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+@objcMembers public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     let viewModel = YouboraConfigViewModel()
     
     @IBOutlet weak var optionsList: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    public static func initFromXIB() -> YouboraConfigViewController {
+        return YouboraConfigViewController().initFromXIB()
+    }
+    
     // MARK: View Methods
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.searchBar == nil {
+            Utils.printInitializationWarning()
+            return
+        }
 
         self.searchBar.delegate = self
         
@@ -39,6 +48,10 @@ import UIKit
         super.viewWillDisappear(animated)
 
         viewModel.saveAllChanges()
+    }
+    
+    public override func insertIntoParent(parentViewController: UIViewController) {
+        super.insertIntoParent(parentViewController: parentViewController)
     }
     
     // MARK: Table view data source

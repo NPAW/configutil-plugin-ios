@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <YouboraConfigUtils_tvOS/YouboraConfigUtils_tvOS-Swift.h>
+#import <YouboraConfigUtils/YouboraConfigUtils-Swift.h>
 
 @interface ViewController ()
 
@@ -22,7 +22,7 @@
     
     [YouboraConfigManager getOptions];
     
-    self.child = [[YouboraConfigViewController alloc] initFromXIB];
+    self.child = [YouboraConfigViewController initFromXIB];
     
     [self.child insertIntoParentWithParentViewController:self];
 }

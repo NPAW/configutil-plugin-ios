@@ -22,16 +22,22 @@ import CoreFoundation
         return Bundle(for: self.classForCoder)
     }
     
-    public func initFromXIB() -> YouboraConfigViewController {
+    public static func initFromXIB() -> YouboraConfigViewController {
+        let controller = YouboraConfigViewController()
         #if swift(>=4.2)
-            return YouboraConfigViewController(nibName: classType, bundle: myBundle)
+        return YouboraConfigViewController(nibName: controller.classType, bundle: controller.myBundle)
         #else
-            return YouboraConfigViewController(nibName: NSNib.Name(rawValue: classType), bundle: myBundle)
+        return YouboraConfigViewController(nibName: NSNib.Name(rawValue: controller.classType), bundle: controller.myBundle)
         #endif
     }
 
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.nibName == nil {
+            Utils.printInitializationWarning()
+            return
+        }
         
         YBConfigBoolCollectionView().registerCell(collectionView: self.propsCollectionView)
         YBConfigStringCollectionView().registerCell(collectionView: self.propsCollectionView)
@@ -86,6 +92,11 @@ import CoreFoundation
     // MARK: - Aux view controller methods
     
     open func insertIntoContainer(containerView: NSView) {
+        if self.nibName == nil {
+            Utils.printInitializationWarning()
+            return
+        }
+        
         containerView.addSubview(self.view)
         
         self.view.translatesAutoresizingMaskIntoConstraints = false

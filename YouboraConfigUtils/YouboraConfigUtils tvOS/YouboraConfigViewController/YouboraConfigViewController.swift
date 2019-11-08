@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc open class YouboraConfigViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+@objcMembers open class YouboraConfigViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let viewModel = YouboraConfigViewModel()
     
@@ -18,8 +18,21 @@ import UIKit
     
     var selectedConfigView: YBConfigView?
     
+    public static func initFromXIB() -> YouboraConfigViewController {
+        return YouboraConfigViewController().initFromXIB()
+    }
+    
+    public override func insertIntoParent(parentViewController: UIViewController) {
+        super.insertIntoParent(parentViewController: parentViewController)
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.nibName == nil {
+            Utils.printInitializationWarning()
+            return
+        }
         
         self.propsCollectionView.dataSource = self
         self.propsCollectionView.delegate = self

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0605A4042354AF0B00C1EF7D"
-               BuildableName = "YouboraConfigUtils_macOS.framework"
+               BuildableName = "YouboraConfigUtils.framework"
                BlueprintName = "YouboraConfigUtils_macOS"
                ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
             </BuildableReference>
@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -46,13 +44,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0605A4042354AF0B00C1EF7D"
-            BuildableName = "YouboraConfigUtils_macOS.framework"
+            BuildableName = "YouboraConfigUtils.framework"
             BlueprintName = "YouboraConfigUtils_macOS"
             ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -64,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0605A4042354AF0B00C1EF7D"
-            BuildableName = "YouboraConfigUtils_macOS.framework"
+            BuildableName = "YouboraConfigUtils.framework"
             BlueprintName = "YouboraConfigUtils_macOS"
             ReferencedContainer = "container:YouboraConfigUtils.xcodeproj">
          </BuildableReference>
