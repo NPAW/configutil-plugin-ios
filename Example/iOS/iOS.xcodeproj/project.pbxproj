@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,24 +13,51 @@
 		0605A44E2354B4D900C1EF7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605A44D2354B4D900C1EF7D /* ViewController.swift */; };
 		0605A4512354B4D900C1EF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0605A44F2354B4D900C1EF7D /* Main.storyboard */; };
 		0605A4532354B4DB00C1EF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0605A4522354B4DB00C1EF7D /* Assets.xcassets */; };
-		062236742374420400D5249C /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062236732374420400D5249C /* YouboraConfigUtils.framework */; };
-		062236752374420400D5249C /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062236732374420400D5249C /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		062236782374421500D5249C /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062236772374421500D5249C /* YouboraConfigUtils.framework */; };
-		062236792374421500D5249C /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 062236772374421500D5249C /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06927A6D2343AA19005127FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927A6C2343AA19005127FC /* AppDelegate.swift */; };
 		06927A742343AA1A005127FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06927A732343AA1A005127FC /* Assets.xcassets */; };
 		06927A772343AA1A005127FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06927A752343AA1A005127FC /* LaunchScreen.storyboard */; };
 		06927AC72344FA29005127FC /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06927AC62344FA29005127FC /* ResourcesViewController.swift */; };
-		06C15B2423756D3F00EB0382 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C15B2323756D3F00EB0382 /* YouboraConfigUtils.framework */; };
-		06C15B2523756D3F00EB0382 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06C15B2323756D3F00EB0382 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		069EA31A23A93E9D00819D94 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31523A93E8F00819D94 /* YouboraConfigUtils.framework */; };
+		069EA31B23A93E9D00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31523A93E8F00819D94 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		069EA31C23A93EAB00819D94 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31723A93E8F00819D94 /* YouboraConfigUtils.framework */; };
+		069EA31D23A93EAB00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31723A93E8F00819D94 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		069EA31E23A93EBB00819D94 /* YouboraConfigUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31923A93E8F00819D94 /* YouboraConfigUtils.framework */; };
+		069EA31F23A93EBB00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA31923A93E8F00819D94 /* YouboraConfigUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		06C21D0123618EC10028D09A /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C21D0023618EC10028D09A /* main.storyboard */; };
 		06C21D0323618F4F0028D09A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D0223618F4F0028D09A /* MenuViewController.swift */; };
 		06C21D0523619CC70028D09A /* BaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D0423619CC70028D09A /* BaseWindowController.swift */; };
 		06C21D072361A59A0028D09A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D062361A59A0028D09A /* MainViewController.swift */; };
-		2BE24D9DC6FFC799D3943E86 /* Pods_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56AD23E90317CE99F72A910 /* Pods_macOS.framework */; };
-		56B3C3BD73FF3A63118E95F9 /* Pods_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97ED0F57B7F653FFDF7C194F /* Pods_iOS.framework */; };
-		769CB3C0B69C7501A5677EB3 /* Pods_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9A23CD3B7C55961BF1F750 /* Pods_tvOS.framework */; };
+		06E1BC4823A93F3200A979DA /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA32C23A93EF000819D94 /* YouboraLib.framework */; };
+		06E1BC4923A93F3200A979DA /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 069EA32C23A93EF000819D94 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06E1BC5023A93FD400A979DA /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E1BC4D23A93FBE00A979DA /* YouboraLib.framework */; };
+		06E1BC5123A93FD400A979DA /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06E1BC4D23A93FBE00A979DA /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		06E1BC5323A9416300A979DA /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E1BC5223A9416200A979DA /* YouboraLib.framework */; };
+		06E1BC5423A9416300A979DA /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06E1BC5223A9416200A979DA /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		069EA31423A93E8F00819D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4E41B54C1EBA18B1003F8B80;
+			remoteInfo = YouboraConfigUtils_iOS;
+		};
+		069EA31623A93E8F00819D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0605A4052354AF0B00C1EF7D;
+			remoteInfo = YouboraConfigUtils_macOS;
+		};
+		069EA31823A93E8F00819D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0605A43C2354B49600C1EF7D;
+			remoteInfo = YouboraConfigUtils_tvOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		062236762374420400D5249C /* Embed Frameworks */ = {
@@ -39,7 +66,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				062236752374420400D5249C /* YouboraConfigUtils.framework in Embed Frameworks */,
+				06E1BC4923A93F3200A979DA /* YouboraLib.framework in Embed Frameworks */,
+				069EA31B23A93E9D00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +78,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				062236792374421500D5249C /* YouboraConfigUtils.framework in Embed Frameworks */,
+				06E1BC5123A93FD400A979DA /* YouboraLib.framework in Embed Frameworks */,
+				069EA31F23A93EBB00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +90,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				06C15B2523756D3F00EB0382 /* YouboraConfigUtils.framework in Embed Frameworks */,
+				06E1BC5423A9416300A979DA /* YouboraLib.framework in Embed Frameworks */,
+				069EA31D23A93EAB00819D94 /* YouboraConfigUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,33 +110,20 @@
 		0605A4502354B4D900C1EF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0605A4522354B4DB00C1EF7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0605A4542354B4DB00C1EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		062236732374420400D5249C /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		062236772374421500D5249C /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0622367B2374422100D5249C /* YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06927A692343AA19005127FC /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06927A6C2343AA19005127FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06927A732343AA1A005127FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06927A762343AA1A005127FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06927A782343AA1A005127FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06927AC62344FA29005127FC /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
-		06A41C3D2360584B00ECAE6B /* YouboraConfigUtils_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A41C402360585000ECAE6B /* YouboraConfigUtils_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06A41C432360585600ECAE6B /* YouboraConfigUtils_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06C15B1F23756D1A00EB0382 /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06C15B2323756D3F00EB0382 /* YouboraConfigUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouboraConfigUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YouboraConfigUtils.xcodeproj; path = ../../YouboraConfigUtils.xcodeproj; sourceTree = "<group>"; };
+		069EA32C23A93EF000819D94 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = ../../Carthage/Build/iOS/YouboraLib.framework; sourceTree = "<group>"; };
 		06C21D0023618EC10028D09A /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		06C21D0223618F4F0028D09A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		06C21D0423619CC70028D09A /* BaseWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindowController.swift; sourceTree = "<group>"; };
 		06C21D062361A59A0028D09A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		2ACD059C48E76BFBCBFA57EF /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3BB177AA4ADBBD5A0FDEDD63 /* Pods-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		63B9B45A7131DFCDB4C80759 /* Pods-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.release.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		9170BFE82753CADDEFB0FEB4 /* Pods-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS.debug.xcconfig"; path = "Target Support Files/Pods-iOS/Pods-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		97ED0F57B7F653FFDF7C194F /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A56AD23E90317CE99F72A910 /* Pods_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5935F500F7654C9553E3C1D /* Pods-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tvOS/Pods-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		CCA24A18A321920E72A8BB5D /* Pods-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.release.xcconfig"; path = "Target Support Files/Pods-macOS/Pods-macOS.release.xcconfig"; sourceTree = "<group>"; };
-		EA9A23CD3B7C55961BF1F750 /* Pods_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E1BC4D23A93FBE00A979DA /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = ../../Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
+		06E1BC5223A9416200A979DA /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = ../../Carthage/Build/Mac/YouboraLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06C15B2423756D3F00EB0382 /* YouboraConfigUtils.framework in Frameworks */,
-				2BE24D9DC6FFC799D3943E86 /* Pods_macOS.framework in Frameworks */,
+				06E1BC5323A9416300A979DA /* YouboraLib.framework in Frameworks */,
+				069EA31C23A93EAB00819D94 /* YouboraConfigUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062236782374421500D5249C /* YouboraConfigUtils.framework in Frameworks */,
-				769CB3C0B69C7501A5677EB3 /* Pods_tvOS.framework in Frameworks */,
+				06E1BC5023A93FD400A979DA /* YouboraLib.framework in Frameworks */,
+				069EA31E23A93EBB00819D94 /* YouboraConfigUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				062236742374420400D5249C /* YouboraConfigUtils.framework in Frameworks */,
-				56B3C3BD73FF3A63118E95F9 /* Pods_iOS.framework in Frameworks */,
+				06E1BC4823A93F3200A979DA /* YouboraLib.framework in Frameworks */,
+				069EA31A23A93E9D00819D94 /* YouboraConfigUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,14 +187,11 @@
 		06927A602343AA19005127FC = {
 			isa = PBXGroup;
 			children = (
-				06A41C432360585600ECAE6B /* YouboraConfigUtils_iOS.framework */,
-				06A41C402360585000ECAE6B /* YouboraConfigUtils_tvOS.framework */,
-				06A41C3D2360584B00ECAE6B /* YouboraConfigUtils_macOS.framework */,
+				069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */,
 				06927A6B2343AA19005127FC /* iOS */,
 				0605A4172354B1AA00C1EF7D /* macOS */,
 				0605A44A2354B4D900C1EF7D /* tvOS */,
 				06927A6A2343AA19005127FC /* Products */,
-				3157AD23C40FC2FF3A5A16D0 /* Pods */,
 				156B5C2CE901EF5520F7DBB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -204,33 +218,24 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		069EA30F23A93E8F00819D94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				069EA31523A93E8F00819D94 /* YouboraConfigUtils.framework */,
+				069EA31723A93E8F00819D94 /* YouboraConfigUtils.framework */,
+				069EA31923A93E8F00819D94 /* YouboraConfigUtils.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		156B5C2CE901EF5520F7DBB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06C15B2323756D3F00EB0382 /* YouboraConfigUtils.framework */,
-				06C15B1F23756D1A00EB0382 /* YouboraConfigUtils.framework */,
-				0622367B2374422100D5249C /* YouboraConfigUtils_macOS.framework */,
-				062236772374421500D5249C /* YouboraConfigUtils.framework */,
-				062236732374420400D5249C /* YouboraConfigUtils.framework */,
-				97ED0F57B7F653FFDF7C194F /* Pods_iOS.framework */,
-				A56AD23E90317CE99F72A910 /* Pods_macOS.framework */,
-				EA9A23CD3B7C55961BF1F750 /* Pods_tvOS.framework */,
+				06E1BC5223A9416200A979DA /* YouboraLib.framework */,
+				06E1BC4D23A93FBE00A979DA /* YouboraLib.framework */,
+				069EA32C23A93EF000819D94 /* YouboraLib.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3157AD23C40FC2FF3A5A16D0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9170BFE82753CADDEFB0FEB4 /* Pods-iOS.debug.xcconfig */,
-				63B9B45A7131DFCDB4C80759 /* Pods-iOS.release.xcconfig */,
-				2ACD059C48E76BFBCBFA57EF /* Pods-macOS.debug.xcconfig */,
-				CCA24A18A321920E72A8BB5D /* Pods-macOS.release.xcconfig */,
-				3BB177AA4ADBBD5A0FDEDD63 /* Pods-tvOS.debug.xcconfig */,
-				A5935F500F7654C9553E3C1D /* Pods-tvOS.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,12 +245,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0605A4282354B1AB00C1EF7D /* Build configuration list for PBXNativeTarget "macOS" */;
 			buildPhases = (
-				0FBA45506CBA61A5CFEA7CA4 /* [CP] Check Pods Manifest.lock */,
 				0605A4122354B1AA00C1EF7D /* Sources */,
 				0605A4132354B1AA00C1EF7D /* Frameworks */,
 				0605A4142354B1AA00C1EF7D /* Resources */,
 				06C15B2623756D3F00EB0382 /* Embed Frameworks */,
-				4856DD3FDB69140CA7BA2582 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,13 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0605A4582354B4DB00C1EF7D /* Build configuration list for PBXNativeTarget "tvOS" */;
 			buildPhases = (
-				27AE7A858EEFFA805239A152 /* [CP] Check Pods Manifest.lock */,
 				0605A4452354B4D900C1EF7D /* Sources */,
 				0605A4462354B4D900C1EF7D /* Frameworks */,
 				0605A4472354B4D900C1EF7D /* Resources */,
 				0605A47A2354B98B00C1EF7D /* ShellScript */,
 				0622367A2374421500D5249C /* Embed Frameworks */,
-				06122C8BF30123C7D9759718 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,12 +282,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06927A7B2343AA1A005127FC /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
-				77842CEF7632A3AAF4A397EA /* [CP] Check Pods Manifest.lock */,
 				06927A652343AA19005127FC /* Sources */,
 				06927A662343AA19005127FC /* Frameworks */,
 				06927A672343AA19005127FC /* Resources */,
 				062236762374420400D5249C /* Embed Frameworks */,
-				B05C86963BA85B477221AEAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -329,6 +328,12 @@
 			mainGroup = 06927A602343AA19005127FC;
 			productRefGroup = 06927A6A2343AA19005127FC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 069EA30F23A93E8F00819D94 /* Products */;
+					ProjectRef = 069EA30E23A93E8F00819D94 /* YouboraConfigUtils.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				06927A682343AA19005127FC /* iOS */,
@@ -337,6 +342,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		069EA31523A93E8F00819D94 /* YouboraConfigUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraConfigUtils.framework;
+			remoteRef = 069EA31423A93E8F00819D94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		069EA31723A93E8F00819D94 /* YouboraConfigUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraConfigUtils.framework;
+			remoteRef = 069EA31623A93E8F00819D94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		069EA31923A93E8F00819D94 /* YouboraConfigUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YouboraConfigUtils.framework;
+			remoteRef = 069EA31823A93E8F00819D94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0605A4142354B1AA00C1EF7D /* Resources */ = {
@@ -385,123 +414,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		06122C8BF30123C7D9759718 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tvOS/Pods-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0FBA45506CBA61A5CFEA7CA4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-macOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27AE7A858EEFFA805239A152 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4856DD3FDB69140CA7BA2582 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-macOS/Pods-macOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-macOS/Pods-macOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-macOS/Pods-macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77842CEF7632A3AAF4A397EA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B05C86963BA85B477221AEAA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS/Pods-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -559,7 +471,6 @@
 /* Begin XCBuildConfiguration section */
 		0605A4232354B1AB00C1EF7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ACD059C48E76BFBCBFA57EF /* Pods-macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -570,7 +481,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/YouboraLib-macOS\"",
-					"$(PROJECT_DIR)/Carthage/Build/macOS",
+					"$(PROJECT_DIR)/../../Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -588,7 +499,6 @@
 		};
 		0605A4242354B1AB00C1EF7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCA24A18A321920E72A8BB5D /* Pods-macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
@@ -599,7 +509,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/YouboraLib-macOS\"",
-					"$(PROJECT_DIR)/Carthage/Build/macOS",
+					"$(PROJECT_DIR)/../../Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -617,7 +527,6 @@
 		};
 		0605A4592354B4DB00C1EF7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BB177AA4ADBBD5A0FDEDD63 /* Pods-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -625,7 +534,7 @@
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					tvOS,
+					"$(PROJECT_DIR)/../../Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -643,7 +552,6 @@
 		};
 		0605A45A2354B4DB00C1EF7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5935F500F7654C9553E3C1D /* Pods-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -651,7 +559,7 @@
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					tvOS,
+					"$(PROJECT_DIR)/../../Carthage/Build/tvOS",
 				);
 				INFOPLIST_FILE = tvOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -785,14 +693,13 @@
 		};
 		06927A7C2343AA1A005127FC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9170BFE82753CADDEFB0FEB4 /* Pods-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -808,14 +715,13 @@
 		};
 		06927A7D2343AA1A005127FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B9B45A7131DFCDB4C80759 /* Pods-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAR8GLKRWU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
