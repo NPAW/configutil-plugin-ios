@@ -4,7 +4,7 @@
 workspace 'YouboraConfigUtils.xcworkspace'
 
 def common_pods
-  pod 'YouboraLib', '6.5.8'
+  pod 'YouboraLib', '~> 6.5.0'
 end
 
 target 'YouboraConfigUtils_iOS' do
