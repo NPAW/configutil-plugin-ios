@@ -18,11 +18,11 @@ extension UIViewController {
         return Bundle(for: self.classForCoder)
     }
     
-    @objc public func initFromXIB() -> Self {
+    func initFromXIB() -> Self {
         return type(of: self).init(nibName: className, bundle: myBundle)
     }
     
-    @objc public func insertIntoParent(parentViewController: UIViewController) {
+    @objc func insertIntoParent(parentViewController: UIViewController) {
         #if swift(>=4.2)
         parentViewController.addChild(self)
         self.didMove(toParent: parentViewController)

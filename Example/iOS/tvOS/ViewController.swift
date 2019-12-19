@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import YouboraConfigUtils_tvOS
+import YouboraConfigUtils
 
 class ViewController: UIViewController {
     
-    let child = YouboraConfigViewController().initFromXIB()
+    let child = YouboraConfigViewController.initFromXIB()
 
     override func viewDidLoad() {
         super.viewDidLoad()

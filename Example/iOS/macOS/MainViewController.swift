@@ -7,19 +7,18 @@
 //
 
 import Cocoa
-import YouboraConfigUtils_macOS
+import YouboraConfigUtils
 
 class MainViewController: NSViewController {
     
     var menuViewController: MenuViewController?
-    let configViewController = YouboraConfigViewController().initFromXIB()
+    let configViewController = YouboraConfigViewController.initFromXIB()
 
     @IBOutlet weak var contentContainerView: NSView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {

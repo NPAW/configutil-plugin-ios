@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import YouboraConfigUtils_macOS
+import YouboraConfigUtils
 
 enum NaviagationOptions {
     case main

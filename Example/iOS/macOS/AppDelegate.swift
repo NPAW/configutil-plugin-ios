@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import YouboraConfigUtils_macOS
+import YouboraConfigUtils
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

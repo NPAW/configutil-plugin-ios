@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <YouboraConfigUtils_macOS/YouboraConfigUtils_macOS-Swift.h>
+#import <YouboraConfigUtils/YouboraConfigUtils-Swift.h>
 
 @interface ViewController()
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.configViewController = [[YouboraConfigViewController alloc] initFromXIB];
+    self.configViewController = [YouboraConfigViewController initFromXIB];
     
     [self.configViewController insertIntoContainerWithContainerView:self.container];
 

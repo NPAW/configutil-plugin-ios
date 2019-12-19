@@ -1,5 +1,5 @@
 PODS:
-  - YouboraLib (6.5.8)
+  - YouboraLib (6.5.12)
 
 DEPENDENCIES:
   - YouboraLib (~> 6.5.0)
@@ -9,7 +9,7 @@ SPEC REPOS:
     - YouboraLib
 
 SPEC CHECKSUMS:
-  YouboraLib: 87e023e76dd68dfc3fcdebcfb984adc6774706f7
+  YouboraLib: ba0dd2a0b7e49d84dbf0c314adf7afcf1e732ec6
 
 PODFILE CHECKSUM: 665d67740b47af8ab6af60534613ffb99c65ec27
 
