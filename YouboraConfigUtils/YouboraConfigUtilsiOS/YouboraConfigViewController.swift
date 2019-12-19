@@ -22,6 +22,11 @@ import UIKit
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        if self.nibName == nil {
+            Utils.printInitializationWarning()
+            return
+        }
+        
         if self.searchBar == nil {
             Utils.printInitializationWarning()
             return

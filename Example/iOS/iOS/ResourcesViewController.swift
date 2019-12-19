@@ -12,7 +12,7 @@ import YouboraConfigUtils
 
 class ResourcesViewController: UIViewController {
     
-    let child = YouboraConfigViewController.initFromXIB()
+    let child = YouboraConfigViewController()
     let containerView = UIView()
     
     // MARK: View Controller Methods
