@@ -29,16 +29,16 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://bitbucket.org/npaw/configutil-plugin-ios.git", :tag => "#{s.version}" }
 
   # Source files
-  s.ios.source_files  = "YouboraConfigUtils/YouboraConfigUtils iOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtils shared/**/*.{swift,h,m}"
+  s.ios.source_files  = "YouboraConfigUtils/YouboraConfigUtilsiOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtilsshared/**/*.{swift,h,m}"
   s.ios.public_header_files = "YouboraConfigUtils/YouboraConfigUtils iOS/**/*.h"
-  s.ios.resources = "YouboraConfigUtils/YouboraConfigUtils iOS/**/*.{xib}"
+  s.ios.resources = "YouboraConfigUtils/YouboraConfigUtilsiOS/**/*.{xib}"
 
-  s.tvos.source_files = "YouboraConfigUtils/YouboraConfigUtils tvOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtils shared/**/*.{swift,h,m}"
+  s.tvos.source_files = "YouboraConfigUtils/YouboraConfigUtilstvOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtilsshared/**/*.{swift,h,m}"
   s.tvos.public_header_files = "YouboraConfigUtils/YouboraConfigUtils tvOS/**/*.{h}"
-  s.tvos.resources = "YouboraConfigUtils/YouboraConfigUtils tvOS/**/*.{xib}"
+  s.tvos.resources = "YouboraConfigUtils/YouboraConfigUtilstvOS/**/*.{xib}"
 
-  s.osx.source_files = "YouboraConfigUtils/YouboraConfigUtils macOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtils shared/**/*.{swift,h,m}"
-  s.osx.public_header_files = "YouboraConfigUtils/YouboraConfigUtils macOS/**/*.{h}"
-  s.osx.resources = "YouboraConfigUtils/YouboraConfigUtils macOS/**/*.{xib}"
-  s.osx.exclude_files = "YouboraConfigUtils/YouboraConfigUtils Shared/Utils & Helper & Extensions/Extensions/UIView.swift", "YouboraConfigUtils/YouboraConfigUtils Shared/Utils & Helper & Extensions/Extensions/UIViewController.swift"
+  s.osx.source_files = "YouboraConfigUtils/YouboraConfigUtilsmacOS/**/*.{swift,h,m}","YouboraConfigUtils/YouboraConfigUtilsshared/**/*.{swift,h,m}"
+  s.osx.public_header_files = "YouboraConfigUtils/YouboraConfigUtilsmacOS/**/*.{h}"
+  s.osx.resources = "YouboraConfigUtils/YouboraConfigUtilsmacOS/**/*.{xib}"
+  s.osx.exclude_files = "YouboraConfigUtils/YouboraConfigUtilsShared/Utils_Helper_Extensions/Extensions/UIView.swift", "YouboraConfigUtils/YouboraConfigUtilsShared/Utils_Helper_Extensions/Extensions/UIViewController.swift"
 end
