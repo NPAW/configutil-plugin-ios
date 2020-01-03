@@ -76,4 +76,24 @@ YouboraConfigManager.getOptions()
 [YouboraConfigManager getOptions];
 ```
 
+## Run samples project
+
+###### Via cocoapods
+
+Navigate to the root folder and then execute: 
+
+
+```bash
+pod install
+```
+
+1. Now you have to go to your **target > General > Frameworks, Libraries and Embedded Content** and change the frameworks that you are using in cocoapods from **Embed & Sign** to **Do Not Embed**
+
+
+###### Via carthage (Default)
+Navigate to the root folder and then execute: 
+```bash
+carthage update
+```
+
 For more information you can check the examples in the folder **./Example/iOS** for swift and for obj-c **./Example/iOS-Objc**
