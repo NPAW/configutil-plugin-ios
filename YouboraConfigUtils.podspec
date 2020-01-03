@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "YouboraConfigUtils"
-  s.version = '1.1.2'
+  s.version = '1.1.3'
   
   # Metadata
   s.summary      = "Set and get all available options to be sent to the back-end"
