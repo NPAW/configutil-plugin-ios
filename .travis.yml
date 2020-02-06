@@ -12,49 +12,49 @@ env:
     - ADAPTER_VERSION_TAG=YOUBORA_CONFIG_UTILS_VERSION_SETTING
 
 stages:
-  # - name: swiftLint
-  #   if: NOT branch =~ ^\d+\.\d+\.\d+$
-  # - name: podLint
-  #   if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: swiftLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
+  - name: podLint
+    if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
     if: NOT branch =~ ^\d+\.\d+\.\d+$#branch = master OR type = pull_request OR branch =~ /^\d+\.\d+\.\d+$/
-  # - name: deploy
-  #   if: branch =~ ^\d+\.\d+\.\d+$
+  - name: deploy
+    if: branch =~ ^\d+\.\d+\.\d+$
 
 jobs:
   include:
-    # - &lint
-    #   stage: swiftLint
-    #   script:
-    #     - xcodebuild -workspace $APP_NAME.xcworkspace -scheme $APP_NAME
-    #   after_failure:
-    #     - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
+    - &lint
+      stage: swiftLint
+      script:
+        - xcodebuild -workspace $APP_NAME.xcworkspace -scheme $APP_NAME
+      after_failure:
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
 
-    # - &pod
-    #   stage: podLint
-    #   osx_image: xcode9.2
-    #   env: SWIFT=4.0
-    #   install: gem install cocoapods
-    #   script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
-    #   after_failure:
-    #     - cat pod.log
-    #     - grep error
-    #     - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
-    # - <<: *pod
-    #   osx_image: xcode9.4
-    #   env: SWIFT=4.1
-    # - <<: *pod
-    #   osx_image: xcode10.1
-    #   env: SWIFT=4.2
-    # - <<: *pod
-    #   osx_image: xcode10.3
-    #   env: SWIFT=4.3
-    # - <<: *pod
-    #   osx_image: xcode10.3
-    #   env: SWIFT=5.0
-    # - <<: *pod
-    #   osx_image: xcode11
-    #   env: SWIFT=5.1
+    - &pod
+      stage: podLint
+      osx_image: xcode9.2
+      env: SWIFT=4.0
+      install: gem install cocoapods
+      script: pod lib lint --fail-fast --swift-version=$SWIFT --allow-warnings --verbose
+      after_failure:
+        - cat pod.log
+        - grep error
+        - 'curl -X POST -H "Travis-Api-Version: 3" -H "Authorization: token $TRAVIS_API_TOKEN" https://api.travis-ci.com/build/$TRAVIS_BUILD_ID/cancel'
+    - <<: *pod
+      osx_image: xcode9.4
+      env: SWIFT=4.1
+    - <<: *pod
+      osx_image: xcode10.1
+      env: SWIFT=4.2
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=4.3
+    - <<: *pod
+      osx_image: xcode10.3
+      env: SWIFT=5.0
+    - <<: *pod
+      osx_image: xcode11
+      env: SWIFT=5.1
 
     - &carthage
       stage: carthage
@@ -91,10 +91,10 @@ jobs:
         - pod deintegrate
         - rm -f Cartfile.private
 
-    # - name: "`pod trunk push`"
-    #   stage: deploy
-    #   install: gem install cocoapods
-    #   script:
-    #     - set -exo pipefail
-    #     - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
-    #   after_failure: cat pod.log | grep error
+    - name: "`pod trunk push`"
+      stage: deploy
+      install: gem install cocoapods
+      script:
+        - set -exo pipefail
+        - pod trunk push --verbose --allow-warnings | tee pod.log | ruby -e 'ARGF.each{ print "." }'
+      after_failure: cat pod.log | grep error
