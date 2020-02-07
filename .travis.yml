@@ -17,7 +17,7 @@ stages:
   - name: podLint
     if: NOT branch =~ ^\d+\.\d+\.\d+$
   - name: carthage
-    if: NOT branch =~ ^\d+\.\d+\.\d+$#branch = master OR type = pull_request OR branch =~ /^\d+\.\d+\.\d+$/
+    if: branch = master OR type = pull_request OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
     if: branch =~ ^\d+\.\d+\.\d+$
 
