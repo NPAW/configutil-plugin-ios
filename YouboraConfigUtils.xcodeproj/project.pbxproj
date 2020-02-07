@@ -760,7 +760,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtilsmacOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-macOS";
@@ -799,7 +799,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtilsmacOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-macOS";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
