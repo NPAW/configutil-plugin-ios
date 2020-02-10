@@ -19,13 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let tabviewController = UITabBarController()
-        
-        tabviewController.viewControllers = [
-            UINavigationController(rootViewController: ResourcesViewController())
-        ]
-        
-        self.window?.rootViewController = tabviewController
+        self.window?.rootViewController = UINavigationController(rootViewController: MenuViewController.loadFromNib())
         
         self.window?.makeKeyAndVisible()
         

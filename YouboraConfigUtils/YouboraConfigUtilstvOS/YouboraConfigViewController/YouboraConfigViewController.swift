@@ -144,7 +144,7 @@ import UIKit
     
     // MARK: - UISearchController Methods
     
-     @objc func searchDidChange( inputText: UITextField ) {
+     func searchDidChange( inputText: UITextField ) {
         self.viewModel.updateSearch(text: inputText.text)
         self.propsCollectionView.reloadData()
     }

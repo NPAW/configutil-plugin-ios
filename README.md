@@ -36,41 +36,96 @@ when update complete goes to **{YOUR_SCHEME} > Build Settings > Framework Search
 
 # How to use
 
-### Swift
+### Import
 
-###### Import
+###### Swift
 
 ```swift
 import YouboraConfigUtils
 ```
 
-###### Initialize View Controller
-
-```swift
-YouboraConfigViewController.initFromXIB()
-```
-
-###### Get saved configurations
-
-```swift
-YouboraConfigManager.getOptions()
-```
-
-### Obj-c
-
-###### Import
+###### Objc
 
 ```objectivec
 #import <YouboraConfigUtils/YouboraConfigUtils-Swift.h>
 ```
 
-###### Initialize View Controller
+### Initialize View Controller
 
-```objectivec
-[YouboraConfigViewController initFromXIB];
+###### Swift
+
+```swift
+YouboraConfigViewController.initFromXIB()
 ```
 
-###### Get saved configurations
+If you wanna an animation when YouboraConfigViewController close you should initialize this way, this flag is only available for iOS, tvOS and macOS don't support it
+
+```swift
+YouboraConfigViewController.initFromXIB(animatedNavigation: true)
+```
+
+###### Objc
+
+```objectivec
+[YouboraConfigViewController initFromXIBWithAnimatedNavigation:true];
+```
+
+### Navigation
+
+#### iOS
+
+You can use the UINavigationController to navigate or case there's no UINavigationController you can present it modally, the YouboraConfigViewController will adapt for both cases
+###### Swift
+
+```swift
+guard let navigationController = self.navigationController else {
+  self.present(YouboraConfigViewController.initFromXIB(animatedNavigation: true), animated: true, completion: nil)
+  return
+}
+
+navigationController.show(YouboraConfigViewController.initFromXIB(), sender: nil)
+```
+
+###### Objc
+```objectivec
+if (self.navigationController) {
+    [self.navigationController showViewController:[YouboraConfigViewController initFromXIB] sender:nil];
+} else {
+    [self presentViewController:[YouboraConfigViewController initFromXIBWithAnimatedNavigation:true] animated:true completion:nil];
+}
+```
+
+#### tvOS
+
+###### Swift
+
+```swift
+guard let navigationController = self.navigationController else {
+  self.present(YouboraConfigViewController.initFromXIB(), animated: true, completion: nil)
+  return
+}
+
+navigationController.show(YouboraConfigViewController.initFromXIB(), sender: nil)
+```
+
+###### Objc
+```objectivec
+if (self.navigationController) {
+    [self.navigationController showViewController:[YouboraConfigViewController initFromXIB] sender:nil];
+} else {
+    [self presentViewController:[YouboraConfigViewController initFromXIB] animated:true completion:nil];
+}
+```
+
+### Get saved configurations
+
+###### Swift
+
+```swift
+YouboraConfigManager.getOptions()
+```
+
+###### Objc
 
 ```objectivec
 [YouboraConfigManager getOptions];

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Utils {
     static func printInitializationWarning() {
       print("****************************************************")

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YouboraConfigViewController" customModule="YouboraConfigUtils" customModuleProvider="target">
             <connections>
+                <outlet property="closeButtonSectionHeightConstraint" destination="31i-QD-yXR" id="8nl-Lh-f9I"/>
                 <outlet property="optionsList" destination="A5X-4l-wj0" id="n0Q-hq-FAS"/>
                 <outlet property="searchBar" destination="AeE-1R-gDL" id="i9c-yp-ezg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="xEM-s9-pDP"/>
@@ -23,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A5X-4l-wj0">
-                    <rect key="frame" x="0.0" y="100" width="414" height="662"/>
+                    <rect key="frame" x="0.0" y="140" width="414" height="622"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dou-Ra-AYr">
@@ -49,22 +48,47 @@
                     </constraints>
                 </stackView>
                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="AeE-1R-gDL">
-                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <rect key="frame" x="0.0" y="84" width="414" height="56"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yE-Qn-ogo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPV-do-xOV">
+                            <rect key="frame" x="354" y="0.0" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="alR-iu-4Mi"/>
+                            </constraints>
+                            <state key="normal" title="Close"/>
+                            <connections>
+                                <action selector="onCloseButtonPressed:" destination="-1" eventType="touchUpInside" id="Z76-u7-CbU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="VPV-do-xOV" secondAttribute="bottom" id="156-sN-sqR"/>
+                        <constraint firstAttribute="height" constant="40" id="31i-QD-yXR"/>
+                        <constraint firstAttribute="trailing" secondItem="VPV-do-xOV" secondAttribute="trailing" id="8u6-2i-SOM"/>
+                        <constraint firstItem="VPV-do-xOV" firstAttribute="top" secondItem="7yE-Qn-ogo" secondAttribute="top" id="VU0-S1-Oza"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="AeE-1R-gDL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0x7-cp-wuY"/>
                 <constraint firstItem="AeE-1R-gDL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FM0-ZC-TXe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dou-Ra-AYr" secondAttribute="trailing" id="H7R-WF-rhz"/>
-                <constraint firstItem="A5X-4l-wj0" firstAttribute="top" secondItem="AeE-1R-gDL" secondAttribute="bottom" id="IIX-zx-nHA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Dou-Ra-AYr" secondAttribute="bottom" id="JHt-Pu-TgK"/>
+                <constraint firstItem="7yE-Qn-ogo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Kb2-oF-U5j"/>
+                <constraint firstItem="7yE-Qn-ogo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Mwo-gG-tpU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A5X-4l-wj0" secondAttribute="trailing" id="QTJ-Jr-fHo"/>
-                <constraint firstItem="AeE-1R-gDL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TSq-US-PF1"/>
                 <constraint firstItem="Dou-Ra-AYr" firstAttribute="top" secondItem="A5X-4l-wj0" secondAttribute="bottom" id="Tbq-Sk-T2v"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7yE-Qn-ogo" secondAttribute="trailing" id="dNy-jA-yUR"/>
                 <constraint firstItem="A5X-4l-wj0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dXX-xo-9Uc"/>
                 <constraint firstItem="Dou-Ra-AYr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gCJ-Me-8xI"/>
+                <constraint firstItem="AeE-1R-gDL" firstAttribute="top" secondItem="7yE-Qn-ogo" secondAttribute="bottom" id="nSF-k9-WfF"/>
+                <constraint firstItem="A5X-4l-wj0" firstAttribute="top" secondItem="AeE-1R-gDL" secondAttribute="bottom" id="tIi-ta-CN3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>

@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     [YouboraConfigManager getOptions];
-    self.child = [YouboraConfigViewController initFromXIB];
+    self.child = [YouboraConfigViewController initFromXIBWithAnimatedNavigation:false];
     
     [self.child insertIntoParentWithParentViewController:self];
 }

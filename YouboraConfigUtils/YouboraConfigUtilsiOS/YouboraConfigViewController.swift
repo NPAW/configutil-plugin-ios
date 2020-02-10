@@ -11,11 +11,18 @@ import UIKit
 @objcMembers public class YouboraConfigViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     let viewModel = YouboraConfigViewModel()
     
+    var animatedNavigation: Bool = false
+    
     @IBOutlet weak var optionsList: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    public static func initFromXIB() -> YouboraConfigViewController {
-        return YouboraConfigViewController().initFromXIB()
+    @IBOutlet weak var closeButtonSectionHeightConstraint: NSLayoutConstraint!
+    
+    public static func initFromXIB(animatedNavigation: Bool = false) -> YouboraConfigViewController {
+        let viewController = YouboraConfigViewController().initFromXIB()
+        viewController.animatedNavigation = animatedNavigation
+        
+        return viewController
     }
     
     // MARK: View Methods
@@ -47,6 +54,8 @@ import UIKit
             self.optionsList.rowHeight = UITableViewAutomaticDimension
         #endif
         self.navigationItem.title = viewModel.getTitle()
+        
+        self.configCloseSection()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -57,6 +66,12 @@ import UIKit
     
     public override func insertIntoParent(parentViewController: UIViewController) {
         super.insertIntoParent(parentViewController: parentViewController)
+    }
+    
+    public func configCloseSection() {
+        if self.navigationController != nil {
+            self.closeButtonSectionHeightConstraint.constant = 0
+        }
     }
     
     // MARK: Table view data source
@@ -98,6 +113,10 @@ import UIKit
     @IBAction func onReset(_ sender: Any) {
         viewModel.resetAllChanges()
         self.optionsList.reloadData()
+    }
+    
+    @IBAction func onCloseButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: self.animatedNavigation, completion: nil)
     }
     
     // MARK: Search methods

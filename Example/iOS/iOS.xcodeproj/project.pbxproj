@@ -30,6 +30,8 @@
 		06C21D0323618F4F0028D09A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D0223618F4F0028D09A /* MenuViewController.swift */; };
 		06C21D0523619CC70028D09A /* BaseWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D0423619CC70028D09A /* BaseWindowController.swift */; };
 		06C21D072361A59A0028D09A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C21D062361A59A0028D09A /* MainViewController.swift */; };
+		06DFBE3423F1692600D9F6A1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFBE3223F1692600D9F6A1 /* MenuViewController.swift */; };
+		06DFBE3523F1692600D9F6A1 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DFBE3323F1692600D9F6A1 /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		06C21D0223618F4F0028D09A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		06C21D0423619CC70028D09A /* BaseWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindowController.swift; sourceTree = "<group>"; };
 		06C21D062361A59A0028D09A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		06DFBE3223F1692600D9F6A1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		06DFBE3323F1692600D9F6A1 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		06E1BC4D23A93FBE00A979DA /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = ../../Carthage/Build/tvOS/YouboraLib.framework; sourceTree = "<group>"; };
 		06E1BC5223A9416200A979DA /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouboraLib.framework; path = ../../Carthage/Build/Mac/YouboraLib.framework; sourceTree = "<group>"; };
 		369ACE90BF33FCB3125D6088 /* Pods_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +211,7 @@
 		06927A6B2343AA19005127FC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				06DFBE2D23F1690C00D9F6A1 /* MenuViewController */,
 				06927A6C2343AA19005127FC /* AppDelegate.swift */,
 				06927A732343AA1A005127FC /* Assets.xcassets */,
 				06927A752343AA1A005127FC /* LaunchScreen.storyboard */,
@@ -224,6 +229,15 @@
 				069EA31923A93E8F00819D94 /* YouboraConfigUtils.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		06DFBE2D23F1690C00D9F6A1 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06DFBE3223F1692600D9F6A1 /* MenuViewController.swift */,
+				06DFBE3323F1692600D9F6A1 /* MenuViewController.xib */,
+			);
+			path = MenuViewController;
 			sourceTree = "<group>";
 		};
 		156B5C2CE901EF5520F7DBB3 /* Frameworks */ = {
@@ -400,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06927A772343AA1A005127FC /* LaunchScreen.storyboard in Resources */,
+				06DFBE3523F1692600D9F6A1 /* MenuViewController.xib in Resources */,
 				06927A742343AA1A005127FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06927AC72344FA29005127FC /* ResourcesViewController.swift in Sources */,
+				06DFBE3423F1692600D9F6A1 /* MenuViewController.swift in Sources */,
 				06927A6D2343AA19005127FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
