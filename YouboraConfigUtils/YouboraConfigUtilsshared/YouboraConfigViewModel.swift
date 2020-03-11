@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import YouboraLib
 
 class YouboraConfigViewModel {
     
@@ -36,7 +37,7 @@ class YouboraConfigViewModel {
         return options[position]
     }
     
-    public func getOptionType(position: Int) -> OptionType {
+    public func getOptionType(position: Int) -> OptionKeyType {
         return getOption(position: position).type
     }
     
@@ -50,6 +51,10 @@ class YouboraConfigViewModel {
             return YBConfigNumberViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
         case .unknown:
             return YBConfigViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        case .valueBool:
+            return YBConfigBoolViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
+        case .depretacted:
+            return YBConfigViewModel(option: getOption(position: position), options: YouboraConfigManager.getOptions())
         }
     }
     
@@ -57,11 +62,15 @@ class YouboraConfigViewModel {
         switch self.getOption(position: position).type {
         case .bool:
             return "Boolean"
+        case .valueBool:
+            return "Boolean"
         case .number:
             return "Number"
         case .string:
             return "String"
-        default:
+        case .depretacted:
+            return "Deprecated"
+        case .unknown:
             return "Unknown"
         }
     }

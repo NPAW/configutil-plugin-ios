@@ -4,7 +4,8 @@
 workspace 'YouboraConfigUtils.xcworkspace'
 
 def common_pods
-  pod 'YouboraLib', '~> 6.5.18'
+  #pod 'YouboraLib', '~> 6.5.18'
+  pod 'YouboraLib', :path => '~/Documents/Projects/lib-plugin-ios'
 end
 
 target 'YouboraConfigUtils_iOS' do

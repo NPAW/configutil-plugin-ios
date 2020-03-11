@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.6] - 
 
+### Added
+- Support to deprecated options is iOS
+
 ### Changed
 
-- Change YBOptions props read to auto update when the Lib receive new props 
+- Change YBOptions props read to auto update when the Lib receive new props in iOS
 
 ## [1.1.5] - 2020-02-10
 

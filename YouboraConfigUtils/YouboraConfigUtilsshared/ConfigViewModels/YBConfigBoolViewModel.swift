@@ -27,6 +27,10 @@ class YBConfigBoolViewModel: YBConfigViewModel {
     }
     
     func updateValue(newValue: Bool) {
-        self.options.setValue(newValue, forKey: self.option.name)
+        if self.option.type == .bool {
+            self.options.setValue(newValue, forKey: self.option.name)
+        } else {
+            self.options.setValue(NSNumber(booleanLiteral: newValue), forKey: self.option.name)
+        }
     }
 }

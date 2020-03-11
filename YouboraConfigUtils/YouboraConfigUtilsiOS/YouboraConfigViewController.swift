@@ -45,6 +45,7 @@ import UIKit
         YBConfigStringCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigStringCellView.cellIdentifier)
         YBConfigNumberCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
         YBConfigUnknownCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
+        YBConfigDeprecatedCellView.registerCell(tableView: self.optionsList, cellIdentifier: YBConfigDeprecatedCellView.cellIdentifier)
         
         self.optionsList.delegate = self
         self.optionsList.dataSource = self
@@ -95,12 +96,16 @@ import UIKit
         switch viewModel.getOptionType(position: indexPath.row) {
         case .bool:
             return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
+        case .valueBool:
+            return YBConfigBoolCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigBoolCellView.cellIdentifier)
         case .string:
             return YBConfigStringCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigStringCellView.cellIdentifier)
         case .number:
             return YBConfigNumberCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigNumberCellView.cellIdentifier)
         case .unknown:
             return YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
+        case .depretacted:
+            return YBConfigDeprecatedCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
         }
     }
     
