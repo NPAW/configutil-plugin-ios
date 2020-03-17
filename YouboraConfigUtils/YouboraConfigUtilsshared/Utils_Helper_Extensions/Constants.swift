@@ -43,10 +43,10 @@ struct Constants {
 extension Constants {
     static let options: [Option] = {
         return YBOptionUtilsKeys.keys.keys.compactMap { key -> Option? in
-            guard let type = YBOptionUtilsKeys.keys[key] else {
+            guard let (type, name) = YBOptionUtilsKeys.keys[key] else {
                 return nil
             }
-            return Option(name: key, type: type)
+            return Option(name: name, type: type)
         }
     }()
 }

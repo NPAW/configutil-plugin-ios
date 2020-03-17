@@ -105,7 +105,7 @@ import UIKit
         case .unknown:
             return YBConfigUnknownCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
         case .depretacted:
-            return YBConfigDeprecatedCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigUnknownCellView.cellIdentifier)
+            return YBConfigDeprecatedCellView.initFromNib(tableView: tableView, indexPath: indexPath, viewModel: cellViewModel, cellIdentifier: YBConfigDeprecatedCellView.cellIdentifier)
         }
     }
     
