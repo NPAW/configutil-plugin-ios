@@ -8,7 +8,7 @@
 
 import Cocoa
 
-typealias UpdateClosure = () -> Void
+associatedtype UpdateClosure = () -> Void
 
 class YBConfigView: NSCollectionViewItem {
     public var viewModel: YBConfigViewModel? {

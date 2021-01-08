@@ -14,7 +14,7 @@ enum NaviagationOptions {
     case config
 }
 
-typealias NavigationClosure = (_ option: NaviagationOptions) -> Void
+associatedtype NavigationClosure = (_ option: NaviagationOptions) -> Void
 
 class MenuViewController: NSViewController {
 

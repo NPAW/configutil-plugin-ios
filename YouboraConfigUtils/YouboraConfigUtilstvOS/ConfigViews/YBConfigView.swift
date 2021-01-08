@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias UpdateClosure = () -> Void
+associatedtype UpdateClosure = () -> Void
 
 class YBConfigView: UIView {
     var viewModel: YBConfigViewModel?

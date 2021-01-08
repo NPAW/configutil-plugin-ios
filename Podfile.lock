@@ -5,7 +5,7 @@ DEPENDENCIES:
   - YouboraLib (~> 6.5.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - YouboraLib
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 665d67740b47af8ab6af60534613ffb99c65ec27
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.10.0
