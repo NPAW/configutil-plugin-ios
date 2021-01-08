@@ -14,11 +14,9 @@ enum NaviagationOptions {
     case config
 }
 
-associatedtype NavigationClosure = (_ option: NaviagationOptions) -> Void
-
 class MenuViewController: NSViewController {
 
-    var navigateTo: NavigationClosure?
+    var navigateTo: ((_ option: NaviagationOptions) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()

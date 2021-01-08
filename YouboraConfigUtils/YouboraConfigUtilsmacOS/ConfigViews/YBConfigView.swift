@@ -8,8 +8,6 @@
 
 import Cocoa
 
-associatedtype UpdateClosure = () -> Void
-
 class YBConfigView: NSCollectionViewItem {
     public var viewModel: YBConfigViewModel? {
         didSet {

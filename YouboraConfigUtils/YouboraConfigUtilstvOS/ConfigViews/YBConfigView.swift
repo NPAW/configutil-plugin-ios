@@ -8,8 +8,6 @@
 
 import UIKit
 
-associatedtype UpdateClosure = () -> Void
-
 class YBConfigView: UIView {
     var viewModel: YBConfigViewModel?
     
@@ -17,7 +15,7 @@ class YBConfigView: UIView {
         return String(describing: YBConfigView.self)
     }
     
-    var valueDidUpdate: UpdateClosure?
+    var valueDidUpdate: (() -> Void)?
     
     func iniateConfigWithData(viewModel: YBConfigViewModel, container: UIView) -> YBConfigView? {
         guard let view = self.loadFromNib(nibName: self.typeName) as? YBConfigView else {
