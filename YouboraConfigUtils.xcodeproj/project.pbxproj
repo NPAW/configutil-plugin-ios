@@ -761,7 +761,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-macOS";
@@ -801,7 +801,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-macOS";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
@@ -835,7 +835,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtilstvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-tvOS";
@@ -873,7 +873,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/YouboraConfigUtils/YouboraConfigUtilstvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "npaw.YouboraConfigUtils-tvOS";
 				PRODUCT_NAME = YouboraConfigUtils;
@@ -947,7 +947,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 			};
 			name = Debug;
 		};
@@ -1006,7 +1006,7 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 			};
 			name = Release;
 		};
@@ -1030,7 +1030,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraConfigUtils;
 				PRODUCT_NAME = YouboraConfigUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1060,7 +1060,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.6;
+				YOUBORA_CONFIG_UTILS_VERSION_SETTING = 1.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.npaw.youbora.YouboraConfigUtils;
 				PRODUCT_NAME = YouboraConfigUtils;
 				PROVISIONING_PROFILE_SPECIFIER = "";
